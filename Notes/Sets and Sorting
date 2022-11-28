@@ -1,0 +1,114 @@
+Interface: Collection of Operation (sequence and set)
+
+Data Structure: Way to store data that supports a set of operations (happens behind the scene and doing the implementation)
+
+Set interface: (set will implements these operations)
+
+Container   | build (A)   |  Given a iterable A, build sequence from items in A return the number of stored items
+            | Len ()      |
+
+Static      | find (k)    |  Return the stored item with key k
+
+Dynamic     | insert (x)  | add x to set (replace item with key x.key if one already exists) remove and return the stored item with key k
+            | delete (k)  |
+
+Order       | iter_ord()  | return the stored items one by one in key order
+            | find_min()  | return the stored item with smallest key
+            | find_max()  | return the stored item with largest key
+            | find_next(k)| return the stored item with smallest key larger than k
+            | find_prev(k)| return the stored item with largest key smaller than k
+
+                            Operations O(.)
+
+Data Structure          || Container || Static   || Dynamic    ||         Order           ||
+                        || build (A) || find (k) || insert (x) ||find_min() | find_prev(k)||
+                        ||           ||          || delete (k) ||find_max() | find_next(k)||
+
+Array (unsorted)        ||     n     ||    n     ||    n       ||     n     |     n       ||
+
+Sorted Array            || n log n   ||   log n  ||    n       ||     1     |     log n   ||
+
+
+ie:
+array of set
+
+x1, x2, x3, ......
+
+SORTING VOCABULARY:
+
+Destructive: overwrites the input array
+
+In place: Uses O(1) extra space (are Destructive and do not use extra memories in the process of sorting)
+
+Input: Array of n numbers/keys as array A
+Output : Sorted array B 
+
+Permutation Sort:
+  def permutation_sort (A):
+      ''Sort A''
+      for B in permutations (A):
+        if is sorted (B):
+          return B
+
+1. enumerate the permutation (n factorial  O(n!)) Ω Omega is lower bound
+2. check if permutation is sorted (time: O(n))
+    for i = 1 to n - 1
+      is B[i] <= B[i + 1] true?
+      if it is then list is sorted
+
+
+Selection Sort:
+8 2 4 9 3
+Find the biggest number on the list and put at the end
+8 2 4 3 | 9 
+Find the next biggest
+3 2 4 | 8 9
+3 2 | 4 8 9
+2 | 3 4 8 9
+2 3 4 8 9
+
+def selection_sort (A, i = None):
+'''Sort A[:i + 1]'''
+  if i is None: i = len(A) - 1
+  if i > 0 :
+    j = prefix_max(A, i)
+    A[i], A[j] = A[j], A[i]
+    selection_sort (A, i - 1 )
+  run time:
+  T(n) = T (n-1) + θ(n) 
+    this is really θ(n^2)
+    T(n) =? cn^2
+    cn^2 =? c(n-1)^2 + θ(n) = cn^2 - 2cn+c+θ(n)
+      θ(n) = 2cn- c
+       
+
+Using recursive:
+1. Found biggest with index <= i
+  def prefix_max (A,i) // finding the biggest number from A to i
+    ''' Return index of max in A[:i+i] '''
+    if i > 0:
+      j=prefix_max(A, i-1)
+      if A[i] < A[j]:
+        return j
+    return i
+  Biggest element from 0 .... i
+    if you are the biggest number than you are either 
+    1. its at index i // at index i 
+    2. it has index < i  // or at less than i 
+
+  Base is i = 0
+    1 element 
+    induction *
+
+  S(1) =  θ(1)
+  S(n) = S (n-1) + θ(1) // run time is order of n (  O(n)  linear )
+  S(n) =? cn
+    cn  =?  c(n-1) + θ(1)
+      c = θ(1)  // constant 
+2. Swap
+3. Sort 1,.... i-1
+
+
+Merge Sort example 
+7, 1, 5, 6, 2, 4, 9, 3
+

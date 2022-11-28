@@ -112,3 +112,59 @@ Using recursive:
 Merge Sort example 
 7, 1, 5, 6, 2, 4, 9, 3
 
+merge them into two
+71  56  24  93
+and sort that
+17 56 24 93
+then merge again
+1756  2493
+and sort 
+1567  2349
+now put them up to down
+1567
+2349
+and sort them compare top to bottom number starting from the back
+so 7<9 
+therefor the last two number is 7, 9
+and now move on to 6 and 4 
+....4679
+
+def merge_sort(A, a=0, b =None):
+'''Sort A[a:b]'''
+  if b is None: b = len(A)
+  if 1 < b - a:
+    c = (a+b+1) //2
+    Merge_sort(A, a ,c)
+    Merge_sort(A, c, b)
+    L,R = A[a:c], A[c:b]
+    merge (L, R, A, len(L), len(R), a , b)
+  Merge sort computes at index c, which is middle of the array
+  then it will make a recursive call which is sort the left, which is everything between index A and index C
+  then sort everything on the right which is index C to index B
+
+  Merge function
+    def merge (L,R,A,i,j,a,b):
+      '''merge sorted L[:i] and R[:j] into A[a:b]'''
+        if a<b:
+          if (j <= 0) or (i > 0 and L[i-1] > R[j-1]):
+            A[b-1] = L[i-1]
+            i=i-1
+          else:
+            A[b-1] = R[i-1]
+            j=j-1
+          merge(L,R,A,i,j,a,b-1)
+  
+
+  S(n) = S (n-1) + θ(1)
+  S(n) = θ(n)   // linear
+Notes/merge sorting diagram 1.png      
+
+Called merge and sort algo twice one for left and one for right
+
+T(1)= θ(1)
+T(n)=2T(n/2) + θ(n)
+  T(n)=? θ(nlogn)
+  cnlogn = 2c(n/2)log(n/2) + θ(n) = cn(logn-log2)+θ(n)
+  θ(n) = cnlog2
+
+  

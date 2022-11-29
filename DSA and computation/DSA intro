@@ -115,6 +115,13 @@ Array access is constant time
 
 
 ASSUME w >= log n
+w(word) needs to grow faster and larger than log n size so you know your machine can handle it 
+* when you n(problem) gets really big then you will need more RAM
+
+Dynamic Sequences interface:
+Static sequence plus:
+- insert_at (i,x): make x the new xi // inserting x at the position of i and anything greater or equal to i will shift right
+- delete_at (i): shift x1 // anything greater than or equal to i + 1 will shift to the left
 
 
 

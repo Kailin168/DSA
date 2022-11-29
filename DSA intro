@@ -1,0 +1,132 @@
+Algorithms and Computation 
+
+
+Communication:
+1. solve computational problem
+2. prove correctness 
+3. argue efficiency
+
+problem: One input can have multiple output
+Binary relationship could have more than one output
+
+Algorithms: Function that take input and maps output
+f: i -> o
+
+example: how many students in the room have the same birthday 
+1. maintain record
+2. interview students in some order
+3. check if DOB in record, if you return pair
+4. otherwise add new students to the record
+5. return none if none are paired
+
+Correctness:
+inductive -> base case
+Inductive hypothesis: if first k students contains match, algo returns a match before interviewing student k+1
+Base case: k=0 thats true
+Assume inductive hypothesis (IH) true
+for k=k`
+if k` contain match already returned by inductive
+else if k`+1 contain match by induction, algo k`+1 against all students
+
+*** Halve anything = divide and conquer = log n 
+
+*** Sort is nlogn
+
+Efficiency: Don't measure time instead count operations
+
+Expect performance to depend on size of input
+
+Big O notation is upper bound
+Ω omega lower bound 
+Θ Theta both bound
+
+O(1)	                    constant	                                                    Determining if a binary number is even or odd; Calculating (-1)^n; Using a constant size lookup table
+O(log log n)	            double logarithmic	                                          Average number of comparisons spent finding an item using interpolation search in a sorted array of uniformly distributed values
+O(log n)	                logarithmic	                                                  Finding an item in a sorted array with a binary search or a balanced search tree as well as all operations in a binomial heap
+O(n)	                    linear	                                                      Finding an item in an unsorted list or in an unsorted array; adding two n-bit integers by ripple carry
+O(n log n)=O(log n!)}	    linearithmic, loglinear, quasilinear, or "n log n"	          Performing a fast Fourier transform; fastest possible comparison sort; heap sort and merge sort
+O(n^{2})	                quadratic	                                                    Multiplying two n-digit numbers by schoolbook multiplication; simple sorting algorithms, such as bubble sort, selection sort and insertion sort; (worst-case) bound on some usually faster sorting algorithms such as quicksort, Shellsort, and tree sort
+O(n^{c})	                polynomial or algebraic	                                      Tree-adjoining grammar parsing; maximum matching for bipartite graphs; finding the determinant with LU decomposition
+O(c^{n}) c>1            	exponential	                                                  Finding the (exact) solution to the traveling salesman problem using dynamic programming; determining if two logical statements are equivalent using brute-force search
+O(n!)	                    factorial	                                                    Solving the traveling salesman problem via brute-force search; generating all unrestricted permutations of a poset; finding the determinant with Laplace expansion; enumerating all partitions of a set
+
+Big O.png
+Big O Chart.png
+
+Model of Computation
+      RAM- random access memory
+
+
+                        |------> 32 bit ---> 4 GB
+Word ---> RAM ------> CPU
+                        |------> 64 bit ---> 20 exabytes
+
+Interface (API/ADT) // what you want to do                  vs.               Data Structure // How you do it
+
+Specification                                               ||                 Representation 
+What data you can store                                     ||                 Tell you how to store data
+what operation are supported and what they mean             ||                 Algorithms to support operations
+problems                                                    ||                 Solutions
+
+2 Main interface 
+1. set
+2. sequence 
+
+
+2 Main data Structure approaches
+1. arrays
+2. pointer based
+
+
+Static sequence interface: # of items doesn't change 
+maintain a sequence of items x0, x1, x2, xn-1
+subject to these operation 
+A[i] = Xi
+
+Operations:
+1. build(x): make new DS for items in x0
+2. length: return n (methods)
+3. iter-seq() output x0, x1, ... xn-1 in sequence order (in the order it was build in)
+4. get_at(i): return xi (index i)
+5. set_at(i,x): set xi to x
+6. get first/last()
+7. set first/last(x)
+
+Solution to the interface problem:
+solution(natural): static array
+constant time O(1) : per get_at (set_at) / len
+linear time O(n) : build/iter_seq
+
+Memory Allocation Model: Allocate static array of size n in O(n) time   --->   space = O(time)
+
+Key: word RAM model for computation 
+
+Your memory is a array of w-bit words
+
+[1][2][3][4][5][6][7][8][9][10]
+ ^             |__________|
+w bit               ^
+                Array of size 4
+
+
+"Array": Consecutive chunk of memory
+Array [i] = memory [address [array]] + [i]
+Array access is constant time
+
+
+ASSUME w >= log n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

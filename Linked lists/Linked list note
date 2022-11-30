@@ -1,0 +1,61 @@
+Linked list: Pointer base DS
+
+Dynamic seq-operations
+
+Static array (great at random access)
+-insert/delete anywhere
+cost O(n) time (linear)
+1. shifting will have to change all the index
+2. even for delete, there will be shifting in memory
+allocation(great when nothing add/delete)
+
+
+Linked List(bad at random access)
+O(n) worst case (great for adding/deleting at the ends)
+• Each item stored in a node which contains a pointer to the next node in sequence
+• Each node has two fields: node.item and node.next
+• Can manipulate nodes simply by relinking pointers!
+• Maintain pointers to the first node in sequence (called the head)
+• Insert/delete first() O(1) time (constant)
+• (Inserting/deleting efficiently from back is also possible)
+• But now get at(i) and set at(i, x) each take O(n) time.
+
+Dynamic Array Sequence
+• Make an array efficient for last dynamic operations
+• Python “list” is a dynamic array
+• Allocate extra space so reallocation does not occur with every dynamic operation
+• Fill ratio: 0 ≤ r ≤ 1 the ratio of items to space
+• Whenever array is full (r = 1), allocate Θ(n) extra space at end to fill ratio ri (e.g., 1/2)
+• Will have to insert Θ(n) items before the next reallocation
+• A single operation can take Θ(n) time for reallocation
+• However, any sequence of Θ(n) operations takes Θ(n) time
+• So each operation takes Θ(1) time “on average”
+
+
+Amortized Analysis (Amortization: Averaging overall the operation to determine the cost)
+• Data structure analysis technique to distribute cost over many operations
+
+Final Note:
+
+• Dynamic arrays only support dynamic last operations in Θ(1) time
+• Python List append and pop are amortized O(1) time, other operations can be O(n)! 
+
+
+Operation, Worst Case O(·)
+
+Data  Structure      || Container   || Static       ||                          Dynamic                               ||
+_________________________________________________________________________________________________________________________
+                     || build(X)    || get at(i)    || insert first(x)    |   insert last(x)   |     insert at(i, x)  ||
+                                                    || delete first()     |   delete last()    |     delete at(i)     ||
+_________________________________________________________________________________________________________________________
+Array                ||       n     ||    *  1   *  ||            n       |            n       |              n       ||
+Linked List          ||       n     ||       n      ||       *  1   *     |            n       |              n       ||
+Dynamic Array        ||       n     ||    *  1   *  ||            n       |      *   1(a)   *  |              n       ||
+
+
+
+
+
+
+
+

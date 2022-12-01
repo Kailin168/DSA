@@ -1,2 +1,13 @@
 Hashing
 
+Operation, O(·)
+
+Data  Structure      || Container   || Static       ||     Dynamic    ||             Order                      ||
+_________________________________________________________________________________________________________________________
+                     || build(X)    || find(k)      || insert (x)     ||  find min()     |     find prev(k)     ||
+                                                    || delete (x)     ||   find max()    |     find next(k)     ||
+_________________________________________________________________________________________________________________________
+Array                ||       n     ||       n      ||       n        ||            n    |              n       ||
+Sorted Array         ||    nlogn    ||    logn      ||       n        ||       *  1 *    |           logn       ||
+Direct Access Array  ||       u     ||    *  1   *  ||       *  1 *   ||            u    |              u       ||
+Hash                 ||       n(e)  ||   *  1(e) *  ||       *  1 *   ||            n    |              n       ||

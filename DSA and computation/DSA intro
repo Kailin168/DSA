@@ -38,7 +38,7 @@ Expect performance to depend on size of input
 
 Big O notation is upper bound
 Ω omega lower bound 
-Θ Theta both bound
+Θ Theta both bound (tight bounds)
 
 O(1)	                    constant	                                                    Determining if a binary number is even or odd; Calculating (-1)^n; Using a constant size lookup table
 O(log log n)	            double logarithmic	                                          Average number of comparisons spent finding an item using interpolation search in a sorted array of uniformly distributed values

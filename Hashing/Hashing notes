@@ -1,5 +1,35 @@
 Hashing
 
+Comparison Model: Given a key or two items, I can compare the key (you will not know exactly what the key is)
+operations you can do with comparison model:  =, < , > <= , >=, !=
+
+In a binary tree, the leaves are the output but the leaves should be n + 1
+that + 1 output is when a output is not exist
+n is the number of item store in the data structure 
+A Correct algo is about to return all the n item and also one of the item stating that n does not exist
+
+min height at least Θ log n, if you just do comparison, you will need at least logn to see if n is in your set but thats not the best way
+
+Comparison is constant branching, so its log n 
+
+Direct access array (set DS): constant time but you dont know how height the number can go  // use integer keys
+
+u -> is the largest key
+u < 2 ^ w
+
+Division hash function 
+h(k) = k mod m
+Take a large item and divide it to make it small   \\ k is the large k
+
+
+Universal Hash function
+
+hab(k) = (((ak+b)mod p)mod m)
+multiple key to a random number a and add to a random number b then mod p and mod m
+H(p,m) = {hab(k)|a,b {0......p-1} and a != 0}
+
+
+
 Operation, O(·)
 
 Data  Structure      || Container   || Static       ||     Dynamic    ||             Order                      ||
@@ -11,3 +41,5 @@ Array                ||       n     ||       n      ||       n        ||        
 Sorted Array         ||    nlogn    ||    logn      ||       n        ||       *  1 *    |           logn       ||
 Direct Access Array  ||       u     ||    *  1   *  ||       *  1 *   ||            u    |              u       ||
 Hash                 ||       n(e)  ||   *  1(e) *  ||       *  1 *   ||            n    |              n       ||
+
+u - is the largest key

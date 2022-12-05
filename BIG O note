@@ -1,0 +1,47 @@
+Time complexity
+Simple math operation without any loop (add, subtract, multiple, divide, even #, odd # )
+O(1) 
+
+One for loop
+O(n)
+
+For loop inside another For loop (nesting)
+O(n^2) 
+* when it is nesting, its multiplication. So loop O(n) * loop O(n) = O(n^2)
+
+Loop and loop side by side (same scope and not nested)
+O(n) 
+when it is side by side, its addition. So loop O(n) + loop O(n) = O(2n). You can eliminate the 2 from 2n.
+
+Divide and conquer (such as binary tree or for SOME merge sort, dividing by 2 or cut in half and solve each side (think recursive) )
+O(logn)
+
+Recursive (basic)
+O(n)
+
+Recursive (When doing another loop inside recursive)
+O(n^2)
+
+Loop then divide and conquer or divide conquer then loop (Multiple when nested so same time complexity)
+O(nlogn)
+
+If O(n) and O(nlogn) is side by side (same scope)
+O(nlogn) is time complexity because we take the worst case and O() is worst case than O(n)
+
+If it increases exponentially such as Fibonacci, spreading of virus, loop loop and unlimited loop
+O(2^n)
+
+Sorting 
+O(nlogn) 
+
+Note: Usually the time complexity of an API command is linearly related to the input and/or output size (plus some possible fixed amount). 
+Some API may be O(logn) because all uses of index lookups, and any general index has O(logn) complexity.
+
+
+
+Space Complexity 
+Constant O(1)
+Using a variable to store such as let x = 0
+
+Linear O(n)
+Creating a new array by (insert, delete so in JS think push(), pop(), shift(), unshift())

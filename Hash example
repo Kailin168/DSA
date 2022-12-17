@@ -1,0 +1,34 @@
+// to filter, you can use a set to filter out the duplicate 
+
+// let chars = ['A', 'B', 'A', 'C', 'B'];
+// let uniqueChars = [...new Set(chars)];
+
+// console.log(uniqueChars);
+
+
+// value counting with hash table 
+let chars = ['A', 'B', 'A', 'C', 'B'];
+let counts = {};
+
+for (let item of chars) {
+  counts[item] = counts[item] ? counts[item] + 1 : 1;
+}
+
+console.log(counts)
+console.log(counts['A'])
+
+
+// FIND MAX
+// use recursive algo to find a max value
+
+items = [6, 20, 8, 56]
+
+function findMax(items){
+  if (items.length === 1){
+    return items[0]
+  }else{
+    op1 = items[0]
+    op2 = findMax(items[1:])
+  }
+}
+

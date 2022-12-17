@@ -1,0 +1,53 @@
+// Recursion
+
+// When function calls itself
+// Recursive functions need to have breaking condition
+// This prevents infinite loops and eventual crashes 
+// Each time the function is called, the old arguments are saved
+// This is called the call Stack
+
+// function countdown(x) {
+//   if (x==0)
+//     print ("done")
+//   return
+//   else
+//     print(x, '...')
+//     countdown(x-1)
+// }
+// countdown(4)
+
+
+function countdown(x) {
+  if (x === 0) {
+    console.log('done');
+    return
+  } else {
+    console.log(x, '...')
+    countdown(x-1)
+    console.log('yay')
+  }
+}
+countdown(5)
+
+
+const power = function(base, exponent) {
+  let result = 1;
+  for (let count = 0; count < exponent; count++) {
+    result *= base;
+  }
+  return result;
+};
+console.log(power(2, 10));
+
+
+function factorial(x) 
+{ 
+
+  if (x === 0)
+ {
+    return 1;
+ }
+  return x * factorial(x-1);
+         
+}
+console.log(factorial(5));

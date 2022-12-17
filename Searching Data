@@ -1,0 +1,82 @@
+// Unordered list search 
+
+items = [6, 2, 8, 19, 56, 23, 87, 41, 49, 53]
+
+function findItem(item, itemlist){
+  for(let i=0; i<items.length; i++){
+    if (item === itemlist[i]){
+      return 1
+    }
+  }
+  return `${item} undefined`
+}
+
+console.log(findItem(87, items))
+console.log(findItem(250, items))
+
+
+// // Searching an ordered list (perform binary search) 
+// // JavaScript program to create a sorted array
+//       // using Binary Search
+       
+//       let binarySearch = function(nums, target) {
+//         let low = 0;
+//         let high = nums.length - 1;
+    
+//         while (low <= high) {
+    
+//           // Finding the mid using floor division  
+//           let mid = low + Math.floor((high - low) / 2);
+    
+//           //Target value is present at the middle of the array
+//           if (nums[mid] === target) {
+//             return mid;
+//           }
+    
+//           //Target value is present in the low subarray
+//           if (target < nums[mid]) {
+//             high = mid - 1;
+//           } 
+//           //Target value is present in the high subarray
+//           else {
+//             low = mid + 1;
+//           }
+//         }  
+//         // Target value is not present in the array
+//         return -1;
+//     };
+    
+//     let numsLists = [[], [0,1], [1,2,3], [-1,0,3,5,9,12], [-1,0,3,5,9,12]];
+//     let targetList = [12, 1, 3, 9, 2];
+//     for(let i=0; i<numsLists.length; i++){
+//       let nums = numsLists[i];
+//       let target = targetList[i];
+//       let index = binarySearch(nums, target);
+//       // Using a custom function to print a neatly formatted array
+//       console.log(i+1 + ". Array to search: " + printArray(nums));
+//       console.log("   Target: " + String(target));
+//       if(index!= -1)
+//         console.log("   " + String(target) + " exists in the array at index", index);
+//       else
+//         console.log("   " + String(target) + " does not exist in the array so the return value is", index);
+//       console.log("----------------------------------------------------------------------------------------------------\n");
+    
+//     }
+
+
+    // Determine if a list is sorted
+
+    items1 = [6, 8, 9]
+    items2 = [20,8,17]
+
+    function isSorted(itemlist){
+      for (let i=0; i<itemlist.length; i++){
+        if (itemlist[i] > itemlist[i+1]){
+          return false
+        }
+      }
+      return true
+    }
+
+    console.log(isSorted(items1))
+    console.log(isSorted(items2))

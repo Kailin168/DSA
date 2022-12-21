@@ -1,0 +1,108 @@
+// Sort
+
+// Bubble Sort (performance O(n^2) since it is loop inside a loop)
+// -Compare the first two item and if first value is greater than the second value then they swap, keep doing until the whole list is sorted
+function bubbleSort(dataset) {
+  for (let i = 0; i < dataset.length; i ++) {
+    for ( let j = 0; j < (dataset.length - i -1); j++) {
+      if (dataset[j] > dataset[j+1]) {
+        let temp = dataset[j]
+        dataset[j] = dataset[j+1]
+        dataset[j+1] = temp
+      }
+    }
+  }
+  console.log(dataset)
+}
+
+let dataset = [234, 43, 55, 63,  5, 6, 235, 547];
+
+bubbleSort(dataset);
+
+
+
+// Merge Sort
+// Divide and conquer algo
+// Breaks a dataset into individual pieces and merges them
+// Uses recursion to operate on dataset
+// Performs well on large sets of data
+// Generally perform in a O(nlogn) 
+function merge(left, right) {
+  let sortedArr = [] // the sorted items will go here
+  while (left.length && right.length) {
+    // Insert the smallest item into sortedArr
+    if (left[0] < right[0]) {
+      sortedArr.push(left.shift())
+    } else {
+      sortedArr.push(right.shift())
+    }
+  }
+  // Use spread operators to create a new array, combining the three arrays
+  return [...sortedArr, ...left, ...right]
+}
+merge([1, 4], [2, 6, 9]) // [1, 2, 4, 6, 9]
+
+function mergeSort(arr) {
+  // Base case
+  if (arr.length <= 1) return arr
+  let mid = Math.floor(arr.length / 2)
+  // Recursive calls
+  let left = mergeSort(arr.slice(0, mid))
+  let right = mergeSort(arr.slice(mid))
+  return merge(left, right)
+}
+mergeSort([3, 5, 8, 5, 99, 1]) // [1, 3, 5, 5, 8, 99]
+
+
+
+// Quick Sort (better than merge sort)
+// Divide and conquer algo, like the merge sort
+// Also uses recursion to perform sorting 
+// Generally performs better than merge sort, O(nlogn)
+// Operates in place on the data
+// Worst case in O(n^2) when data is mostly sorted already
+
+// Pivot point selection 
+
+var items = [5,3,7,6,2,9];
+function swap(items, leftIndex, rightIndex){
+    var temp = items[leftIndex];
+    items[leftIndex] = items[rightIndex];
+    items[rightIndex] = temp;
+}
+function partition(items, left, right) {
+    var pivot   = items[Math.floor((right + left) / 2)], //middle element
+        i       = left, //left pointer
+        j       = right; //right pointer
+    while (i <= j) {
+        while (items[i] < pivot) {
+            i++;
+        }
+        while (items[j] > pivot) {
+            j--;
+        }
+        if (i <= j) {
+            swap(items, i, j); //sawpping two elements
+            i++;
+            j--;
+        }
+    }
+    return i;
+}
+
+function quickSort(items, left, right) {
+    var index;
+    if (items.length > 1) {
+        index = partition(items, left, right); //index returned from partition
+        if (left < index - 1) { //more elements on the left side of the pivot
+            quickSort(items, left, index - 1);
+        }
+        if (index < right) { //more elements on the right side of the pivot
+            quickSort(items, index, right);
+        }
+    }
+    return items;
+}
+// first call to quick sort
+var sortedArray = quickSort(items, 0, items.length - 1);
+console.log(sortedArray); //prints [2,3,5,6,7,9]

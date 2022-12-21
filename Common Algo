@@ -1,0 +1,39 @@
+// Search algo
+//   -Find specific data in a structure (for example, a substring with a string)
+
+// Sorting algo
+//   -Take a dataset and apply sort order to it
+
+// Computational algo
+//   -take one set of data and create another set of data from it
+//   -given one set of data and calculate another (is a given number prime?)
+
+// Collection algo
+//   -work with collections of data (count specific items, navigate among data elements, filter out unwanted data, etc)
+
+
+// Find the greatest common denominator (GCD) of two integers.
+//   Example: GCD of 20 and 8 is 4
+//   8/4 is 2 and 20/4 is 5
+
+//   1. for two integers a and b, where a > b, divide a by b
+//   2. if the remainder, r, is 0, then stop: GCD is b
+//   3. otherwise, set a to b, b to r and repeat at step 1 until r is 0.
+
+
+let a = 60
+let b = 96
+
+let gcd;
+
+while ( a != b){
+  if (a > b){
+    a = a - b
+  }else { b = b - a }
+}
+
+gcd = a;
+
+console.log(gcd);
+
+// Algo performance 

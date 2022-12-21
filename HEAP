@@ -1,0 +1,30 @@
+Heap- binary tree
+
+min Heap
+
+                    10
+                    /\
+                  20  15
+                  /\   /\
+                50 18  
+
+                if the 18 is less than 20 then you have to swap
+                    10
+                    /\
+                  18  15
+                  /\   /\
+                50 20 5  40
+                since 5 is less than 15 and also less than the top heap (10) then 5 will move all the way up
+
+                    5
+                    /\
+                  18  10
+                  /\   /\
+                50 20 15  40
+
+
+** keep in mind that heap is not sorted as long as it is more than the parent for min heap and less than the parents for Max Heap
+
+Min / Max is always on the top for Heap (thing will bubble to the time if it is not order correctly )
+
+Heaps are used for implement prioperty queue cuz order doesnt matter 

@@ -1,8 +1,8 @@
 Time complexity
-Simple math operation without any loop (add, subtract, multiple, divide, even #, odd # )
+Simple math operation without any loop (add, subtract, multiple, divide, even #, odd # ) looking at a element index in array
 O(1) 
 
-One for loop
+One for loop Linear time ( searching an unsorted array for a specific value)
 O(n)
 
 For loop inside another For loop (nesting)
@@ -13,14 +13,14 @@ Loop and loop side by side (same scope and not nested)
 O(n) 
 when it is side by side, its addition. So loop O(n) + loop O(n) = O(2n). You can eliminate the 2 from 2n.
 
-Divide and conquer (such as binary tree or for SOME merge sort, dividing by 2 or cut in half and solve each side (think recursive) )
-O(logn)
+Divide and conquer (such as binary tree or for SOME merge sort, dividing by 2 or cut in half and solve each side (think recursive) ) Find item in a sorted array with binary search 
+O(logn)    // logarithmic
 
 Recursive (basic)
-O(n)
+O(n) 
 
-Recursive (When doing another loop inside recursive)
-O(n^2)
+Recursive (When doing another loop inside recursive) Simple sorting like bubble sort, selection sort and insertion sort
+O(n^2) // quadratic 
 
 Loop then divide and conquer or divide conquer then loop (Multiple when nested so same time complexity)
 O(nlogn)
@@ -31,7 +31,7 @@ O(nlogn) is time complexity because we take the worst case and O() is worst case
 If it increases exponentially such as Fibonacci, spreading of virus, loop loop and unlimited loop
 O(2^n)
 
-Sorting 
+Sorting //log linear complex sorting like heap sort and merge sort
 O(nlogn) 
 
 Note: Usually the time complexity of an API command is linearly related to the input and/or output size (plus some possible fixed amount). 

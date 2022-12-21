@@ -1,0 +1,360 @@
+Data Structure 
+-used to organize data so it can be processed 
+
+Arrays
+-collection of elements identified by index or key
+Array operation:
+Calculate item index: O (1)
+Inserted or delete item at beginning: O(n) linear (cuz it array needs to move)
+Inserted or delete item at middle: O(n) linear (cuz it array needs to move)
+Inserted or delete item at end: O(1) constant
+
+
+Linked lists
+-They are easier and faster to iterate sequentially than arrays
+-collection of data elements, called nodes
+-contain reference to the next nodes in the list
+-hold whatever data the application needs
+-elements can be easily inserted and removed
+-underlying memory doesn't need to be reorganized 
+-can't do constant time random item access
+-item lookup is linear in time complexity (O (n))
+
+1. size()
+This method returns the number of nodes present in the linked list.
+size() {
+    let count = 0; 
+    let node = this.head;
+    while (node) {
+        count++;
+        node = node.next
+    }
+    return count;
+}
+2. clear()
+This method empties out the list.
+clear() {
+    this.head = null;
+}
+3. getLast()
+This method returns the last node of the linked list.
+getLast() {
+    let lastNode = this.head;
+    if (lastNode) {
+        while (lastNode.next) {
+            lastNode = lastNode.next
+        }
+    }
+    return lastNode
+}
+4. getFirst()
+This method returns the first node of the linked list.
+getFirst() {
+    return this.head;
+}
+
+class Node {
+    // constructor
+    constructor(element) {
+        this.element = element;
+        this.next = null
+    }
+}
+// linkedlist class
+class LinkedList {
+    constructor() {
+        this.head = null;
+        this.size = 0;
+    }
+ 
+    // adds an element at the end
+    // of list
+    add(element) {
+        // creates a new node
+        var node = new Node(element);
+ 
+        // to store current node
+        var current;
+ 
+        // if list is Empty add the
+        // element and make it head
+        if (this.head == null)
+            this.head = node;
+        else {
+            current = this.head;
+ 
+            // iterate to the end of the
+            // list
+            while (current.next) {
+                current = current.next;
+            }
+  
+            // add node
+            current.next = node;
+        }
+        this.size++;
+    }
+ 
+    // insert element at the position index
+    // of the list
+    insertAt(element, index) {
+        if (index < 0 || index > this.size)
+            return console.log("Please enter a valid index.");
+        else {
+            // creates a new node
+            var node = new Node(element);
+            var curr, prev;
+ 
+            curr = this.head;
+ 
+            // add the element to the
+            // first index
+            if (index == 0) {
+                node.next = this.head;
+                this.head = node;
+            } else {
+                curr = this.head;
+                var it = 0;
+                // iterate over the list to find
+                // the position to insert
+                while (it < index) {
+                    it++;
+                    prev = curr;
+                    curr = curr.next;
+                }
+ 
+                // adding an element
+                node.next = curr;
+                prev.next = node;
+            }
+            this.size++;
+        }
+    }
+ 
+    // removes an element from the
+    // specified location
+    removeFrom(index) {
+        if (index < 0 || index >= this.size)
+            return console.log("Please Enter a valid index");
+        else {
+            var curr, prev, it = 0;
+            curr = this.head;
+            prev = curr;
+// deleting first element
+            if (index === 0) {
+                this.head = curr.next;
+            } else {
+                // iterate over the list to the
+                // position to removce an element
+                while (it < index) {
+                    it++;
+                    prev = curr;
+                    curr = curr.next;
+                }
+ 
+                // remove the element
+                prev.next = curr.next;
+            }
+            this.size--;
+ 
+            // return the remove element
+            return curr.element;
+        }
+    }
+ 
+    // removes a given element from the
+    // list
+    removeElement(element) {
+        var current = this.head;
+        var prev = null;
+// iterate over the list
+        while (current != null) {
+            // comparing element with current
+            // element if found then remove the
+            // and return true
+            if (current.element === element) {
+                if (prev == null) {
+                    this.head = current.next;
+                } else {
+                    prev.next = current.next;
+                }
+                this.size--;
+                return current.element;
+            }
+            prev = current;
+            current = current.next;
+        }
+        return -1;
+    }
+ 
+ 
+    // finds the index of element
+    indexOf(element) {
+        var count = 0;
+        var current = this.head;
+ 
+        // iterate over the list
+        while (current != null) {
+            // compare each element of the list
+            // with given element
+            if (current.element === element)
+                return count;
+            count++;
+            current = current.next;
+        }
+// not found
+        return -1;
+    }
+ 
+    // checks the list for empty
+    isEmpty() {
+        return this.size == 0;
+    }
+ 
+    // gives the size of the list
+    size_of_list() {
+        console.log(this.size);
+    }
+ 
+ 
+    // prints the list items
+    printList() {
+        var curr = this.head;
+        var str = "";
+        while (curr) {
+            str += curr.element + " ";
+            curr = curr.next;
+        }
+        console.log(str);
+    }
+ 
+}
+ // creating an object for the
+// Linkedlist class
+var ll = new LinkedList();
+ 
+// testing isEmpty on an empty list
+// returns true
+console.log(ll.isEmpty());
+ 
+// adding element to the list
+ll.add(10);
+ 
+// prints 10
+ll.printList();
+ 
+// returns 1
+console.log(ll.size_of_list());
+ 
+// adding more elements to the list
+ll.add(20);
+ll.add(30);
+ll.add(40);
+ll.add(50);
+ 
+// returns 10 20 30 40 50
+ll.printList();
+// prints 50 from the list
+console.log("is element removed ?" + ll.removeElement(50));
+ 
+// prints 10 20 30 40
+ll.printList();
+ 
+// returns 3
+console.log("Index of 40 " + ll.indexOf(40));
+ 
+// insert 60 at second position
+// ll contains 10 20 60 30 40
+ll.insertAt(60, 2);
+ 
+ll.printList();
+ 
+// returns false
+console.log("is List Empty ? " + ll.isEmpty());
+ 
+// remove 3rd element from the list
+console.log(ll.removeFrom(3));
+ 
+// prints 10 20 60 40
+ll.printList();
+
+
+
+
+Stacks and queues
+Stack: collection that supports push and pop operations
+-the last item pushed is the first one Popped (LIFO)
+Queue: collection that support adding and removing
+-first item added is first item out (FIFO)
+
+Stack
+-expression processing
+-backtracking: browser back stack (using browser and user clicked back)
+Queue
+-order processing (ensure order is process in the order it received)
+-messaging app so message is send correctly
+
+Hash tables
+keys : values mapping are unique
+hash table are typically very fast (faster than array and linked list)
+for small datasets, arrays are usually more efficient
+hash table don't order entries in a predictable way
+
+Creating hash all at once
+let items1 = {"key1" : 1 , "key2" : 2 , "key3" : "three"}
+
+Creating hash one at a time
+let item2 = {}
+items2.key1 = 1
+items2.key2 = 3
+items2["key1"] = "three"
+
+Replace an item on the hash
+item2.key2 = "two"
+
+
+Iterates key and values in hash ( return both, just key or just value )
+
+const population = {
+  male: 4,
+  female: 93,
+  others: 10
+};
+
+// Iterate through the object
+for (const key in population) {
+  if (population.hasOwnProperty(key)) {
+    console.log(`${key}: ${population[key]}`);
+  }
+}
+
+
+const object1 = {
+  a: 'somestring',
+  b: 42
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+
+const population = {
+  male: 4,
+  female: 93,
+  others: 10
+};
+
+let genders = Object.keys(population);
+
+console.log(genders); // ["male","female","others"]
+
+const population = {
+  male: 4,
+  female: 93,
+  others: 10
+};
+
+let numbers = Object.values(population);
+
+console.log(numbers); // [4,93,10]

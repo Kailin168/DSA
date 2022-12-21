@@ -1,0 +1,66 @@
+Binary tree search BTS
+
+every node can only have two children(node) 
+left/right can be null or have a value
+left child node < parents
+right child node > parents
+
+
+
+
+
+                      Data
+              (left)  /  \  (right)
+
+        
+
+                    30
+                    /\
+                 20   40
+                 /\   /\
+                  25 
+
+  If the incoming node is 35 then it need to be place somewhere that it is either < or > than the parents
+  and since 35 is not > than 40 or less than 20 the only spot it can fit is left node of 40
+
+
+                    30
+                    /\
+                 20   40
+                 /\   /\
+                  25 35
+
+if new incoming node is 60 and 70 and since we know it needs to be greater than parents than this is the order where we will most likely put them
+
+                    30
+                  /    \
+                20     40
+               /  \   /   \
+                  25 35   50
+                  /\ /\   / \
+                             60
+                             / \
+                               70
+
+The tree must be sorted 
+and in order to find a number we just need to compare with top node and move it down
+so if the number we are getting is 35
+then we can its larger than 30 so we look at right. this will disregard the whole tree from the left saving time
+then on the 40 node, we know that 35 is less than the parent 40 so we look left. And thats how we find the node we are looking for  
+
+
+                    5
+                  /    \
+                2       7
+               /  \  
+              8   11   
+
+Tree Traversals : visiting every node (finish with everything on the left then the root then whatever's on the right side)
+in order: recursively visit left subtree, visit root, recursively visit right subtree: 8 2 11 5 7 (explores data sequentially)
+pre- order: visit root, recursively visit left subtree, recursively visit right subtree: 5, 2 ,8 ,11 ,7  (explores roots before leaves)
+post- order: recurse left subtree, recurse right subtree, visit root last: 8 11 2 7 5 (explores leaves before roots)
+
+
+BFS Breadth First Search ( O(V+E))
+explore neighbour nodes first, before moving to the next level neighbour
+Adding nodes to the queue until queue is run out.

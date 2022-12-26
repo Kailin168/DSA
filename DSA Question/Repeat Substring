@@ -1,0 +1,16 @@
+var repeatedSubstringPattern = function(s) {
+    for (let size = 1; size <= s.length; size++) {
+        if (s.length%size === 0){
+            const multipleSize = s.length/size
+            const subString = s.substring(0,size)
+            let comparingSubString = ""
+            for (let i = 0; i < multipleSize; i++) {
+                comparingSubString = comparingSubString + subString
+            }
+            if (comparingSubString === s && multipleSize > 1){
+                return true;
+            }
+        }
+    }
+    return false;
+};

@@ -1,0 +1,28 @@
+//Maximum Depth of Binary Tree
+
+var maxDepth = function(root) {
+    if (!root) {
+        return 0
+    };
+    if (root.left || root.right) {
+        let left = maxDepth(root.left);
+        let right = maxDepth(root.right);
+        let newMax = Math.max(left,right);
+        // Compare the root's child side by side and take the biggest one and then the biggest child needs to plus 1 
+        return newMax + 1
+    }
+    return 1;
+    // have to return 1 because if both left and right are null then the +1 is the root layer itself
+};
+
+// shorter code
+
+var maxDepth = function(root) {
+  if (!root) {
+      return 0
+};
+  let left = maxDepth(root.left);
+  let right = maxDepth(root.right);
+  let newMax = Math.max(left,right);
+  return newMax + 1
+};

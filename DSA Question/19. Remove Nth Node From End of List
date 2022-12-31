@@ -1,0 +1,25 @@
+var removeNthFromEnd = function(head, n) {
+    let count = 0;
+    let current = head
+    while (current) {
+        count += 1
+        current = current.next;
+    }
+    let turns = count - n - 1
+    
+    if ( turns < 0 ) {
+        // then you are not moving at all
+        return head.next
+    }
+    
+    let newHead = head
+    
+    for ( i = 0; i < turns; i++) {
+        newHead = newHead.next
+    }
+    
+    if ( newHead.next !== null ) {
+        newHead.next = newHead.next.next
+        } 
+    return head;
+};

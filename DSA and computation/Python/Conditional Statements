@@ -1,0 +1,117 @@
+#conditional statement
+
+raining = input('is it raining? (yes or no)')
+if raining == 'yes':
+  print('you need umbrella')
+
+
+#if Statement (if and then the condition)
+n = input('choose and integer between -10 and 10 and enter it here:')
+#input always return string
+
+n = int(n)
+
+if n < 5:
+  print('the integer is less than 5')
+
+# if you choose something thats not less than 5 then it will not display anything since the statement is not true
+
+#if-else 
+
+def minimum(x,y):
+  if x < y:
+    return x
+  else:
+    return y
+    # if x is not less than y then just return y
+
+#test out this function 
+
+result = minimum(2, 5)
+print(result)
+#2
+
+result = minimum(-2, -5)
+print(result)
+#-5
+
+result = minimum(7, 7)
+print(result)
+#7
+
+result = minimum(3, 3.1)
+print(result)
+#3
+
+#if-elif statement
+raining = input('is it raining? yes or no')
+umbrella = input('do you have umbrella? yes or no')
+
+if raining == 'yes' and umbrella == 'yes':
+  print('dont forget your umbrella')
+elif raining == 'yes' and umbrella == 'no':
+  print('wear water proof jacket when you go out')
+
+
+x = input('enter a number here: ')
+x = float(x)
+
+if x < 2:
+  print('number is less than 2')
+elif x < 6:
+  print('number is less than 6')
+elif x < 8:
+  print('the number is less than 8')
+elif x < 10:
+  print('the number is less than 10')
+
+
+x = 1
+print(float(x))
+#1.0
+
+x = 1.5
+print(int(x))
+#1
+
+
+x = input('enter a number here: ')
+x = float(x)
+
+if x < 2:
+  print('the number is less than 2')
+if x < 6:
+  print('the number is less than 6')
+if x < 8:
+  print('the number is less than 8')
+if x < 10:
+  print('the number is less than 10')
+
+# this will give an redundance answer of printing out all the if as long as it is true
+# the number is less than 2  the number is less than 6  the number is less than 8   the number is less than 10
+
+
+#if - elif - else 
+# input is of absolute value 
+
+
+def abs_val(num):
+  if num < 0:
+    return -1 * num  # return -num
+  elif num == 0:
+    return 0
+  else: 
+    return num
+  
+result = abs_val(-4)
+print(result)
+#4
+
+result = abs_val(0)
+print(result)
+#0
+
+result = abs_val(78.3)
+print(result)
+#78.3
+

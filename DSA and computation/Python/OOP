@@ -1,0 +1,33 @@
+# OOP
+# -every objects has a type
+
+
+# define new objects  {SPOT}
+#   Objects are categorized {DOG}
+#     categories are classes {DOG}{CAT}
+#       Every object is an instance of a class {DOG} - {SPOT}
+
+
+
+class Dog():
+  def _init_(self, name, age):
+    self.name = name
+    self.age = age
+  def bark(self):
+    print('woof woof!')
+  
+
+fido = Dog('Fido', 2)
+
+fido.bark()
+#woof woof!
+
+print(fido.name)
+#fido
+print(fido.age)
+#2
+fido.age += 1
+
+print(fido.age)
+#3
+

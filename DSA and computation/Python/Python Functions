@@ -1,0 +1,65 @@
+def functionName(inputName):
+  body
+
+#example
+
+def addFive(x):
+  print(5+x)
+
+addFive(30)
+
+def square(x):
+  return x * x
+
+result = square(5)
+print(result)
+
+def sumOfSquare(x,y):
+  square1 = x * x
+  square2 = y * y
+  return square1 + square2
+
+result = sumOfSquare(2,3)
+print(result)
+
+def is_it_raining():
+  raining = input("Is it Raining today?")
+  return raining
+
+monday_rain = is_it_raining()
+
+print(monday_rain)
+
+#Modules (reuse code)
+
+import calendar 
+# use all the everything from the calendar modules
+
+cal = calendar.month(2009, 7)
+
+print(cal)
+
+import math
+result = math.sqrt(49)
+print(result)
+
+#should return a float of 7.0 even if you put integer
+
+import random
+number = random.randint(1, 100)
+print(number)
+# inclusive between integer 1 to 100
+
+movies = ["A", "B", "C"]
+
+watch = random.choice(movies)
+print(watch)
+
+# pick something from the sequences
+
+
+cards = ["Ace", "Two", "Three"]
+random.shuffle(cards)
+print(cards)
+
+#same sequence but in random order

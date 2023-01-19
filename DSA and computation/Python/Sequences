@@ -1,0 +1,56 @@
+name = 'brad'
+
+group = ['daniel', 'gloria', 'marvin']
+
+type(name)
+#string
+
+type(group)
+#list or a sequence that stores a collection of data
+
+#List (has order and can be change)
+
+n = 5
+print(n)
+
+listA = [5, 10, 15, 20]
+print(listA)
+#print the same order
+
+type(listA)
+#list
+
+#access item from the list
+
+print(listA[0])
+#5
+
+listA[0] = 150
+# this will change the first item on the list to 150
+print(listA)
+
+listB = [True, 'star', 50, 33.333]
+
+#Tuples : items can not be change and have specific order
+
+child1_birth = ("Julia", "children's Hospital", "New York", "US", "07/05/1999", "05:23")
+child2_birth = ("Austin", "Washington Hospital", "California", "US", "11/07/1998", "16:23")
+
+type(child1_birth)
+#tuple
+
+type(child2_birth)
+#tuple
+
+print(child1_birth)
+print(child2_birth)
+
+#to access child's name
+print(child1_birth[0])
+
+#if you try to change the value then you will get an error cuz tuple can't be change
+
+child1_birth[0] = "sam"
+#TypeError: tuple object does not support change item
+
+

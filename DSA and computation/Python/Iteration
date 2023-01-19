@@ -1,0 +1,55 @@
+# playing Hangman
+#player1 comes up with a word
+#player2 is guessing the word
+#hint: # of vowels in the word
+
+word = 'serendipitous'
+#player1 store the word
+
+vowels = ['a', 'e', 'i', 'o', 'u']
+
+vowelCount = 0
+
+for character in word:
+  if character in vowels:
+    vowelCount += 1
+
+print(vowelCount)
+#6
+
+#iteration - repeating preform a set of instructions 
+#check if character is vowel and if it is then increase count by 1
+
+#FOR LOOP
+
+range(start, stop, step)
+
+for i in range(4):
+  print(i)
+
+# 0 1 2 3
+
+for i in range(1, 8, 2):
+  print(i)
+# 1, 3, 5, 7    start from 1 and end in 8 and skip by 2
+
+vowels = ['a', 'e', 'i', 'o', 'u']
+for v in vowels:
+  print(v)
+
+#a e i o u 
+
+#while loop
+
+
+vowels = ['a', 'e', 'i', 'o', 'u']
+length = len(vowels)
+print(length)
+#5
+
+vowels = ['a', 'e', 'i', 'o', 'u']
+i = 0
+while i < len(vowels):
+  print(vowels[i])
+  i += 1
+

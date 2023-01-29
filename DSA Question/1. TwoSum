@@ -1,0 +1,18 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    
+    const hash = {}
+    
+    for (let i = 0; i < nums.length; i++) {
+        const reminder = target - nums[i]
+        if (hash[reminder] !== undefined) {
+            return [hash[reminder],i];
+            }
+            hash[nums[i]] = i;
+    }
+    return -1-1
+};

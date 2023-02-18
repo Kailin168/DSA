@@ -1,0 +1,6 @@
+System design uses the concepts of computer networking, parallel computing, and distributed systems to make a system that is scalable and great performance. 
+
+Main part of system design:
+Reliable- whether it can handle failure and errors
+Effective- whether it meet all user needs and business requirements
+Maintainable- whether it is flexible and can easily scale up or down. 

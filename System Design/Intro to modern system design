@@ -4,3 +4,55 @@ Main part of system design:
 Reliable- whether it can handle failure and errors
 Effective- whether it meet all user needs and business requirements
 Maintainable- whether it is flexible and can easily scale up or down. 
+
+RPC- remote procedure calls
+Use widely in distributed System
+Like a middle man that handle the message and encrypt if needed
+
+Consistency 
+Strongest Consistency - strict consistency/ linearizability
+sequential consistency
+casual consistency 
+Weakest Consistency - Eventual Consistency 
+
+Eventual Consistency - no strict ordering and reads to return the latest write
+read request will eventually returned but wont promise that it is the latest value 
+however, it will eventually reach its final state
+- hight availability 
+- Domain name system is highly available system tha enables name lookups to millions of devices across the internet.
+
+
+Causal Consistency 
+-categorizing operations into dependent and independent operations
+dependent operation is also called the causally related operations 
+-doesn't ensure operation that is not causally related
+-weak but better than eventual consistency
+ie: like comment and replies. you want to have comment before replies
+
+
+Sequential consistency
+-stronger than casual 
+-preserves the ordering specified by each client's programs
+-but do not ensure that writes are visible instantly or in the same order as they occurred according to some global clock
+ie: social network app, don't care if the posts are appearing in the correct order. but the will have some sort of ordering and their post will be ordered as they are submitted
+
+Strict consistency aka linearizability
+-strongest
+-read request from any replicas will get the latest write value. once client receive the write has been performed then client can read the value 
+ie: changing pW if we suspect something 
+
+
+Failure level
+Fail stop- node in the distributed system halts permanently. However, the other nodes can still detect that node by communicating with it.
+Crash- node in the distributed system halts silently, and the other nodes can’t detect that the node has stopped working.
+Omission failures - If node fails to respond to the incoming request then its send omission failure or if the node fails to receive the request and can't acknowledge it then it's receive omission failure.
+Temporal failures - node generate correct results but it is too late to be useful
+byzantine failures - node exhibits random behavior like transmitting arbitrary messages at arbitrary times, producing wrong results, or stopping midway. This mostly happens due to an attack by a malicious entity or a software bug. A byzantine failure is the most challenging type of failure to deal with.
+
+
+Availability
+-percentage of time that some service is accessible to clients and is operated normally 
+(total time- amount of time service was down)/ total time  and * 100 
+that gives you the percentage of the service's availability 
+
+

@@ -54,5 +54,23 @@ Availability
 -percentage of time that some service is accessible to clients and is operated normally 
 (total time- amount of time service was down)/ total time  and * 100 
 that gives you the percentage of the service's availability 
+- these are unintended down time like cyber attacks.
+
+Reliability 
+-mean tune between failures (MTBF)
+-mean time to repair (MTTR)
+Availability is depended on Reliability 
 
 
+Scalability
+-ability to handle increase amount without compromising performance 
+** Vertical scalability - scaling up by providing additional capability to the device like CPU and RAM (so Hardware and higher cost)
+** Horizontal scalability - scaling out is increase number of machine in the network. (make sure all the machine act as if they are working as one)
+
+Maintainability 
+- make sure it run smoothly even where there is a problem
+- simple code to easier to maintain
+- add and integrate new features without any hassle
+
+Fault Tolerance 
+- if a system is able to run even when one or more of the components fails 

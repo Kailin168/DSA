@@ -1,0 +1,36 @@
+Building Block of system design
+
+1. Domain name system
+  how to design hierarchical and distributed naming systems for computer connected to the internet via different protocols
+2. Load Balancers
+  fairly distribute incoming clients requests among a pool of available servers. it also reduces load and can bypass failed servers
+3. Databases
+  enable to store, retrieve and modify and delete data
+4. Key-value store
+  store data with key value pair and achieving scalability, durability, configurability 
+5. Content delivery network (CDN)
+  design CDN that's used to keep viral content such as video, image, audio, and webpages. deliver content without reducing latency and burden on the data centers
+6. Sequencer
+  design of a unique IDs generator with a major focus on maintaining causality.
+7. Service monitoring 
+  help analyze the system and alert the stakeholders if a problem occurs. get early warning system so that system admin can act ahead. build one monitor system for client and one for server side.
+8. Distributed caching
+  caching system where multiple cache servers coordinate to store frequently accessed data
+9. Distributed messaging Queue 
+  queue with multiple users. These are then used for interacting between producers and consumers.
+10. Publish-subscribe system
+  design asynchronous service to service communication method called a pub sub system. popular in data processing systems
+11. Rate limiter
+  a system that slows down incoming requests based on a pre set limit. this will serve as a defense layer 
+12. Blob store
+  storage solution for unstructured data for example multimedia files
+13. Distributed Search
+  search system that take what the user want to search and find it in seconds. Think crawl, index and search
+14. Distributed Logging
+  design a system that allows services in a distributed system to log their events more efficiently 
+15. Distributed Task Scheduling 
+  scheduler system that mediates between tasks and resources. 
+16. shared counters
+  efficient distributed counting system to deal with millions of concurrent read/write requests like popular tweets
+
+

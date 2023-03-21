@@ -1,4 +1,6 @@
 # DSA
-Data Structure and Algorithms 
+Notes on Data Structure and Algorithms 
+Practice and solutions for Leetcode questions
+
 
 

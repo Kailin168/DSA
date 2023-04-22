@@ -4,7 +4,11 @@ SQL is relational
 Table
 Vertical
 Uses Key: Foreign, Primary, Unique
+Use case: banking and ecommerce 
+SQLite
+
 
 NoSQL is non relational
 Documents and JSON
 Horizontal 
+MongoDB

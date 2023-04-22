@@ -5,7 +5,7 @@ Table
 Vertical
 Uses Key: Foreign, Primary, Unique
 Use case: banking and ecommerce 
-SQLite
+SQLite and postgres
 
 
 NoSQL is non relational

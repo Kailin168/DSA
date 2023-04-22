@@ -4,8 +4,8 @@ SQL is relational
 Table
 Vertical
 Uses Key: Foreign, Primary, Unique
-Use case: banking and ecommerce 
-SQLite and postgres
+Use case: banking and e-commerce 
+SQLite and PostgreSQL
 
 
 NoSQL is non relational

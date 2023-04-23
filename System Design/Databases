@@ -1,14 +1,17 @@
 SQL vs NoSQL
 
 SQL is relational 
-Table
-Vertical
+For structured data
+Table-based
+Vertical scalable
 Uses Key: Foreign, Primary, Unique
 Use case: banking and e-commerce 
 SQLite and PostgreSQL
 
 
 NoSQL is non relational
-Documents and JSON
-Horizontal 
+For un-structured data
+NoSQL databases are document, key-value, graph, or wide-column stores
+NoSQL is better for unstructured data like documents or JSON
+Horizontal scalable
 MongoDB

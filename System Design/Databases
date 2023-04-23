@@ -4,13 +4,13 @@ SQL is relational
 For structured data
 Table-based
 Vertical scalable
-Uses Key: Foreign, Primary, Unique
+Uses Foreign key, Primary key, Unique key
 Use case: banking and e-commerce 
 SQLite and PostgreSQL
 
 
 NoSQL is non relational
-For un-structured data
+For semi-structured, structured, and un-structured data
 NoSQL databases are document, key-value, graph, or wide-column stores
 NoSQL is better for unstructured data like documents or JSON
 Horizontal scalable

@@ -5,7 +5,7 @@ Reliable- whether it can handle failure and errors
 Effective- whether it meet all user needs and business requirements
 Maintainable- whether it is flexible and can easily scale up or down. 
 
-RPC- remote procedure calls
+RPC - remote procedure calls
 Use widely in distributed System
 Like a middle man that handle the message and encrypt if needed
 

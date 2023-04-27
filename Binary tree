@@ -62,5 +62,5 @@ post- order: recurse left subtree, recurse right subtree, visit root last: 8 11 
 
 
 BFS Breadth First Search ( O(V+E))
-explore neighbour nodes first, before moving to the next level neighbour
+explore neighbor nodes first, before moving to the next level neighbor
 Adding nodes to the queue until queue is run out.

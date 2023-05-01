@@ -3,7 +3,13 @@ Abstraction is a technique that helps us simplify things by hiding unnecessary d
 
 
 
+1. Database abstraction transactions 
 Database abstraction transactions simplify the process of handling data when multiple users are reading, writing, or changing it at the same time. It provides a straightforward way to either save the changes if everything goes well or cancel them if there's a problem. In both cases, the data transitions from one reliable state to another. Transactions allow users to focus on their main tasks instead of worrying about complicated issues that can arise when data is being modified concurrently.
 
 
-Abstractions in distributed systems
+2. Abstractions in distributed systems
+Abstractions in distributed systems make life easier for engineers by simplifying their work and removing the need to deal with the underlying complexity of the systems. 
+
+With the increasing popularity of distributed services provided by major companies like Amazon AWS, Google Cloud, and Microsoft Azure, the concept of abstraction in distributed systems has gained traction. Each service offers different levels of agreement, but the important thing is that the intricate details of implementing these distributed services are hidden from users. This allows developers to focus on building their applications without getting caught up in the complexities of the distributed systems, which can be very challenging to understand.
+
+In today's world, applications can't function properly if they rely on a single node, especially with a rapidly growing number of users. Abstractions in distributed systems enable engineers to easily transition to distributed systems, which helps them scale their applications to meet the demands of a larger user base.

@@ -1,0 +1,9 @@
+What is abstraction?
+Abstraction is a technique that helps us simplify things by hiding unnecessary details. It allows us to focus on the main ideas and goals without getting lost in the complexities. By using abstraction, we can get a clearer and more general understanding of a concept or problem. Think of it like looking at a simplified illustration that represents a complex idea. It helps us grasp the essence without getting overwhelmed by the intricacies.
+
+
+
+Database abstraction transactions simplify the process of handling data when multiple users are reading, writing, or changing it at the same time. It provides a straightforward way to either save the changes if everything goes well or cancel them if there's a problem. In both cases, the data transitions from one reliable state to another. Transactions allow users to focus on their main tasks instead of worrying about complicated issues that can arise when data is being modified concurrently.
+
+
+Abstractions in distributed systems

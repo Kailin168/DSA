@@ -15,3 +15,5 @@ With the increasing popularity of distributed services provided by major compani
 In today's world, applications can't function properly if they rely on a single node, especially with a rapidly growing number of users. Abstractions in distributed systems enable engineers to easily transition to distributed systems, which helps them scale their applications to meet the demands of a larger user base.
 
 Remote Procedure Calls
+Remote procedure calls (RPCs) provide an abstraction of a local procedure call to the developers by hiding the complexities of packing and sending function arguments to the remote server, receiving the return values, and managing any network retries.
+

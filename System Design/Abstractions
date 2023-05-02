@@ -20,3 +20,10 @@ Remote procedure calls (RPCs) provide an abstraction of a local procedure call t
 Spectrum of Consistency Models
 What is consistency?
 In distributed systems, consistency may mean many things. One is that each replica node has the same view of data at a given point in time. The other is that each read request gets the value of the recent write. These are not the only definitions of consistency, since there are many forms of consistency. Normally, consistency models provide us with abstractions to reason about the correctness of a distributed system doing concurrent data reads, writes, and mutations.
+
+
+The two ends of the consistency spectrum are:
+
+Strongest consistency
+Weakest consistency
+

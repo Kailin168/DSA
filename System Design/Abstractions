@@ -17,3 +17,4 @@ In today's world, applications can't function properly if they rely on a single 
 Remote Procedure Calls
 Remote procedure calls (RPCs) provide an abstraction of a local procedure call to the developers by hiding the complexities of packing and sending function arguments to the remote server, receiving the return values, and managing any network retries.
 
+Spectrum of Consistency Models

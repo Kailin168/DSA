@@ -29,6 +29,20 @@ Weakest consistency
 
 
 Type of Consistency:
+Summary:
 
+Consistency models define how data is updated and read in distributed systems. Here are the main types of consistency models:
+
+1. Eventual Consistency: This is the weakest consistency model where replicas may temporarily have different values but will eventually converge. It is suitable for applications that don't require strict ordering or the latest data.
+
+2. Causal Consistency: This model preserves the order of causally-related operations, but operations that are not causally related can be seen in different orders. It is used to prevent non-intuitive behaviors and is commonly used in systems like commenting systems.
+
+3. Sequential Consistency: This model preserves the order specified by each client's program. However, it doesn't guarantee instant visibility or the same order of writes according to a global clock. It is used in applications where order matters, such as social networking posts.
+
+4. Strict Consistency (Linearizability): This is the strongest consistency model where all replicas return the latest write value, and reads reflect the effects of all prior writes. Achieving strict consistency is challenging in distributed systems but necessary for critical operations like updating passwords.
+
+Each consistency model has its trade-offs in terms of performance and availability. Strong consistency models may sacrifice performance and availability for data integrity, while weaker models prioritize performance and availability but may result in temporary inconsistencies.
+
+It's important for application programmers to choose the appropriate consistency model based on their specific requirements and trade-offs.
 
 

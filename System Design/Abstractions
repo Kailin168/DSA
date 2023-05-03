@@ -29,8 +29,6 @@ Weakest consistency
 
 
 Type of Consistency:
-Summary:
-
 Consistency models define how data is updated and read in distributed systems. Here are the main types of consistency models:
 
 1. Eventual Consistency: This is the weakest consistency model where replicas may temporarily have different values but will eventually converge. It is suitable for applications that don't require strict ordering or the latest data.

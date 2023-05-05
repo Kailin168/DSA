@@ -47,7 +47,7 @@ The Spectrum of Failure Models
 
 Failures are common in distributed systems and can occur in different ways. Understanding failure models helps us analyze their impact and find ways to handle them.
 
-Here's a simplified explanation of different failure models:
+Different failure models:
 
 1. Fail-stop: A node in the system stops working permanently, but other nodes can still detect its failure by communicating with it. It's the easiest type of failure to deal with.
 

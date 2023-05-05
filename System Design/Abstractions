@@ -44,8 +44,6 @@ Each consistency model has its trade-offs in terms of performance and availabili
 It's important for application programmers to choose the appropriate consistency model based on their specific requirements and trade-offs.
 
 
-
-
 The Spectrum of Failure Models
 
 Failures are common in distributed systems and can occur in different ways. Understanding failure models helps us analyze their impact and find ways to handle them.

@@ -43,4 +43,6 @@ Each consistency model has its trade-offs in terms of performance and availabili
 
 It's important for application programmers to choose the appropriate consistency model based on their specific requirements and trade-offs.
 
+The Spectrum of Failure Models
+
 

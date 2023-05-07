@@ -1,0 +1,6 @@
+
+Availability
+Learn about availability, how to measure it, and its importance.
+
+- Availability refers to the amount of time that a service or infrastructure is accessible and operating normally for its clients. It is measured as a percentage, where a higher percentage means better availability. For example, a service with 100% availability operates normally all the time. We measure availability in nines, which represent the amount of downtime allowed per year. The more nines a service has, the less downtime it experiences. Service providers may measure availability differently, so it's important to understand how a specific provider calculates their availability numbers.
+

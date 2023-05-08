@@ -11,6 +11,8 @@ Reliability and availability are important metrics to measure service compliance
 
 We can have situations where both reliability and availability are low or high, and the ideal situation is when both are high.
 
+Scalability 
+Learn about Scalability, how to measure it, and its importance.
 Scalability refers to a system's ability to handle more work without sacrificing performance. There are different types of workload, such as request and data workload, and different dimensions of scalability, including size, administrative, and geographical.
 
 There are two ways to implement scalability: vertical and horizontal scaling. Vertical scaling involves adding more resources (e.g., CPU, RAM) to an existing device, while horizontal scaling involves adding more machines to the network. Vertical scaling is more expensive and has limitations, while horizontal scaling is cheaper and more flexible.

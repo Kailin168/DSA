@@ -1,18 +1,18 @@
 
 Availability
 Learn about availability, how to measure it, and its importance.
-- Availability refers to the amount of time that a service or infrastructure is accessible and operating normally for its clients. It is measured as a percentage, where a higher percentage means better availability. For example, a service with 100% availability operates normally all the time. We measure availability in nines, which represent the amount of downtime allowed per year. The more nines a service has, the less downtime it experiences. Service providers may measure availability differently, so it's important to understand how a specific provider calculates their availability numbers.
+  Availability refers to the amount of time that a service or infrastructure is accessible and operating normally for its clients. It is measured as a percentage, where a higher percentage means better availability. For example, a service with 100% availability operates normally all the time. We measure availability in nines, which represent the amount of downtime allowed per year. The more nines a service has, the less downtime it experiences. Service providers may measure availability differently, so it's important to understand how a specific provider calculates their availability numbers.
 
 Reliability
 Learn about reliability, how to measure it, and its importance.
-- Reliability is the likelihood that a service will perform its functions for a certain amount of time. We use mean time between failures (MTBF) and mean time to repair (MTTR) to measure reliability. MTBF measures how long a service can run without failing, while MTTR measures how long it takes to fix a failure. We want a higher MTBF and a lower MTTR.
+  Reliability is the likelihood that a service will perform its functions for a certain amount of time. We use mean time between failures (MTBF) and mean time to repair (MTTR) to measure reliability. MTBF measures how long a service can run without failing, while MTTR measures how long it takes to fix a failure. We want a higher MTBF and a lower MTTR.
 
-Reliability and availability are important metrics to measure service compliance with service level objectives. Availability measures how much time a service is accessible to clients, while reliability measures the frequency and impact of failures. They are related, but availability is dependent on reliability.
+  Reliability and availability are important metrics to measure service compliance with service level objectives. Availability measures how much time a service is accessible to clients, while reliability measures the frequency and impact of failures. They are related, but availability is dependent on reliability.
 
-We can have situations where both reliability and availability are low or high, and the ideal situation is when both are high.
+  We can have situations where both reliability and availability are low or high, and the ideal situation is when both are high.
 
 Scalability 
 Learn about Scalability, how to measure it, and its importance.
-Scalability refers to a system's ability to handle more work without sacrificing performance. There are different types of workload, such as request and data workload, and different dimensions of scalability, including size, administrative, and geographical.
+  Scalability refers to a system's ability to handle more work without sacrificing performance. There are different types of workload, such as request and data workload, and different dimensions of scalability, including size, administrative, and geographical.
 
-There are two ways to implement scalability: vertical and horizontal scaling. Vertical scaling involves adding more resources (e.g., CPU, RAM) to an existing device, while horizontal scaling involves adding more machines to the network. Vertical scaling is more expensive and has limitations, while horizontal scaling is cheaper and more flexible.
+  There are two ways to implement scalability: vertical and horizontal scaling. Vertical scaling involves adding more resources (e.g., CPU, RAM) to an existing device, while horizontal scaling involves adding more machines to the network. Vertical scaling is more expensive and has limitations, while horizontal scaling is cheaper and more flexible.

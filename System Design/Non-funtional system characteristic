@@ -20,3 +20,8 @@ Learn about Scalability, how to measure it, and its importance.
 
 Maintainability
 Learn about maintainability, how to measure it, and its relationship with reliability.
+  Maintainability refers to the ability of a system to be easily maintained and updated after it is built. This includes tasks such as fixing bugs, adding new features, and keeping the system up to date. Three important aspects of maintainability are operability, lucidity, and modifiability. Operability refers to the ease with which the system can continue to operate smoothly and recover from faults. Lucidity refers to the simplicity of the code, which makes it easier to understand and maintain. Modifiability refers to the system's ability to integrate new features without difficulty.
+
+Maintainability is measured using the probability that the system will restore its functions within a specified time of fault occurrence, known as M. The metric used to measure M is the mean time to repair (MTTR), which is the average amount of time required to repair and restore a failed component. The goal is to have a low MTTR value.
+
+Maintainability is closely related to reliability, which refers to both the time-to-repair and the time-to-failure. Combining maintainability and reliability analysis can provide insights into availability, downtime, and uptime.

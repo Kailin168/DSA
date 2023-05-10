@@ -25,3 +25,7 @@ Learn about maintainability, how to measure it, and its relationship with reliab
   Maintainability is measured using the probability that the system will restore its functions within a specified time of fault occurrence, known as M. The metric used to measure M is the mean time to repair (MTTR), which is the average amount of time required to repair and restore a failed component. The goal is to have a low MTTR value.
 
   Maintainability is closely related to reliability, which refers to both the time-to-repair and the time-to-failure. Combining maintainability and reliability analysis can provide insights into availability, downtime, and uptime.
+
+Fault Tolerance
+Learn about fault tolerance, how to measure it, and its importance.
+  Fault tolerance refers to a system's ability to keep functioning even if some of its components fail. This is important for large-scale applications that use many servers and databases to serve billions of users and store huge amounts of data. Fault tolerance techniques include replication, where multiple copies of data are created and updated regularly for consistency, and checkpointing, which saves the system's state at regular intervals to allow for quick recovery in case of failure. These techniques require a trade-off between availability and consistency, and failure to maintain consistency can lead to data inconsistency problems.

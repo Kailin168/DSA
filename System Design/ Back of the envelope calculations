@@ -1,1 +1,10 @@
-Why do we use back-of-the-envelope calculations?#
+Why do we use back-of-the-envelope calculations?
+  What is the difference between web servers and application servers?
+
+  Web servers and application servers are both types of servers that can be used in a data center to handle different workloads. The difference between them is somewhat fuzzy, but in general, web servers serve static content to clients, such as web browsers, while application servers provide dynamic content. 
+
+Web servers are the first point of contact after load balancers and are responsible for handling API calls from clients. They require good computational resources, but the memory and storage resources can be small to medium, depending on the service offered. For example, Facebook has used a web server with 32 GB of RAM and 500 GB of storage space.
+
+Application servers run the core application software and business logic. They primarily provide dynamic content and can require extensive computational and storage resources, which can be volatile and non-volatile. Facebook has used application servers with a RAM of up to 256 GB and two types of storage (traditional rotating disks and flash) with a capacity of up to 6.5 TB. 
+
+Overall, web servers and application servers are designed to handle different tasks in a distributed system, with web servers being responsible for handling incoming requests and application servers running the core application software.

@@ -7,3 +7,13 @@ Introduction to Domain Name System (DNS): how domain names get translated to IP 
   Instead of typing an IP address to visit a website, we can simply enter the domain name, and DNS will look up the corresponding IP address for us. It simplifies the process and makes it easier for humans to access websites without having to remember complex IP addresses.
 
 
+DNS (Domain Name System) is like the Internet's phone book. It translates human-friendly domain names (like educative.io) into machine-readable IP addresses (like 104.18.2.119). When a user enters a domain name in their browser, the browser asks the DNS infrastructure to find the corresponding IP address. Once the IP address is obtained, the user's request is sent to the correct web server.
+
+Key points about DNS:
+
+- DNS is not a single server, but a complete infrastructure with multiple servers called name servers.
+- The DNS database stores domain name to IP address mappings as resource records (RRs). RRs contain information like the type, name, and value of the mapping.
+- DNS uses caching to reduce latency by storing frequently used mappings.
+- DNS operates in a hierarchical structure, which allows it to handle the increasing size and query load of the Internet.
+
+In the next lesson, we'll explore the hierarchical structure of DNS and how it manages the entire database.

@@ -1,1 +1,9 @@
 Introduction to Domain Name System (DNS): how domain names get translated to IP addresses through DNS.
+
+  To understand the origins of DNS (Domain Name System), let's use the analogy of a mobile phone. Just like each user has a unique phone number, computers on the internet are identified by IP addresses. However, remembering IP addresses can be difficult, just like trying to remember all the phone numbers of our contacts.
+
+  To solve this problem, we use a phone book to store and retrieve phone numbers. Similarly, DNS acts as the internet's phone book. It maintains a repository of mappings between domain names (e.g., educative.io) and their corresponding IP addresses (e.g., 104.18.2.119).
+
+  Instead of typing an IP address to visit a website, we can simply enter the domain name, and DNS will look up the corresponding IP address for us. It simplifies the process and makes it easier for humans to access websites without having to remember complex IP addresses.
+
+

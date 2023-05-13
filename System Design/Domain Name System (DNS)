@@ -16,4 +16,14 @@ Key points about DNS:
 - DNS uses caching to reduce latency by storing frequently used mappings.
 - DNS operates in a hierarchical structure, which allows it to handle the increasing size and query load of the Internet.
 
-In the next lesson, we'll explore the hierarchical structure of DNS and how it manages the entire database.
+
+
+
+How the Domain Name System Works
+DNS Hierarchy:
+
+DNS is not a single server but a hierarchical infrastructure with different types of servers.
+DNS resolvers are servers that initiate queries and forward requests to other DNS servers. They can also cache DNS mappings.
+Root-level name servers receive requests from local servers and maintain servers for top-level domains (TLDs) like .com, .edu, etc.
+TLD name servers hold the IP addresses of authoritative name servers for specific domains.
+Authoritative name servers are owned by organizations and provide IP addresses for their web or application servers.

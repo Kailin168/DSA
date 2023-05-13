@@ -36,3 +36,15 @@ Caching in DNS:
   Caching involves temporarily storing frequently requested resource records to reduce response time and network traffic.
   Caching can occur in browsers, operating systems, local name servers, and ISP DNS resolvers.
   Caching helps reduce the load on the DNS infrastructure and can be beneficial even when no cache is available for a specific query.
+
+DNS as a Distributed System:
+  DNS itself is a distributed system with advantages such as avoiding single points of failure, low query latency, and flexibility during maintenance or server issues.
+  There are 13 logical root name servers managed by 12 organizations, spread across the globe.
+  DNS is highly scalable due to its hierarchical structure, with replicated instances of root-level servers and the involvement of TLD and authoritative servers.
+
+Scalability, Reliability, and Consistency:
+  DNS is highly scalable due to its hierarchical structure, dividing the workload among different servers.
+  DNS achieves reliability through caching, server replication, and the use of UDP for faster performance.
+  DNS compromises strong consistency for high performance, providing eventual consistency and updating records lazily across replicated servers.
+  The time it takes for updates to propagate depends on the DNS infrastructure, update size, and the part of the DNS tree being updated.
+

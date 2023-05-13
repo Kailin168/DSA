@@ -31,3 +31,8 @@ DNS Query Resolution:
   DNS queries can be performed iteratively or recursively.
   In iterative resolution, the local server directly requests the root, TLD, and authoritative servers for the IP address.
   In recursive resolution, the end user requests the local server, which then requests the root servers and forwards the request to other servers.
+
+Caching in DNS:
+  Caching involves temporarily storing frequently requested resource records to reduce response time and network traffic.
+  Caching can occur in browsers, operating systems, local name servers, and ISP DNS resolvers.
+  Caching helps reduce the load on the DNS infrastructure and can be beneficial even when no cache is available for a specific query.

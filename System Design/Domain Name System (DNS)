@@ -48,3 +48,4 @@ Scalability, Reliability, and Consistency:
   DNS compromises strong consistency for high performance, providing eventual consistency and updating records lazily across replicated servers.
   The time it takes for updates to propagate depends on the DNS infrastructure, update size, and the part of the DNS tree being updated.
 
+It is important to note that some slides and specific examples may not be fully conveyed due to the text-based nature of this format.

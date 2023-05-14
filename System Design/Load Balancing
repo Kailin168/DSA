@@ -7,7 +7,28 @@ Performance: Load balancers can forward requests to servers with a lesser load s
 
 
 
-Global and Local Load Balancing
+Global Server Load Balancing (GSLB):
+
+- GSLB ensures that incoming traffic is intelligently distributed to different data centers.
+- It makes forwarding decisions based on factors like users' geographic locations, server availability, and data center health.
+- GSLB can reroute traffic to alternative data centers in case of failures or high load.
+- It can be implemented on-premises or obtained through Load Balancing as a Service (LBaaS).
+
+Load Balancing in DNS:
+
+- DNS can perform GSLB by responding with multiple IP addresses for a DNS query.
+- DNS uses a simple technique of reordering the list of IP addresses in each response to distribute the load among different data centers.
+- Round-robin is commonly used in DNS for load balancing, but it has limitations such as uneven load distribution and slow recovery from failures.
+- DNS's small packet size and limited control over client behavior require additional layers of load balancing.
+
+Application Delivery Controllers (ADCs):
+
+- ADCs are local load balancers deployed within a data center.
+- They act as reverse proxies and divide incoming requests among available servers.
+- ADCs use a virtual IP address (VIP) to seamlessly connect incoming client requests to the appropriate server.
+- ADCs help solve some of the limitations of DNS-based load balancing, such as control over client behavior, determining the closest server, and faster recovery from failures.
+
+Note: While DNS-based load balancing is a form of GSLB, other methods like ADCs and cloud-based load balancing are more advanced options for GSLB.
 
 
 Advanced Details of Load Balancers

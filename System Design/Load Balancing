@@ -32,3 +32,14 @@ Note: While DNS-based load balancing is a form of GSLB, other methods like ADCs 
 
 
 Advanced Details of Load Balancers
+  Load balancers distribute client requests to servers based on different algorithms. Some common algorithms include round-robin scheduling, weighted round-robin, least connections, least response time, IP hash, and URL hash. Load balancers can be static or dynamic, with dynamic algorithms considering the current state of servers for better forwarding decisions.
+
+  Load balancers can be stateful or stateless. Stateful load balancing maintains session information between clients and servers, while stateless load balancing is faster and lighter but may require additional state for routing requests correctly.
+
+  There are two types of load balancers based on OSI layers: Layer 4 load balancers that operate on transport protocols like TCP and UDP, and Layer 7 load balancers that use application layer protocols for application-aware forwarding decisions.
+
+  Load balancing is typically implemented using multiple layers of load balancers, including tier-0 (DNS), tier-1 (ECMP routers), tier-2 (layer 4 load balancers), and tier-3 (layer 7 load balancers).
+
+  Load balancers can be implemented as hardware devices, software solutions on commodity hardware, or cloud-based services (LBaaS).
+
+  Overall, load balancers are essential for distributing traffic, maintaining session information, improving performance, and ensuring high availability in enterprise-level services.  

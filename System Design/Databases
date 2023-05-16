@@ -48,3 +48,4 @@ Synchronous versus asynchronous replication
   Asynchronous replication doesn't wait for acknowledgments, allowing the primary node to continue its work even if secondary nodes are down. However, if the primary node fails, unwritten data can be lost.
 
   This presents a trade-off between data consistency and availability when system components can fail.
+

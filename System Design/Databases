@@ -37,3 +37,8 @@ Choosing the right database depends on factors such as data structure, ACID requ
 
 Data is a valuable asset for organizations as it provides crucial insights and drives the entire business. Organizations must securely store and retrieve client data while ensuring timely access under varying conditions. To successfully run an online business, the data store needs to possess characteristics such as fault tolerance, scalability, and high performance. Achieving these characteristics on a single node can be challenging or even impossible.
 
+Replication 
+  Replication is the process of maintaining multiple copies of data across various nodes to achieve availability, scalability, and performance. Replication is necessary because achieving these characteristics on a single node is challenging or impossible. However, replication comes with its complexities.
+
+  Some complexities in replication include ensuring consistency among the copies, handling failed replica nodes, choosing between synchronous and asynchronous replication, managing replication lag in asynchronous replication, handling concurrent writes, and determining the appropriate consistency model for end programmers.
+

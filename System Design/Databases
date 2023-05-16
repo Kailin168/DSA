@@ -33,3 +33,7 @@ Relational databases store data in structured tables and use SQL for data manipu
 Non-relational (NoSQL) databases are designed for managing unstructured and semi-structured data with high scalability and flexibility. They offer simpler design, horizontal scaling, availability, and support for diverse data models. NoSQL databases include key-value databases (e.g., DynamoDB, Redis), document databases (e.g., MongoDB, Firestore), graph databases (e.g., Neo4J, OrientDB), and columnar databases (e.g., Cassandra, HBase).
 
 Choosing the right database depends on factors such as data structure, ACID requirements, data size, and scalability needs. The distinctions between NoSQL and relational databases have blurred over time, with some NoSQL databases supporting SQL-like queries and ACID properties.
+
+
+Data is a valuable asset for organizations as it provides crucial insights and drives the entire business. Organizations must securely store and retrieve client data while ensuring timely access under varying conditions. To successfully run an online business, the data store needs to possess characteristics such as fault tolerance, scalability, and high performance. Achieving these characteristics on a single node can be challenging or even impossible.
+

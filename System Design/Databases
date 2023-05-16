@@ -42,3 +42,9 @@ Replication
 
   Some complexities in replication include ensuring consistency among the copies, handling failed replica nodes, choosing between synchronous and asynchronous replication, managing replication lag in asynchronous replication, handling concurrent writes, and determining the appropriate consistency model for end programmers.
 
+Synchronous versus asynchronous replication
+  Synchronous replication waits for acknowledgments from secondary nodes before reporting success to the client, ensuring all nodes are up to date. However, if a secondary node fails to acknowledge, it causes high latency.
+
+  Asynchronous replication doesn't wait for acknowledgments, allowing the primary node to continue its work even if secondary nodes are down. However, if the primary node fails, unwritten data can be lost.
+
+  This presents a trade-off between data consistency and availability when system components can fail.

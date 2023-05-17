@@ -1,12 +1,12 @@
 Introduction to Databases:
 
-Databases are organized collections of data that make it easier to store, retrieve, modify, and delete data. They are essential for managing large amounts of data and have various advantages over file storage. Unlike files, databases offer concurrent management, grant different access rights to users, and allow for scalability and efficient search capabilities.
+  Databases are organized collections of data that make it easier to store, retrieve, modify, and delete data. They are essential for managing large amounts of data and have various advantages over file storage. Unlike files, databases offer concurrent management, grant different access rights to users, and allow for scalability and efficient search capabilities.
 
-There are two basic types of databases: SQL (relational databases) and NoSQL (non-relational databases). SQL databases have predetermined schemas and are suitable for structured data like contact information, while NoSQL databases are unstructured, dynamic, and suitable for storing diverse data types like user preferences.
+  There are two basic types of databases: SQL (relational databases) and NoSQL (non-relational databases). SQL databases have predetermined schemas and are suitable for structured data like contact information, while NoSQL databases are unstructured, dynamic, and suitable for storing diverse data types like user preferences.
 
-Advantages of using databases include managing large data, ensuring data consistency and integrity, enabling easy data updates, providing security and availability, and offering scalability through replication and partitioning.
+  Advantages of using databases include managing large data, ensuring data consistency and integrity, enabling easy data updates, providing security and availability, and offering scalability through replication and partitioning.
 
-To delve deeper into databases, the chapter is divided into four lessons: Types of Databases, Data Replication, Data Partitioning, and Cost-benefit analysis. These lessons cover different database types, replication models, partitioning models, and the best sharding approach for different databases. Let's start by understanding the different types of databases and their preferred use cases.
+  To delve deeper into databases, the chapter is divided into four lessons: Types of Databases, Data Replication, Data Partitioning, and Cost-benefit analysis. These lessons cover different database types, replication models, partitioning models, and the best sharding approach for different databases. Let's start by understanding the different types of databases and their preferred use cases.
 
 SQL vs NoSQL
 

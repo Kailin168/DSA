@@ -34,7 +34,6 @@ Non-relational (NoSQL) databases are designed for managing unstructured and semi
 
 Choosing the right database depends on factors such as data structure, ACID requirements, data size, and scalability needs. The distinctions between NoSQL and relational databases have blurred over time, with some NoSQL databases supporting SQL-like queries and ACID properties.
 
-
 Data is a valuable asset for organizations as it provides crucial insights and drives the entire business. Organizations must securely store and retrieve client data while ensuring timely access under varying conditions. To successfully run an online business, the data store needs to possess characteristics such as fault tolerance, scalability, and high performance. Achieving these characteristics on a single node can be challenging or even impossible.
 
 Replication 

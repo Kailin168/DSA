@@ -69,3 +69,12 @@ There are two common ways to shard or partition data:
    - Key-range based sharding: In this approach, each partition is assigned a continuous range of keys. For example, a partition may be assigned a range of customer IDs. This allows range queries to be performed efficiently using the partitioning keys. Tables with foreign key relationships can also be horizontally partitioned using the same partition key on all related tables.
    
    - Hash-based sharding: Hash-based sharding involves applying a hash-like function to a specific attribute or key, which produces different values based on the attribute's value. The hash value is then used to determine the partition in which the data should be stored. This technique ensures that keys are uniformly distributed across the partitions. However, it doesn't support range queries since keys are spread across all partitions.
+
+
+Rebalancing partitions may be necessary in sharding. This can be done using strategies such as avoiding hash mod n, fixing the number of partitions, dynamic partitioning, or partitioning proportionally to nodes. The choice of rebalancing strategy depends on factors such as data distribution, load balancing, and system requirements.
+
+To facilitate request routing in a sharded system, various approaches can be used, such as allowing clients to request any node and forwarding the request to the appropriate node, using a routing tier to determine the correct node, or having clients directly connect to the node containing the requested data.
+
+To keep track of changes in the cluster and manage the distributed system, a separate management server like ZooKeeper may be used. ZooKeeper maintains mappings and notifies other components about changes in the partitioning or node configuration.
+
+In summary, sharding is a technique used to divide data into smaller partitions distributed across multiple nodes in a network. It offers benefits such as improved performance, scalability, and availability for distributed systems.

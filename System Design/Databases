@@ -58,3 +58,14 @@ Data Partitioning
   Data partitioning involves dividing the data into subsets and assigning each subset to a different node. The goal is to achieve balanced partitions and distribute the read/write load evenly across the nodes. This approach helps in managing increasing query rates and larger data sizes more effectively.
 
 Sharding
+Sharding is a technique used to distribute the load among multiple nodes in a network by partitioning or dividing a large dataset into smaller chunks of data stored on different nodes. The goal is to balance the partitions so that each partition contains a similar amount of data.
+
+There are two common ways to shard or partition data:
+
+1. Vertical Sharding: In vertical sharding, different tables or columns within a table are placed in separate database instances or servers. For example, a table may be split into multiple tables, with some columns in one table and the remaining columns in another. This approach is often used to improve the retrieval speed of tables containing wide text or binary large objects (BLOBs). By splitting such columns into separate tables, data retrieval and manipulation become more efficient.
+
+2. Horizontal Sharding: Horizontal sharding involves dividing a table into multiple tables based on rows of data. Each partition or shard of the original table is distributed across different database servers. There are two common strategies for horizontal sharding:
+
+   - Key-range based sharding: In this approach, each partition is assigned a continuous range of keys. For example, a partition may be assigned a range of customer IDs. This allows range queries to be performed efficiently using the partitioning keys. Tables with foreign key relationships can also be horizontally partitioned using the same partition key on all related tables.
+   
+   - Hash-based sharding: Hash-based sharding involves applying a hash-like function to a specific attribute or key, which produces different values based on the attribute's value. The hash value is then used to determine the partition in which the data should be stored. This technique ensures that keys are uniformly distributed across the partitions. However, it doesn't support range queries since keys are spread across all partitions.

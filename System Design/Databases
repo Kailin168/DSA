@@ -56,3 +56,5 @@ Data Partitioning
   Partitioning data enables organizations to maintain the desirable properties of traditional databases, such as range queries, secondary indices, and ACID transactions, while benefiting from the distributed nature of the database system. It offers the opportunity to optimize performance for specific use cases and achieve better results compared to generic solutions.
 
   Data partitioning involves dividing the data into subsets and assigning each subset to a different node. The goal is to achieve balanced partitions and distribute the read/write load evenly across the nodes. This approach helps in managing increasing query rates and larger data sizes more effectively.
+
+Sharding

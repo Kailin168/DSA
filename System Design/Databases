@@ -50,6 +50,7 @@ Synchronous versus asynchronous replication
 
 The primary-secondary replication model involves replicating data across multiple nodes, with one designated as the primary. The primary node processes writes and keeps the secondary nodes in sync. This model works well for read-heavy workloads and provides read resilience in case of primary node failure. However, it can become a bottleneck for writes and may result in data inconsistency if asynchronous replication is used. Missed updates can be lost if the primary node fails.
 
+TRADE OFFS in DATABASES
 Data Partitioning 
   Data is partitioned or sharded to address the scalability challenges posed by increasing data volume and concurrent read/write traffic. Traditional databases may struggle to handle the load on a single node, resulting in reduced latency and throughput. By partitioning data, it can be distributed across multiple nodes, allowing for improved scalability.
 

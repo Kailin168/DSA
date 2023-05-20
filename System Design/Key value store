@@ -46,6 +46,31 @@ To design a key-value store, we'll go through the following four steps:
    - Learn how to achieve scalability using consistent hashing. Consistent hashing allows distributing the data across multiple servers in a balanced way.
    - Replicate the partitioned data to ensure fault tolerance and high availability.
 
+      Add scalability:
+      To achieve scalability in a key-value store, we need to partition the data across multiple storage nodes. This allows us to distribute the load evenly and add or remove nodes as needed. One way to achieve this is by using the modulus operator to assign requests to nodes based on their IDs. However, this method can be inefficient when adding or removing nodes, as a large number of keys need to be moved.
+
+      Consistent hashing:
+      Consistent hashing is an effective technique for load management in key-value stores. It involves considering a conceptual ring of hashes, where each node's ID is mapped to a point on the ring. Requests are also mapped to a point on the ring using their hash values. By moving in a clockwise direction on the ring, each request is processed by the next node encountered. This approach minimizes the number of keys that need to be moved when nodes are added or removed.
+
+      Use of virtual nodes:
+      To achieve a more even distribution of the request load, virtual nodes can be used. Instead of using a single hash function, multiple hash functions are applied to each key. This results in each server having multiple positions on the ring, allowing for a more uniform distribution of requests. Additional virtual nodes can be added to nodes with higher hardware capacity, further improving load balancing.
+
+      Advantages of virtual nodes:
+      Using virtual nodes provides several advantages:
+      - Workload is uniformly distributed when a node fails or undergoes maintenance, as the other nodes share its load.
+      - Each node can decide how many virtual nodes it is responsible for, taking into account its hardware capacity.
+      - The proposed design becomes more scalable and can handle increased request loads.
+
+      Data replication:
+      Data replication ensures durability and high availability in the key-value store. There are two common approaches:
+
+      1. Primary-secondary approach: In this approach, one storage area is designated as the primary, while others are secondary. The secondary areas replicate data from the primary, allowing for read requests. However, write requests can only be served by the primary. This approach introduces a single point of failure if the primary goes down.
+
+      2. Peer-to-peer approach: In this approach, all storage areas are primary and replicate data among themselves. Both read and write operations are allowed on all nodes. Typically, a smaller number of nodes (e.g., three or five) are chosen for replication to avoid inefficiency and excessive replication.
+
+      By using a peer-to-peer relationship for replication, data items are replicated across multiple hosts. Each node has a coordinator responsible for handling read and write operations for specific keys. The coordinator replicates the keys to a specified number of successors on the ring. Preference lists are used to determine the replicas, skipping nodes that already have a replica to ensure they are placed on different physical nodes.
+
+
 3. Versioning Data and Achieving Configurability:
    - Resolve conflicts that can arise when multiple entities make changes to the same data.
    - Make the system more configurable to adapt to different use cases and requirements.

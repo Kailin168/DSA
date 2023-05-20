@@ -1,0 +1,57 @@
+Key-value store:
+
+Introduction to key-value stores:
+Key-value stores are like distributed hash tables (DHTs). Each key is generated using a hash function and should be unique. In a key-value store, a key is associated with a specific value, and the value can be anything the user wants to store, like a blob, image, or server name. Key-value stores are useful in various scenarios, such as storing user sessions in web applications or building NoSQL databases.
+
+Designing a key-value store:
+To design a key-value store, we'll go through the following four steps:
+
+1. Design the Key-value Store:
+   - Define the requirements of the key-value store and design the application programming interface (API) for accessing the data.
+   Sure! Here's a simplified explanation of the design of a key-value store:
+
+      Requirements:
+      To design a key-value store, we need to consider both functional and non-functional requirements.
+
+      Functional requirements:
+      1. Configurable service: The key-value store should be configurable to support different consistency models, allowing applications to make trade-offs between availability, consistency, cost-effectiveness, and performance.
+
+      2. Ability to always write: Applications should have the ability to write data into the key-value store. However, if strong consistency is required, this might not always be possible due to the implications of the CAP theorem.
+
+      3. Hardware heterogeneity: Each node in the system should be capable of performing any task, ensuring that there are no distinguished nodes. While servers can have different capabilities, newer hardware should be able to handle tasks as well as older hardware.
+
+      Non-functional requirements:
+      1. Scalability: The key-value store should be able to run on tens of thousands of servers distributed globally, allowing for incremental scalability. Servers should be added or removed with minimal disruption, and the system should handle a large number of users.
+
+      2. Availability: Continuous service availability is crucial. The system should provide the desired level of availability, which can be configured based on the consistency requirements. Strong consistency might result in lower availability and vice versa.
+
+      3. Fault tolerance: The key-value store should continue operating even in the presence of failures in servers or their components, ensuring uninterrupted service.
+
+      API design:
+      The API design of a key-value store typically includes two primary functions: get and put.
+
+      1. The get function:
+        - API call: get(key)
+        - Description: Returns the value associated with the provided key. If data is replicated and the store is configured with weaker data consistency, multiple values might be returned for the same key.
+
+      2. The put function:
+        - API call: put(key, value)
+        - Description: Stores the provided value associated with the given key. The system determines where the data should be placed, and it may keep metadata about the stored object, such as the version.
+
+      Data type:
+      In a key-value store, the key is often a primary key, while the value can be any arbitrary binary data. Some key-value stores, like Dynamo, use MD5 hashes on the key to generate a unique identifier that determines which server node is responsible for that key.
+
+
+2. Ensure Scalability and Replication:
+   - Learn how to achieve scalability using consistent hashing. Consistent hashing allows distributing the data across multiple servers in a balanced way.
+   - Replicate the partitioned data to ensure fault tolerance and high availability.
+
+3. Versioning Data and Achieving Configurability:
+   - Resolve conflicts that can arise when multiple entities make changes to the same data.
+   - Make the system more configurable to adapt to different use cases and requirements.
+
+4. Enable Fault Tolerance and Failure Detection:
+   - Implement mechanisms to make the key-value store fault tolerant, meaning it can continue functioning even if some servers fail.
+   - Develop techniques for detecting failures in the system and responding accordingly.
+
+By following these steps, we can design a key-value store that is scalable, fault-tolerant, and configurable to meet different needs. This type of system is commonly used by major companies like Amazon, Facebook, and Netflix for various purposes such as managing user preferences, shopping carts, and product catalogs. It offers a simpler and more cost-effective alternative to traditional relational databases for certain applications.

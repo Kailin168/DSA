@@ -94,6 +94,11 @@ To design a key-value store, we'll go through the following four steps:
       - After network repair, conflicts arise, and the client receives the conflicting versions' context.
       - The client performs reconciliation, and the write is coordinated, resulting in a new version with an updated clock.
 
+      Compromising with vector clocks' limitations:
+      - Vector clocks can become large when multiple servers write to the same object simultaneously, making version history management cumbersome.
+      - To address this, a clock truncation strategy can be employed, storing a timestamp with each (node, counter) pair.
+      - Truncation helps limit the size of vector clocks but can reduce reconciliation efficiency.
+
 4. Enable Fault Tolerance and Failure Detection:
    - Implement mechanisms to make the key-value store fault tolerant, meaning it can continue functioning even if some servers fail.
    - Develop techniques for detecting failures in the system and responding accordingly.

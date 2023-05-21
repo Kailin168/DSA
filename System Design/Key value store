@@ -87,6 +87,13 @@ To design a key-value store, we'll go through the following four steps:
       - The "put" API call stores a value associated with a key and requires the context metadata.
       - If conflicts arise from multiple versions, the client is responsible for resolving them.
 
+      Vector clock usage example:
+      - An example scenario illustrates how vector clocks track versions and handle conflicts.
+      - Each write operation is associated with a vector clock indicating the node and its counter value.
+      - In case of network partitions, different nodes handle requests, leading to divergent versions.
+      - After network repair, conflicts arise, and the client receives the conflicting versions' context.
+      - The client performs reconciliation, and the write is coordinated, resulting in a new version with an updated clock.
+
 4. Enable Fault Tolerance and Failure Detection:
    - Implement mechanisms to make the key-value store fault tolerant, meaning it can continue functioning even if some servers fail.
    - Develop techniques for detecting failures in the system and responding accordingly.

@@ -81,6 +81,12 @@ To design a key-value store, we'll go through the following four steps:
       - Causality between events can be maintained using timestamps or vector clocks, which are lists of (node, counter) pairs representing the version of an object.
       - Vector clocks allow us to determine causal relationships and handle conflicts effectively.
 
+      Modifying the API design:
+      - The API design needs to include context information about the node and its vector clock value for determining causal relationships.
+      - The "get" API call returns the object's value along with its metadata, including the version.
+      - The "put" API call stores a value associated with a key and requires the context metadata.
+      - If conflicts arise from multiple versions, the client is responsible for resolving them.
+
 4. Enable Fault Tolerance and Failure Detection:
    - Implement mechanisms to make the key-value store fault tolerant, meaning it can continue functioning even if some servers fail.
    - Develop techniques for detecting failures in the system and responding accordingly.

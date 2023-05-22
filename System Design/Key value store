@@ -123,5 +123,6 @@ To design a key-value store, we'll go through the following four steps:
 
       4. Promote membership in the ring to detect failures: Nodes in the system can go offline temporarily or indefinitely, and it's important to detect and handle such failures. Membership changes in the system, such as adding or removing nodes, are recorded and reconciled using a gossip protocol. The gossip-based protocol allows nodes to share information asynchronously and maintain an eventually consistent view of membership. Nodes randomly choose each other as peers and synchronize their membership histories.
 
+      By implementing these steps, you can make your key-value store more fault-tolerant and able to detect failures, ensuring data availability, durability, and consistency.
 
 By following these steps, we can design a key-value store that is scalable, fault-tolerant, and configurable to meet different needs. This type of system is commonly used by major companies like Amazon, Facebook, and Netflix for various purposes such as managing user preferences, shopping carts, and product catalogs. It offers a simpler and more cost-effective alternative to traditional relational databases for certain applications.

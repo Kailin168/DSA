@@ -107,11 +107,15 @@ To design a key-value store, we'll go through the following four steps:
       - Parameters like "r" (minimum nodes for read) and "w" (minimum nodes for write) can be set to balance trade-offs.
       - Different combinations of "n," "r," and "w" affect the speed of reads and writes.
 
-
       By understanding data versioning, modifying the API design, utilizing vector clocks, and configuring the system, we can achieve conflict resolution and configurability for a key-value storage service.
 
 4. Enable Fault Tolerance and Failure Detection:
    - Implement mechanisms to make the key-value store fault tolerant, meaning it can continue functioning even if some servers fail.
    - Develop techniques for detecting failures in the system and responding accordingly.
+
+      To enable fault tolerance and failure detection in a key-value store:
+
+
+
 
 By following these steps, we can design a key-value store that is scalable, fault-tolerant, and configurable to meet different needs. This type of system is commonly used by major companies like Amazon, Facebook, and Netflix for various purposes such as managing user preferences, shopping carts, and product catalogs. It offers a simpler and more cost-effective alternative to traditional relational databases for certain applications.

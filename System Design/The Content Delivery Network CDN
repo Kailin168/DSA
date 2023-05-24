@@ -13,21 +13,21 @@ A content delivery network (CDN) is the solution to the problems we discussed ea
 
 To bring data closer to users, CDNs store copies of static and dynamic data in small data centers near users. CDN providers focus on reducing propagation delay by bringing the data closer to users and ensuring sufficient bandwidth availability through the path. By doing so, they can minimize transmission and queuing delays.
 
-CDNs solve the discussed problems in the following ways:
-1. High latency: CDNs bring content closer to end users, reducing physical distance and latency.
-2. Data-intensive applications: CDNs serve a large number of users through a few CDN components in a specific area, minimizing issues. The origin data center provides data to local CDN components only once, and local CDN components can then serve different users individually without each user having to download their own copy from the origin servers.
-3. Scarcity of data center resources: CDNs handle most of the traffic for popular content, relieving the load on origin servers. Local or distributed CDN components share the load, ensuring efficient resource utilization.
+  CDNs solve the discussed problems in the following ways:
+  1. High latency: CDNs bring content closer to end users, reducing physical distance and latency.
+  2. Data-intensive applications: CDNs serve a large number of users through a few CDN components in a specific area, minimizing issues. The origin data center provides data to local CDN components only once, and local CDN components can then serve different users individually without each user having to download their own copy from the origin servers.
+  3. Scarcity of data center resources: CDNs handle most of the traffic for popular content, relieving the load on origin servers. Local or distributed CDN components share the load, ensuring efficient resource utilization.
 
 Requirements:
-Let's discuss the functional and non-functional requirements for a CDN.
+Functional and non-functional requirements for a CDN.
 
 Functional requirements:
-- Retrieve: The CDN should be able to retrieve content from the origin servers based on the CDN model being used.
-- Request: CDN proxy servers should respond to user requests for content delivery.
-- Deliver: In a push model, origin servers should be able to send content to CDN proxy servers.
-- Search: The CDN should execute searches against user queries to find cached or stored content within the CDN infrastructure.
-- Update: If there are scripts running in the CDN, it should be able to update content within peer CDN proxy servers.
-- Delete: The CDN should have the ability to delete cached entries from CDN servers based on the type of content (static or dynamic).
+  - Retrieve: The CDN should be able to retrieve content from the origin servers based on the CDN model being used.
+  - Request: CDN proxy servers should respond to user requests for content delivery.
+  - Deliver: In a push model, origin servers should be able to send content to CDN proxy servers.
+  - Search: The CDN should execute searches against user queries to find cached or stored content within the CDN infrastructure.
+  - Update: If there are scripts running in the CDN, it should be able to update content within peer CDN proxy servers.
+  - Delete: The CDN should have the ability to delete cached entries from CDN servers based on the type of content (static or dynamic).
 
 Non-functional requirements:
 - Performance: The CDN design should minimize latency, providing a low-delay user experience.

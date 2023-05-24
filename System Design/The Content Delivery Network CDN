@@ -30,14 +30,14 @@ Functional requirements:
   - Delete: The CDN should have the ability to delete cached entries from CDN servers based on the type of content (static or dynamic).
 
 Non-functional requirements:
-- Performance: The CDN design should minimize latency, providing a low-delay user experience.
-- Availability: CDNs should be available at all times, with protection against attacks like Distributed Denial of Service (DDoS).
-- Scalability: The CDN design should scale horizontally to handle increasing user requests.
-- Reliability and security: The CDN should be reliable, avoiding single points of failure, and capable of handling massive traffic loads. It should also provide protection against various attacks.
+  - Performance: The CDN design should minimize latency, providing a low-delay user experience.
+  - Availability: CDNs should be available at all times, with protection against attacks like Distributed Denial of Service (DDoS).
+  - Scalability: The CDN design should scale horizontally to handle increasing user requests.
+  - Reliability and security: The CDN should be reliable, avoiding single points of failure, and capable of handling massive traffic loads. It should also provide protection against various attacks.
 
 Building blocks:
 The design of a CDN incorporates the following building blocks:
-- DNS: Maps CDN domain names to IP addresses, directing users to the specified proxy server.
-- Load balancers: Distribute requests among operational proxy servers, ensuring efficient load distribution.
+  - DNS: Maps CDN domain names to IP addresses, directing users to the specified proxy server.
+  - Load balancers: Distribute requests among operational proxy servers, ensuring efficient load distribution.
 
 In summary, a CDN is a network of geographically distributed proxy servers that bring data closer to users, reducing latency and addressing issues with data-intensive applications. It satisfies functional requirements like content retrieval, delivery, and search, while meeting non-functional requirements such as performance, availability, scalability, reliability, and security. The CDN design utilizes building blocks like DNS and load balancers to enable efficient content delivery.

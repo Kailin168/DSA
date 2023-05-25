@@ -41,3 +41,5 @@ The design of a CDN incorporates the following building blocks:
   - Load balancers: Distribute requests among operational proxy servers, ensuring efficient load distribution.
 
 In summary, a CDN is a network of geographically distributed proxy servers that bring data closer to users, reducing latency and addressing issues with data-intensive applications. It satisfies functional requirements like content retrieval, delivery, and search, while meeting non-functional requirements such as performance, availability, scalability, reliability, and security. The CDN design utilizes building blocks like DNS and load balancers to enable efficient content delivery.
+
+Design of CDN

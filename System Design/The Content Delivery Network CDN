@@ -42,4 +42,63 @@ The design of a CDN incorporates the following building blocks:
 
 In summary, a CDN is a network of geographically distributed proxy servers that bring data closer to users, reducing latency and addressing issues with data-intensive applications. It satisfies functional requirements like content retrieval, delivery, and search, while meeting non-functional requirements such as performance, availability, scalability, reliability, and security. The CDN design utilizes building blocks like DNS and load balancers to enable efficient content delivery.
 
-Design of CDN
+Design of CDN system
+
+In this lesson, we'll learn about the basic design of a CDN (Content Delivery Network) system. We'll cover the different components of a CDN, the workflow of how these components interact, and the API design for various functionalities.
+
+CDN Components:
+A CDN system consists of the following components:
+
+1. Clients: These are the end users who request content from the CDN using browsers, smartphones, or other devices.
+
+2. Routing System: The routing system directs clients to the nearest CDN facility. It gathers information about content placement, request volume, server load, and URI namespace to efficiently route users to the appropriate CDN facility.
+
+3. Scrubber Servers: Scrubber servers separate legitimate traffic from malicious traffic and protect against attacks like DDoS. They are activated only when an attack is detected.
+
+4. Proxy Servers: Proxy servers, also known as edge proxy servers, store and serve content to users. They store frequently accessed data in RAM and can also store less frequently accessed data on SSD or hard drives. Proxy servers also handle accounting information and receive content from the distribution system.
+
+5. Distribution System: The distribution system is responsible for distributing content to the edge proxy servers across different CDN facilities. It uses intelligent broadcast-like approaches and the Internet to efficiently distribute content.
+
+6. Origin Servers: The origin servers provide the CDN infrastructure with data. They serve any unavailable data at the CDN to clients. The internal architecture of the origin infrastructure is not discussed here.
+
+7. Management System: The management systems monitor resource usage and statistics in the CDN. They measure important metrics such as latency, downtime, packet loss, and server load. For third-party CDNs, accounting information can be used for billing purposes.
+
+Workflow:
+The workflow of a CDN system follows these steps:
+
+1. Origin servers delegate the URI namespace of cached objects to the request routing system.
+
+2. Origin servers publish content to the distribution system, which distributes the content among the proxy servers and provides feedback to the routing system. This feedback helps optimize the selection of the nearest proxy server for clients.
+
+3. Clients request a suitable proxy server from the routing system.
+
+4. The request routing system returns the IP address of an appropriate proxy server.
+
+5. The client's request passes through scrubber servers for security reasons.
+
+6. The scrubber server forwards legitimate traffic to the edge proxy server.
+
+7. The edge proxy server serves the client's request and periodically sends accounting information to the management system. If the requested content is not available in the proxy servers, the request may be routed to origin servers or parent proxy servers in a hierarchy.
+
+API Design:
+The CDN system uses APIs for various functionalities. Here are the APIs for different operations:
+
+1. Retrieve Content (proxy server to origin server):
+   - API: retrieveContent(proxyserver_id, content_type, content_version, description)
+   - This API retrieves content from the origin server based on the provided parameters.
+
+2. Deliver Content (origin server to proxy servers):
+   - API: deliverContent(origin_id, server_list, content_type, content_version, description)
+   - This API delivers updated content from the origin server to the proxy servers.
+
+3. Request Content (clients to proxy servers):
+   - API: requestContent(user_id, content_type, description)
+   - Clients use this API to request content from the proxy servers.
+
+4. Search Content (proxy server to peer proxy servers):
+   - API: searchContent(proxyserver_id, content_type, description)
+   - Proxy servers can search for requested content in peer proxy servers within the same Point of Presence (PoP).
+
+5. Update Content (proxy server to peer proxy servers):
+   - API: updateContent(proxyserver_id, content_type, description)
+   - Proxy servers use this API to update specified content in peer proxy servers

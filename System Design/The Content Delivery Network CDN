@@ -102,3 +102,7 @@ Design of CDN system
     5. Update Content (proxy server to peer proxy servers):
       - API: updateContent(proxyserver_id, content_type, description)
       - Proxy servers use this API to update specified content in peer proxy servers
+
+Understanding Content Delivery Networks (CDNs): Part 1
+
+

@@ -105,73 +105,73 @@ Design of CDN system
 
 Understanding Content Delivery Networks (CDNs): Part 1
 
-Introduction:
-In this lesson, we will explore the fundamentals of Content Delivery Networks (CDNs). Specifically, we will focus on two models used in CDNs: push and pull models. We will also discuss dynamic content caching optimization and various techniques for discovering nearby proxy servers in CDNs.
+    Introduction:
+    In this lesson, we will explore the fundamentals of Content Delivery Networks (CDNs). Specifically, we will focus on two models used in CDNs: push and pull models. We will also discuss dynamic content caching optimization and various techniques for discovering nearby proxy servers in CDNs.
 
-1. Content caching strategies in CDNs:
-CDNs utilize content caching to deliver up-to-date and popular web content. There are two classifications of CDNs based on how they obtain content from origin servers:
+    1. Content caching strategies in CDNs:
+    CDNs utilize content caching to deliver up-to-date and popular web content. There are two classifications of CDNs based on how they obtain content from origin servers:
 
-a. Push CDN:
-- In the push CDN model, content is automatically sent from the origin server to the CDN proxy servers.
-- The responsibility for delivering content to the CDN proxy servers lies with the content provider.
-- Push CDN is suitable for static content delivery, where the origin server determines which content to send to users via the CDN.
-- Content is pushed to proxy servers in different locations based on its popularity.
-- However, if the content changes rapidly, the push model may struggle to keep up and result in redundant content pushes.
+    a. Push CDN:
+    - In the push CDN model, content is automatically sent from the origin server to the CDN proxy servers.
+    - The responsibility for delivering content to the CDN proxy servers lies with the content provider.
+    - Push CDN is suitable for static content delivery, where the origin server determines which content to send to users via the CDN.
+    - Content is pushed to proxy servers in different locations based on its popularity.
+    - However, if the content changes rapidly, the push model may struggle to keep up and result in redundant content pushes.
 
-b. Pull CDN:
-- In the pull CDN model, a CDN retrieves unavailable data from origin servers when requested by a user.
-- Proxy servers keep the files for a specified time and remove them from the cache if they are no longer requested, balancing capacity and cost.
-- When users request web content, the CDN pulls the content from the origin server and serves it to the users.
-- Pull CDNs are better suited for serving dynamic content that frequently changes.
-- Pull CDNs have the advantage of low storage consumption compared to push CDNs.
+    b. Pull CDN:
+    - In the pull CDN model, a CDN retrieves unavailable data from origin servers when requested by a user.
+    - Proxy servers keep the files for a specified time and remove them from the cache if they are no longer requested, balancing capacity and cost.
+    - When users request web content, the CDN pulls the content from the origin server and serves it to the users.
+    - Pull CDNs are better suited for serving dynamic content that frequently changes.
+    - Pull CDNs have the advantage of low storage consumption compared to push CDNs.
 
-Note: Many content providers use a combination of both push and pull CDN caching approaches to leverage their respective benefits.
+    Note: Many content providers use a combination of both push and pull CDN caching approaches to leverage their respective benefits.
 
-2. Dynamic content caching optimization:
-Optimizing the caching of dynamic content is essential due to its frequent changes. Here are some optimization techniques:
+    2. Dynamic content caching optimization:
+    Optimizing the caching of dynamic content is essential due to its frequent changes. Here are some optimization techniques:
 
-a. Execution of scripts at proxy servers:
-- Certain dynamic content creation involves scripts that can be executed at proxy servers instead of the origin server.
-- Running these scripts at proxy servers can be beneficial, generating dynamic content based on parameters such as user location, time of day, third-party APIs, etc.
+    a. Execution of scripts at proxy servers:
+    - Certain dynamic content creation involves scripts that can be executed at proxy servers instead of the origin server.
+    - Running these scripts at proxy servers can be beneficial, generating dynamic content based on parameters such as user location, time of day, third-party APIs, etc.
 
-b. Compression techniques:
-- Compression techniques, like Railgun used by Cloudflare, can be employed to reduce communication between origin servers and proxy servers.
-- Compressing dynamic content helps minimize storage requirements at proxy servers.
+    b. Compression techniques:
+    - Compression techniques, like Railgun used by Cloudflare, can be employed to reduce communication between origin servers and proxy servers.
+    - Compressing dynamic content helps minimize storage requirements at proxy servers.
 
-c. Edge Side Includes (ESI):
-- ESI is a markup language that helps optimize dynamic content caching.
-- It specifies where content has changed in a web page, allowing the rest of the content to be cached.
-- CDN providers often use ESI, although it is not yet standardized by the W3C.
+    c. Edge Side Includes (ESI):
+    - ESI is a markup language that helps optimize dynamic content caching.
+    - It specifies where content has changed in a web page, allowing the rest of the content to be cached.
+    - CDN providers often use ESI, although it is not yet standardized by the W3C.
 
-3. Multi-tier CDN architecture:
-To efficiently distribute content to CDN proxy servers, a multi-tier architecture is commonly used. Here's how it works:
+    3. Multi-tier CDN architecture:
+    To efficiently distribute content to CDN proxy servers, a multi-tier architecture is commonly used. Here's how it works:
 
-- Content providers send data to a large number of clients through a CDN.
-- Distributing data simultaneously to all CDN proxy servers can burden the origin server.
-- CDNs utilize a tree-like structure for data distribution, reducing the burden on the origin server.
-- Edge proxy servers have peer servers within the same hierarchy, receiving data from parent nodes in the tree, ultimately receiving it from the origin servers.
-- The tree structure allows scalability by adding more server nodes to accommodate increasing users.
-- CDNs typically have one or two tiers of proxy servers, simplifying data distribution.
+    - Content providers send data to a large number of clients through a CDN.
+    - Distributing data simultaneously to all CDN proxy servers can burden the origin server.
+    - CDNs utilize a tree-like structure for data distribution, reducing the burden on the origin server.
+    - Edge proxy servers have peer servers within the same hierarchy, receiving data from parent nodes in the tree, ultimately receiving it from the origin servers.
+    - The tree structure allows scalability by adding more server nodes to accommodate increasing users.
+    - CDNs typically have one or two tiers of proxy servers, simplifying data distribution.
 
-4. Finding the nearest proxy server to fetch data:
-To minimize user-perceived latency, it is crucial to fetch data from the nearest proxy server. Consider these important factors:
+    4. Finding the nearest proxy server to fetch data:
+    To minimize user-perceived latency, it is crucial to fetch data from the nearest proxy server. Consider these important factors:
 
-a. Network distance:
-- The length of the network path and its capacity (bandwidth) influence the network distance between the user and the proxy server.
-- The shortest path with the highest capacity
+    a. Network distance:
+    - The length of the network path and its capacity (bandwidth) influence the network distance between the user and the proxy server.
+    - The shortest path with the highest capacity
 
- is the nearest proxy server, allowing faster content downloads.
+    is the nearest proxy server, allowing faster content downloads.
 
-b. Requests load:
-- Proxy servers handle varying loads at different times.
-- A request routing system should forward requests to locations with lesser load, balancing the load among proxy servers and reducing response latency.
+    b. Requests load:
+    - Proxy servers handle varying loads at different times.
+    - A request routing system should forward requests to locations with lesser load, balancing the load among proxy servers and reducing response latency.
 
-Techniques used to route users to the nearest proxy server include:
+    Techniques used to route users to the nearest proxy server include:
 
-- DNS redirection: Content providers use DNS redirects to direct clients to specific CDNs, considering network distance and load balancing.
-- Anycast: Routing methodology where multiple edge servers share the same IP address, directing clients to the nearest proxy servers.
-- Client multiplexing: Involves providing a list of candidate servers to the client, allowing them to choose one. However, this approach may result in inefficient server selection.
-- HTTP redirection: The client requests content from the origin server, which responds with an HTTP redirect to the CDN's URL for content retrieval.
+    - DNS redirection: Content providers use DNS redirects to direct clients to specific CDNs, considering network distance and load balancing.
+    - Anycast: Routing methodology where multiple edge servers share the same IP address, directing clients to the nearest proxy servers.
+    - Client multiplexing: Involves providing a list of candidate servers to the client, allowing them to choose one. However, this approach may result in inefficient server selection.
+    - HTTP redirection: The client requests content from the origin server, which responds with an HTTP redirect to the CDN's URL for content retrieval.
 
-Conclusion:
-Understanding CDN models, dynamic content caching optimization, multi-tier architecture, and techniques for finding the nearest proxy server enhances our comprehension of CDNs' functionality and performance optimization.
+    Conclusion:
+    Understanding CDN models, dynamic content caching optimization, multi-tier architecture, and techniques for finding the nearest proxy server enhances our comprehension of CDNs' functionality and performance optimization.

@@ -178,58 +178,56 @@ Understanding Content Delivery Networks (CDNs): Part 1
 
 
 Understanding CDN: Part 2 - Content Consistency and Proxy Server Deployment
+    Introduction:
+    In this lesson, we will delve deeper into Content Delivery Networks (CDNs). Specifically, we will explore content consistency mechanisms and the deployment of proxy servers within CDNs. We will also discuss the difference between CDN as a service and specialized CDNs, along with the reasons why Netflix built its own CDN.
 
+    1. Content Consistency in CDN:
+    To ensure data consistency between proxy servers and origin servers, CDNs employ various mechanisms. Here are three common approaches:
 
-Introduction:
-In this lesson, we will delve deeper into Content Delivery Networks (CDNs). Specifically, we will explore content consistency mechanisms and the deployment of proxy servers within CDNs. We will also discuss the difference between CDN as a service and specialized CDNs, along with the reasons why Netflix built its own CDN.
+    a. Periodic Polling:
+    - Proxy servers in pull-based CDNs periodically request updated data from the origin server.
+    - The frequency of polling is adjusted using a time-to-refresh (TTR) parameter to avoid unnecessary bandwidth consumption.
+    - Periodic polling is suitable when content changes infrequently.
 
-1. Content Consistency in CDN:
-To ensure data consistency between proxy servers and origin servers, CDNs employ various mechanisms. Here are three common approaches:
+    b. Time-to-Live (TTL):
+    - Each object in the CDN cache has a TTL assigned by the origin server.
+    - TTL defines the expiration time of the content.
+    - Proxy servers serve the same data version until it expires. After expiration, the proxy server checks for updates from the origin server.
+    - This approach reduces the frequency of refresh messages and ensures that users receive up-to-date content.
 
-a. Periodic Polling:
-- Proxy servers in pull-based CDNs periodically request updated data from the origin server.
-- The frequency of polling is adjusted using a time-to-refresh (TTR) parameter to avoid unnecessary bandwidth consumption.
-- Periodic polling is suitable when content changes infrequently.
+    c. Leases:
+    - Origin servers grant leases to proxy servers, specifying the time interval for which they must be notified of any data changes.
+    - Proxy servers request lease renewals after the lease expires, minimizing the number of messages exchanged.
+    - The lease duration can be dynamically optimized based on the observed load on proxy servers, known as adaptive leasing.
 
-b. Time-to-Live (TTL):
-- Each object in the CDN cache has a TTL assigned by the origin server.
-- TTL defines the expiration time of the content.
-- Proxy servers serve the same data version until it expires. After expiration, the proxy server checks for updates from the origin server.
-- This approach reduces the frequency of refresh messages and ensures that users receive up-to-date content.
+    2. Deployment of Proxy Servers:
+    When deploying proxy servers within a CDN, certain considerations come into play. Here's what you need to know:
 
-c. Leases:
-- Origin servers grant leases to proxy servers, specifying the time interval for which they must be notified of any data changes.
-- Proxy servers request lease renewals after the lease expires, minimizing the number of messages exchanged.
-- The lease duration can be dynamically optimized based on the observed load on proxy servers, known as adaptive leasing.
+    a. Placement of CDN Proxy Servers:
+    - CDN proxy servers should be strategically placed in network locations with good connectivity.
+    - On-premises deployment involves placing proxy servers near major Internet Exchange Points (IXPs).
+    - Off-premises deployment means placing proxy servers in the networks of Internet Service Providers (ISPs).
+    - The goal is to minimize latency and deliver content efficiently to end-users.
 
-2. Deployment of Proxy Servers:
-When deploying proxy servers within a CDN, certain considerations come into play. Here's what you need to know:
+    b. CDN as a Service:
+    - Many companies opt to use CDN services provided by companies like Akamai, Cloudflare, or Fastly.
+    - Content providers sign contracts with CDN service providers, delivering their content to be distributed by the CDN.
+    - CDN as a service raises concerns such as downtime of the public CDN, lack of proxy servers in specific regions, and domain/IP restrictions in some countries.
 
-a. Placement of CDN Proxy Servers:
-- CDN proxy servers should be strategically placed in network locations with good connectivity.
-- On-premises deployment involves placing proxy servers near major Internet Exchange Points (IXPs).
-- Off-premises deployment means placing proxy servers in the networks of Internet Service Providers (ISPs).
-- The goal is to minimize latency and deliver content efficiently to end-users.
+    c. Specialized CDN:
+    - Some companies choose to build their own CDN instead of using CDN services.
+    - Specialized CDNs consist of points of presence (PoPs) that serve content exclusively for the company.
+    - While initial setup costs are high, they decrease over time.
+    - Private CDNs can be used alongside public CDNs as a backup or to handle additional capacity.
 
-b. CDN as a Service:
-- Many companies opt to use CDN services provided by companies like Akamai, Cloudflare, or Fastly.
-- Content providers sign contracts with CDN service providers, delivering their content to be distributed by the CDN.
-- CDN as a service raises concerns such as downtime of the public CDN, lack of proxy servers in specific regions, and domain/IP restrictions in some countries.
+    3. Netflix and Its CDN:
+    Netflix decided to build its own CDN, known as Open Connect, for several reasons:
 
-c. Specialized CDN:
-- Some companies choose to build their own CDN instead of using CDN services.
-- Specialized CDNs consist of points of presence (PoPs) that serve content exclusively for the company.
-- While initial setup costs are high, they decrease over time.
-- Private CDNs can be used alongside public CDNs as a backup or to handle additional capacity.
+    - CDN service providers struggled to meet the growing demand for video streaming on Netflix.
+    - Using public CDN services became costly as the volume of streaming videos increased.
+    - Protecting the data of all the videos on the platform was critical for Netflix.
+    - Building their own CDN allowed Netflix to have greater control over the streaming experience and troubleshoot network issues.
+    - Netflix wanted to keep popular content for a longer time, which was more feasible with their own CDN.
 
-3. Netflix and Its CDN:
-Netflix decided to build its own CDN, known as Open Connect, for several reasons:
-
-- CDN service providers struggled to meet the growing demand for video streaming on Netflix.
-- Using public CDN services became costly as the volume of streaming videos increased.
-- Protecting the data of all the videos on the platform was critical for Netflix.
-- Building their own CDN allowed Netflix to have greater control over the streaming experience and troubleshoot network issues.
-- Netflix wanted to keep popular content for a longer time, which was more feasible with their own CDN.
-
-Conclusion:
-Understanding content consistency mechanisms and the deployment of proxy servers in CDNs is crucial for ensuring efficient content delivery and minimizing latency. The choice between CDN as a service and specialized CDNs depends on factors like cost, control, and specific requirements of the content provider. Netflix's decision to build its own CDN highlights the advantages of having control over the entire streaming infrastructure.
+    Conclusion:
+    Understanding content consistency mechanisms and the deployment of proxy servers in CDNs is crucial for ensuring efficient content delivery and minimizing latency. The choice between CDN as a service and specialized CDNs depends on factors like cost, control, and specific requirements of the content provider. Netflix's decision to build its own CDN highlights the advantages of having control over the entire streaming infrastructure.

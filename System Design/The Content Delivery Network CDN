@@ -222,7 +222,6 @@ Understanding CDN: Part 2 - Content Consistency and Proxy Server Deployment
 
     3. Netflix and Its CDN:
     Netflix decided to build its own CDN, known as Open Connect, for several reasons:
-
     - CDN service providers struggled to meet the growing demand for video streaming on Netflix.
     - Using public CDN services became costly as the volume of streaming videos increased.
     - Protecting the data of all the videos on the platform was critical for Netflix.

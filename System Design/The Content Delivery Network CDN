@@ -183,7 +183,6 @@ Understanding CDN: Part 2 - Content Consistency and Proxy Server Deployment
 
     1. Content Consistency in CDN:
     To ensure data consistency between proxy servers and origin servers, CDNs employ various mechanisms. Here are three common approaches:
-
     a. Periodic Polling:
     - Proxy servers in pull-based CDNs periodically request updated data from the origin server.
     - The frequency of polling is adjusted using a time-to-refresh (TTR) parameter to avoid unnecessary bandwidth consumption.
@@ -202,7 +201,6 @@ Understanding CDN: Part 2 - Content Consistency and Proxy Server Deployment
 
     2. Deployment of Proxy Servers:
     When deploying proxy servers within a CDN, certain considerations come into play. Here's what you need to know:
-
     a. Placement of CDN Proxy Servers:
     - CDN proxy servers should be strategically placed in network locations with good connectivity.
     - On-premises deployment involves placing proxy servers near major Internet Exchange Points (IXPs).

@@ -237,7 +237,6 @@ In this evaluation, we will assess the design of our proposed Content Delivery N
 
     1. Performance:
     To ensure high performance and minimize latency, our CDN design incorporates the following key elements:
-
     - Proxy servers serve content from RAM, which allows for faster access.
     - Proxy servers are strategically placed near users to reduce latency.
     - CDN can utilize proxy servers located in ISPs or Internet exchange points (IXPs) to handle high traffic.
@@ -246,7 +245,6 @@ In this evaluation, we will assess the design of our proposed Content Delivery N
 
     2. Availability:
     The distributed nature of a CDN ensures availability by implementing the following measures:
-
     - Cached content serves as a backup in case of origin server failures.
     - Operational proxy servers continue to handle traffic if some servers become unavailable.
     - Redundancy can be achieved by replicating data across multiple proxy servers, avoiding a single point of failure.
@@ -254,14 +252,12 @@ In this evaluation, we will assess the design of our proposed Content Delivery N
 
     3. Scalability:
     Our CDN design facilitates scalability through the following approaches:
-
     - Content is brought closer to users, reducing the need for high bandwidth and supporting scalability.
     - Horizontal scalability is achieved by adding reading replicas, such as edge proxy servers.
     - The layered architecture of proxy servers allows for horizontal scalability and increases storage capacity.
 
     4. Reliability and Security:
     Our CDN design ensures reliability and security through the following measures:
-
     - Maintenance cycles and additional hardware/software are implemented to avoid single points of failure.
     - Massive traffic loads are handled by distributing the load evenly among edge proxy servers.
     - Scrubber servers can be used to prevent Distributed Denial of Service (DDoS) attacks.

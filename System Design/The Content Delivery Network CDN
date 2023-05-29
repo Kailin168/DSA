@@ -228,3 +228,7 @@ Understanding CDN: Part 2 - Content Consistency and Proxy Server Deployment
 
     Conclusion:
     Understanding content consistency mechanisms and the deployment of proxy servers in CDNs is crucial for ensuring efficient content delivery and minimizing latency. The choice between CDN as a service and specialized CDNs depends on factors like cost, control, and specific requirements of the content provider. Netflix's decision to build its own CDN highlights the advantages of having control over the entire streaming infrastructure.
+
+
+
+Title: Evaluating the Design of a CDN

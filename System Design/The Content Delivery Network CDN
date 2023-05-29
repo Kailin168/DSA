@@ -235,38 +235,38 @@ Evaluating the Design of a CDN
 Introduction:
 In this evaluation, we will assess the design of our proposed Content Delivery Network (CDN) based on the requirements discussed in previous lessons. We will focus on performance, availability, scalability, reliability, and security.
 
-1. Performance:
-To ensure high performance and minimize latency, our CDN design incorporates the following key elements:
+    1. Performance:
+    To ensure high performance and minimize latency, our CDN design incorporates the following key elements:
 
-- Proxy servers serve content from RAM, which allows for faster access.
-- Proxy servers are strategically placed near users to reduce latency.
-- CDN can utilize proxy servers located in ISPs or Internet exchange points (IXPs) to handle high traffic.
-- A request routing system directs users to the nearest proxy server, improving response times.
-- Long-tail content is stored in nonvolatile storage systems (e.g., SSD or HDD) to further reduce latency.
+    - Proxy servers serve content from RAM, which allows for faster access.
+    - Proxy servers are strategically placed near users to reduce latency.
+    - CDN can utilize proxy servers located in ISPs or Internet exchange points (IXPs) to handle high traffic.
+    - A request routing system directs users to the nearest proxy server, improving response times.
+    - Long-tail content is stored in nonvolatile storage systems (e.g., SSD or HDD) to further reduce latency.
 
-2. Availability:
-The distributed nature of a CDN ensures availability by implementing the following measures:
+    2. Availability:
+    The distributed nature of a CDN ensures availability by implementing the following measures:
 
-- Cached content serves as a backup in case of origin server failures.
-- Operational proxy servers continue to handle traffic if some servers become unavailable.
-- Redundancy can be achieved by replicating data across multiple proxy servers, avoiding a single point of failure.
-- Load balancers distribute user requests among active proxy servers, maintaining availability.
+    - Cached content serves as a backup in case of origin server failures.
+    - Operational proxy servers continue to handle traffic if some servers become unavailable.
+    - Redundancy can be achieved by replicating data across multiple proxy servers, avoiding a single point of failure.
+    - Load balancers distribute user requests among active proxy servers, maintaining availability.
 
-3. Scalability:
-Our CDN design facilitates scalability through the following approaches:
+    3. Scalability:
+    Our CDN design facilitates scalability through the following approaches:
 
-- Content is brought closer to users, reducing the need for high bandwidth and supporting scalability.
-- Horizontal scalability is achieved by adding reading replicas, such as edge proxy servers.
-- The layered architecture of proxy servers allows for horizontal scalability and increases storage capacity.
+    - Content is brought closer to users, reducing the need for high bandwidth and supporting scalability.
+    - Horizontal scalability is achieved by adding reading replicas, such as edge proxy servers.
+    - The layered architecture of proxy servers allows for horizontal scalability and increases storage capacity.
 
-4. Reliability and Security:
-Our CDN design ensures reliability and security through the following measures:
+    4. Reliability and Security:
+    Our CDN design ensures reliability and security through the following measures:
 
-- Maintenance cycles and additional hardware/software are implemented to avoid single points of failure.
-- Massive traffic loads are handled by distributing the load evenly among edge proxy servers.
-- Scrubber servers can be used to prevent Distributed Denial of Service (DDoS) attacks.
-- Real-time applications may build their own specialized CDNs to maintain content security and prevent leakage issues.
-- The health of servers can be monitored using the heartbeat protocol, removing faulty servers from the system.
+    - Maintenance cycles and additional hardware/software are implemented to avoid single points of failure.
+    - Massive traffic loads are handled by distributing the load evenly among edge proxy servers.
+    - Scrubber servers can be used to prevent Distributed Denial of Service (DDoS) attacks.
+    - Real-time applications may build their own specialized CDNs to maintain content security and prevent leakage issues.
+    - The health of servers can be monitored using the heartbeat protocol, removing faulty servers from the system.
 
-Conclusion:
-CDNs have been instrumental in delivering high availability and low-latency content since their inception. Our CDN design takes into account performance optimization, availability assurance, scalability support, and reliability/security measures. By implementing these design principles, our CDN is well-equipped to improve the performance of large-scale services and meet the demands of modern content delivery requirements.
+    Conclusion:
+    CDNs have been instrumental in delivering high availability and low-latency content since their inception. Our CDN design takes into account performance optimization, availability assurance, scalability support, and reliability/security measures. By implementing these design principles, our CDN is well-equipped to improve the performance of large-scale services and meet the demands of modern content delivery requirements.

@@ -232,8 +232,8 @@ Understanding CDN: Part 2 - Content Consistency and Proxy Server Deployment
 
 Evaluating the Design of a CDN
 
-Introduction:
-In this evaluation, we will assess the design of our proposed Content Delivery Network (CDN) based on the requirements discussed in previous lessons. We will focus on performance, availability, scalability, reliability, and security.
+  Introduction:
+  In this evaluation, we will assess the design of our proposed Content Delivery Network (CDN) based on the requirements discussed in previous lessons. We will focus on performance, availability, scalability, reliability, and security.
 
     1. Performance:
     To ensure high performance and minimize latency, our CDN design incorporates the following key elements:

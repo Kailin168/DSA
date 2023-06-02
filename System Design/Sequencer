@@ -4,21 +4,21 @@ Sequencer: Basics of designing a sequencer
     Introduction:
     In a large distributed system, millions of events occur every second, such as commenting on a post, sharing a Tweet, or posting a picture. To distinguish these events from each other, a mechanism of assigning globally unique IDs is crucial. This mechanism ensures proper identification and enables various functionalities within the system.
 
-    1. Unique IDs in Distributed Systems:
-    Unique IDs serve multiple purposes in distributed systems, including:
-    - Event Differentiation: With numerous events happening simultaneously, unique IDs allow us to distinguish one event from another.
-    - Primary Keys in Databases: Unique IDs are commonly used as primary keys in databases, ensuring each entry has a distinct identifier.
-    - Distributed Databases: In distributed databases, auto-increment features for generating IDs independently on different nodes don't work. Therefore, a unique ID generator is required to serve as a primary key in a distributed setting.
+      1. Unique IDs in Distributed Systems:
+      Unique IDs serve multiple purposes in distributed systems, including:
+      - Event Differentiation: With numerous events happening simultaneously, unique IDs allow us to distinguish one event from another.
+      - Primary Keys in Databases: Unique IDs are commonly used as primary keys in databases, ensuring each entry has a distinct identifier.
+      - Distributed Databases: In distributed databases, auto-increment features for generating IDs independently on different nodes don't work. Therefore, a unique ID generator is required to serve as a primary key in a distributed setting.
 
-    2. Importance of Unique IDs:
-    Having unique IDs brings several benefits, such as:
-    - Event Flow Identification: Unique IDs help trace the flow of an event in system logs, aiding in debugging and analysis.
-    - Performance Tracing and Analysis: Real-world systems like Facebook's Canopy use unique TraceIDs to identify events across multiple microservices involved in fulfilling a user request.
+      2. Importance of Unique IDs:
+      Having unique IDs brings several benefits, such as:
+      - Event Flow Identification: Unique IDs help trace the flow of an event in system logs, aiding in debugging and analysis.
+      - Performance Tracing and Analysis: Real-world systems like Facebook's Canopy use unique TraceIDs to identify events across multiple microservices involved in fulfilling a user request.
 
-    3. Designing a Unique ID Generator:
-    To design a unique ID generator within a distributed system, the following aspects are addressed:
-    - Lesson 1: Design of a Unique ID Generator: This lesson covers the requirements and discusses three methods for generating unique IDs: using UUIDs, utilizing a database, or implementing a range handler.
-    - Lesson 2: Unique IDs with Causality: This lesson expands on the ID generation process by considering causality and incorporating the element of time.
+      3. Designing a Unique ID Generator:
+      To design a unique ID generator within a distributed system, the following aspects are addressed:
+      - Lesson 1: Design of a Unique ID Generator: This lesson covers the requirements and discusses three methods for generating unique IDs: using UUIDs, utilizing a database, or implementing a range handler.
+      - Lesson 2: Unique IDs with Causality: This lesson expands on the ID generation process by considering causality and incorporating the element of time.
 
     Conclusion:
     Unique IDs play a vital role in identifying events and objects within distributed systems. Designing a reliable and efficient unique ID generator is challenging but essential. By understanding the requirements and exploring various methods of ID generation, we can develop a robust system that ensures globally unique IDs and enables seamless functionality within distributed systems.

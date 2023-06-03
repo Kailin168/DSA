@@ -4,7 +4,6 @@ Basics of designing a sequencer
     The Importance and Design of Unique IDs in Distributed Systems
     Introduction:
     In a large distributed system, millions of events occur every second, such as commenting on a post, sharing a Tweet, or posting a picture. To distinguish these events from each other, a mechanism of assigning globally unique IDs is crucial. This mechanism ensures proper identification and enables various functionalities within the system.
-
       1. Unique IDs in Distributed Systems:
       Unique IDs serve multiple purposes in distributed systems, including:
       - Event Differentiation: With numerous events happening simultaneously, unique IDs allow us to distinguish one event from another.

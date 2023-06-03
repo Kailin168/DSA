@@ -13,7 +13,6 @@ Basics of designing a sequencer
       Having unique IDs brings several benefits, such as:
       - Event Flow Identification: Unique IDs help trace the flow of an event in system logs, aiding in debugging and analysis.
       - Performance Tracing and Analysis: Real-world systems like Facebook's Canopy use unique TraceIDs to identify events across multiple microservices involved in fulfilling a user request.
-
       3. Designing a Unique ID Generator:
       To design a unique ID generator within a distributed system, the following aspects are addressed:
       - Lesson 1: Design of a Unique ID Generator: This lesson covers the requirements and discusses three methods for generating unique IDs: using UUIDs, utilizing a database, or implementing a range handler.

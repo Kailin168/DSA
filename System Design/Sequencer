@@ -17,6 +17,5 @@ Basics of designing a sequencer
       To design a unique ID generator within a distributed system, the following aspects are addressed:
       - Lesson 1: Design of a Unique ID Generator: This lesson covers the requirements and discusses three methods for generating unique IDs: using UUIDs, utilizing a database, or implementing a range handler.
       - Lesson 2: Unique IDs with Causality: This lesson expands on the ID generation process by considering causality and incorporating the element of time.
-
     Conclusion:
     Unique IDs play a vital role in identifying events and objects within distributed systems. Designing a reliable and efficient unique ID generator is challenging but essential. By understanding the requirements and exploring various methods of ID generation, we can develop a robust system that ensures globally unique IDs and enables seamless functionality within distributed systems.

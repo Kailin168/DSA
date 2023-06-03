@@ -9,7 +9,6 @@ Basics of designing a sequencer
       - Event Differentiation: With numerous events happening simultaneously, unique IDs allow us to distinguish one event from another.
       - Primary Keys in Databases: Unique IDs are commonly used as primary keys in databases, ensuring each entry has a distinct identifier.
       - Distributed Databases: In distributed databases, auto-increment features for generating IDs independently on different nodes don't work. Therefore, a unique ID generator is required to serve as a primary key in a distributed setting.
-
       2. Importance of Unique IDs:
       Having unique IDs brings several benefits, such as:
       - Event Flow Identification: Unique IDs help trace the flow of an event in system logs, aiding in debugging and analysis.

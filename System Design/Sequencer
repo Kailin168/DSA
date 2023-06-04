@@ -22,4 +22,26 @@ Basics of designing a sequencer
 
 
 Designing a System for Generating Unique IDs
+Introduction:
+In this lesson, we will explore the design of a system that generates unique IDs. We'll discuss the requirements for unique identifiers and examine three different solutions: using UUID, utilizing a database, and implementing a range handler.
+
+1. Requirements for Unique Identifiers:
+To design an effective ID generation system, we need to consider the following requirements:
+
+- Uniqueness: Each identifier should be unique to ensure proper identification.
+- Scalability: The system should be capable of generating at least a billion unique IDs per day.
+- Availability: It should be able to handle the generation of IDs for all events, even those occurring at nanosecond intervals.
+- 64-bit Numeric ID: Restricting the ID length to 64 bits is sufficient for future use.
+
+2. First Solution: Using UUID (Universally Unique Identifier):
+A simple solution is to use UUID, a 128-bit number that offers a vast number of unique combinations. UUIDs have different versions, and we opt for version 4, which generates a pseudorandom number. Each server can generate its own UUID independently, making it highly scalable and available. However, using UUIDs may result in slower primary key indexing, and there is a small chance of collisions.
+
+3. Second Solution: Using a Database:
+An alternative approach is to mimic the auto-increment feature of a database. A central database provides a current ID that increments by one for each event. To avoid a single point of failure, we modify the conventional auto-increment by incrementing the ID by a value 'm' representing the number of database servers. This approach ensures scalability and prevents ID duplication. However, scaling for multiple data centers can be challenging.
+
+4. Third Solution: Using a Range Handler:
+To address the limitations of previous solutions, we can implement a range handler using ranges on a central server. Multiple ranges, such as 1 to 1,000,000 and 1,000,001 to 2,000,000, can be allocated to servers. Each server claims a range and assigns IDs from within that range. This approach prevents ID duplication, allows concurrent request handling, and can be load-balanced. However, a failed server results in the loss of a significant range until it becomes active again.
+
+Conclusion:
+Designing a system for generating unique IDs requires careful consideration of requirements such as uniqueness, scalability, availability, and ID length. The use of UUIDs, databases, or range handlers presents different trade-offs and solutions. By understanding these options, we can develop an ID generation system that meets the specific needs of our distributed system.
 

@@ -19,3 +19,7 @@ Basics of designing a sequencer
       - Lesson 2: Unique IDs with Causality: This lesson expands on the ID generation process by considering causality and incorporating the element of time.
     Conclusion:
     Unique IDs play a vital role in identifying events and objects within distributed systems. Designing a reliable and efficient unique ID generator is challenging but essential. By understanding the requirements and exploring various methods of ID generation, we can develop a robust system that ensures globally unique IDs and enables seamless functionality within distributed systems.
+
+Title: Designing a System for Generating Unique IDs
+
+Introduction

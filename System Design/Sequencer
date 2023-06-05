@@ -48,50 +48,50 @@ Designing a System for Generating Unique IDs
 
 Unique IDs with Causality
 
-In this lesson, we will learn how to generate unique IDs using time and also maintain the causality of events. The ability to distinguish between events and understand their sequence is important in various applications.
+    In this lesson, we will learn how to generate unique IDs using time and also maintain the causality of events. The ability to distinguish between events and understand their sequence is important in various applications.
 
-Causality: 
-Causality refers to the relationship between events where one event is dependent on another and cannot occur before it. It helps us understand the order of events. Concurrent events, on the other hand, occur independently of each other and do not have a causal relationship.
+    Causality: 
+    Causality refers to the relationship between events where one event is dependent on another and cannot occur before it. It helps us understand the order of events. Concurrent events, on the other hand, occur independently of each other and do not have a causal relationship.
 
-Using UNIX timestamps: 
-UNIX timestamps, which are granular to the millisecond, can be used to generate unique IDs. By assigning a timestamp to each event, we can maintain causality. We can generate a large number of IDs per second using this approach.
+    Using UNIX timestamps: 
+    UNIX timestamps, which are granular to the millisecond, can be used to generate unique IDs. By assigning a timestamp to each event, we can maintain causality. We can generate a large number of IDs per second using this approach.
 
-Pros: 
-- Simple and scalable solution
-- Enables multiple servers to handle concurrent requests
+    Pros: 
+    - Simple and scalable solution
+    - Enables multiple servers to handle concurrent requests
 
-Cons: 
-- Same timestamp can be returned for concurrent events, resulting in non-unique IDs
+    Cons: 
+    - Same timestamp can be returned for concurrent events, resulting in non-unique IDs
 
-Twitter Snowflake: 
-Twitter Snowflake is a system that efficiently uses time to generate unique IDs. It divides a 64-bit ID into different components: sign bit, timestamp, worker number, and sequence number. The timestamp component allows for time-based sorting of IDs.
+    Twitter Snowflake: 
+    Twitter Snowflake is a system that efficiently uses time to generate unique IDs. It divides a 64-bit ID into different components: sign bit, timestamp, worker number, and sequence number. The timestamp component allows for time-based sorting of IDs.
 
-Pros: 
-- Time-based sorting of IDs
-- Highly available ID generator
+    Pros: 
+    - Time-based sorting of IDs
+    - Highly available ID generator
 
-Cons: 
-- IDs generated in a dead period are wasted, leading to gaps in the range of IDs
+    Cons: 
+    - IDs generated in a dead period are wasted, leading to gaps in the range of IDs
 
-Using logical clocks: 
-Logical clocks, such as Lamport and vector clocks, can be used to maintain causal history of events.
+    Using logical clocks: 
+    Logical clocks, such as Lamport and vector clocks, can be used to maintain causal history of events.
 
-Lamport clocks: 
-In Lamport clocks, each node has a numeric counter that is incremented before executing an event. Messages between nodes carry the counter value, allowing for partial ordering of events based on the happened-before relationship. However, Lamport clocks cannot infer global causality.
+    Lamport clocks: 
+    In Lamport clocks, each node has a numeric counter that is incremented before executing an event. Messages between nodes carry the counter value, allowing for partial ordering of events based on the happened-before relationship. However, Lamport clocks cannot infer global causality.
 
-Vector clocks: 
-Vector clocks capture the causal history of events by using a vector data structure. Each node has a counter, and the vector represents the state of all nodes. It provides a total ordering of events and allows for inferring causality at the global level.
+    Vector clocks: 
+    Vector clocks capture the causal history of events by using a vector data structure. Each node has a counter, and the vector represents the state of all nodes. It provides a total ordering of events and allows for inferring causality at the global level.
 
-Pros and Cons of different approaches:
-- UUID: Unique, scalable, available, but does not maintain causality.
-- Database: Not unique, not scalable, available, maintains causality.
-- Range handler: Unique, scalable, available, maintains causality to some extent.
-- UNIX timestamps: Not unique, weak scalability, available, maintains causality weakly.
-- Twitter Snowflake: Unique, scalable, available, maintains causality weakly.
-- Logical clocks: Unique, scalability depends on the number of nodes, available, maintains causality.
+    Pros and Cons of different approaches:
+    - UUID: Unique, scalable, available, but does not maintain causality.
+    - Database: Not unique, not scalable, available, maintains causality.
+    - Range handler: Unique, scalable, available, maintains causality to some extent.
+    - UNIX timestamps: Not unique, weak scalability, available, maintains causality weakly.
+    - Twitter Snowflake: Unique, scalable, available, maintains causality weakly.
+    - Logical clocks: Unique, scalability depends on the number of nodes, available, maintains causality.
 
-TrueTime API:
-Google's TrueTime API in Spanner provides an alternative solution by reporting an interval of time instead of a specific timestamp. It takes into account clock uncertainties and provides a narrower interval of time. It relies on GPS receivers or atomic clocks in data centers to ensure clock synchronization.
+    TrueTime API:
+    Google's TrueTime API in Spanner provides an alternative solution by reporting an interval of time instead of a specific timestamp. It takes into account clock uncertainties and provides a narrower interval of time. It relies on GPS receivers or atomic clocks in data centers to ensure clock synchronization.
 
-Summary:
-Generating unique IDs with causality is important in various applications. UNIX timestamps, Twitter Snowflake, logical clocks (Lamport and vector clocks), and TrueTime API are some approaches to achieve this. Each approach has its pros and cons in terms of uniqueness, scalability, availability, and causality maintenance. The choice of approach depends on the specific requirements of the application.
+    Summary:
+    Generating unique IDs with causality is important in various applications. UNIX timestamps, Twitter Snowflake, logical clocks (Lamport and vector clocks), and TrueTime API are some approaches to achieve this. Each approach has its pros and cons in terms of uniqueness, scalability, availability, and causality maintenance. The choice of approach depends on the specific requirements of the application.

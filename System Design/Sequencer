@@ -47,7 +47,6 @@ Designing a System for Generating Unique IDs
 
 
 Unique IDs with Causality
-Unique IDs with Causality
 
 In this lesson, we will learn how to generate unique IDs using time and also maintain the causality of events. The ability to distinguish between events and understand their sequence is important in various applications.
 

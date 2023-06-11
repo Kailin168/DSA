@@ -1,4 +1,4 @@
-# Data Structures and Algorithms and System Design Notes Repository 💻
+# Data Structures & Algorithms and System Design Notes Repository 💻
 Welcome to the Data Structures and Algorithms Notes repository! This repository contains notes and examples for data structures and algorithm topics that can be used for review.
 
 ### Notes 📓 

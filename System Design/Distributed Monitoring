@@ -32,8 +32,6 @@ An example will be used to demonstrate why monitoring is essential in a distribu
 
 
 Introduction to Distributed Monitoring
-In this section, we'll learn why monitoring is crucial in a distributed system. We'll cover the following points:
-
 1. Need for monitoring:
    - When a single service fails in a distributed system, it can cause problems in related systems. Monitoring helps detect failures early and prevent cascading issues.
    - For example, if a user uploads a video on YouTube, various services in different servers handle different tasks. If one service fails, it can lead to errors and disrupt the user experience.

@@ -29,3 +29,6 @@ To design a distributed monitoring system, we break it down into the following c
    - Designing a Client-side Monitoring System: Learning how to design a system that monitors client-side errors.
 
 An example will be used to demonstrate why monitoring is essential in a distributed system. The lesson will also cover the cost of downtime due to failures and different types of monitoring.
+
+
+Introduction to Distributed Monitoring

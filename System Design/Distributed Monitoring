@@ -32,3 +32,23 @@ An example will be used to demonstrate why monitoring is essential in a distribu
 
 
 Introduction to Distributed Monitoring
+In this section, we'll learn why monitoring is crucial in a distributed system. We'll cover the following points:
+
+1. Need for monitoring:
+   - When a single service fails in a distributed system, it can cause problems in related systems. Monitoring helps detect failures early and prevent cascading issues.
+   - For example, if a user uploads a video on YouTube, various services in different servers handle different tasks. If one service fails, it can lead to errors and disrupt the user experience.
+   - With complex infrastructures and numerous servers globally, manually identifying and resolving problems becomes challenging. Monitoring reduces operational costs and automates the detection of failures.
+
+2. Downtime cost:
+   - Unplanned outages can be costly for businesses. For instance, Meta (formerly Facebook) experienced a nearly nine-hour outage in 2021, resulting in a loss of around $13 million per hour.
+   - The IT infrastructure is spread worldwide, and monitoring servers in geographically separated data centers is essential.
+   - Outages can have a significant impact, as shown by an example where an AWS service issue resulted in connection delays and performance problems, costing approximately $66,240 per minute.
+
+3. Types of monitoring:
+   - To understand the types of errors we need to monitor, let's consider an example from Educative, where learners connect to an executable environment.
+   - We can categorize monitoring focus into two broad types of errors:
+     - Service-side errors: These occur on servers and are typically visible to monitoring services. They are reported as error 5xx in HTTP response codes.
+     - Client-side errors: These originate from the client-side and may go unnoticed by the service. They are reported as error 4xx in HTTP response codes. Some client-side errors occur when client requests fail to reach the service.
+   - Designing a monitoring system that handles both service-side and client-side errors allows better analysis of globally distributed services and enables timely detection and response to faults.
+
+In the upcoming chapters, we'll explore monitoring server-side errors and client-side errors in more detail, focusing on designing effective monitoring systems.

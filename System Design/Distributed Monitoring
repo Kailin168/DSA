@@ -75,4 +75,4 @@ Metrics and alerting in a monitoring system. Here are the key points covered:
          - Alerting is a crucial component of a monitoring system that responds to changes in metric values.
          - An alert definition consists of a metrics-based condition or threshold and an action to take when values fall outside the acceptable range.
 
-Monitoring systems that define metrics, collect data, and send alerts when values are abnormal provide valuable insights to support teams. They enable quick and confident responses to issues, ensuring service stability. By monitoring metrics and setting up effective alerting mechanisms, organizations can proactively address problems and maintain a healthy infrastructure.
+      Monitoring systems that define metrics, collect data, and send alerts when values are abnormal provide valuable insights to support teams. They enable quick and confident responses to issues, ensuring service stability. By monitoring metrics and setting up effective alerting mechanisms, organizations can proactively address problems and maintain a healthy infrastructure.

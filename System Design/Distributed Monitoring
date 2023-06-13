@@ -50,3 +50,31 @@ Introduction to Distributed Monitoring
    - Designing a monitoring system that handles both service-side and client-side errors allows better analysis of globally distributed services and enables timely detection and response to faults.
 
 Prerequisites of a Monitoring System
+Simplifying "Prerequisites of a Monitoring System":
+
+In this section, we'll learn about metrics and alerting in a monitoring system. Here are the key points covered:
+
+1. Metrics:
+   - Metrics define what we should measure and in what units. They provide insights into the system's state at any given time.
+   - Examples of metrics include a web server's ability to handle traffic per second or network performance in terms of throughput and latency.
+   - Collecting metric values with minimal performance impact is important. Monitoring systems can provide data on processor load, CPU statistics, RAM usage, disk space, etc.
+
+2. Populating the metrics:
+   - Metrics should be logically centralized for global monitoring and alerting purposes.
+   - Monitoring systems can either pull or push metrics depending on user preference.
+   - In the pull strategy, monitored servers store metrics and expose an endpoint for the monitoring system to fetch them.
+   - Pushing metrics can be beneficial in certain situations, such as when a firewall restricts direct access.
+
+3. Persisting the data:
+   - Storing the metrics from monitored servers is crucial, especially for large data centers.
+   - A time-series database is helpful for storing and organizing a large amount of metric data in chronological sequence.
+
+4. Application metrics:
+   - We may need to add code or APIs to expose metrics specific to our own applications.
+   - Code instrumentation helps collect relevant information about the performance and health of our applications.
+
+5. Alerting:
+   - Alerting is a crucial component of a monitoring system that responds to changes in metric values.
+   - An alert definition consists of a metrics-based condition or threshold and an action to take when values fall outside the acceptable range.
+
+Monitoring systems that define metrics, collect data, and send alerts when values are abnormal provide valuable insights to support teams. They enable quick and confident responses to issues, ensuring service stability. By monitoring metrics and setting up effective alerting mechanisms, organizations can proactively address problems and maintain a healthy infrastructure.

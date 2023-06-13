@@ -50,9 +50,7 @@ Introduction to Distributed Monitoring
    - Designing a monitoring system that handles both service-side and client-side errors allows better analysis of globally distributed services and enables timely detection and response to faults.
 
 Prerequisites of a Monitoring System
-Simplifying "Prerequisites of a Monitoring System":
-
-In this section, we'll learn about metrics and alerting in a monitoring system. Here are the key points covered:
+Metrics and alerting in a monitoring system. Here are the key points covered:
 
 1. Metrics:
    - Metrics define what we should measure and in what units. They provide insights into the system's state at any given time.

@@ -48,3 +48,5 @@ Introduction to Distributed Monitoring
      - Service-side errors: These occur on servers and are typically visible to monitoring services. They are reported as error 5xx in HTTP response codes.
      - Client-side errors: These originate from the client-side and may go unnoticed by the service. They are reported as error 4xx in HTTP response codes. Some client-side errors occur when client requests fail to reach the service.
    - Designing a monitoring system that handles both service-side and client-side errors allows better analysis of globally distributed services and enables timely detection and response to faults.
+
+Prerequisites of a Monitoring System

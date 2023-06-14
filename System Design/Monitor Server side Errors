@@ -1,19 +1,17 @@
 Design of a Monitoring System
 
+Explore the initial design of a generic monitoring system. Here are the key points covered:
+    1. Requirements:
+      - The monitoring system should be able to monitor various aspects of the server, including local processes, resource usage (CPU/memory/disk/network), server health, hardware component faults, critical services, network infrastructure, power consumption, routing information, DNS, latency, and overall service health.
+      - Automated monitoring is desired, with anomaly detection and alerts.
 
-In this section, we'll explore the initial design of a generic monitoring system. Here are the key points covered:
+    2. Building blocks:
+      - The system will utilize blob storage to store metric information.
 
-1. Requirements:
-   - The monitoring system should be able to monitor various aspects of the server, including local processes, resource usage (CPU/memory/disk/network), server health, hardware component faults, critical services, network infrastructure, power consumption, routing information, DNS, latency, and overall service health.
-   - Automated monitoring is desired, with anomaly detection and alerts.
+    3. High-level design:
+      - The monitoring system consists of three main components:
+        - Storage: A time-series database stores metric data, such as CPU usage or application exceptions.
+        - Data collector service: This component fetches relevant data from each service and stores it in the storage.
+        - Querying service: An API that allows querying the time-series database to retrieve relevant information.
 
-2. Building blocks:
-   - The system will utilize blob storage to store metric information.
-
-3. High-level design:
-   - The monitoring system consists of three main components:
-     - Storage: A time-series database stores metric data, such as CPU usage or application exceptions.
-     - Data collector service: This component fetches relevant data from each service and stores it in the storage.
-     - Querying service: An API that allows querying the time-series database to retrieve relevant information.
-
-The high-level design provides an overview of how the monitoring system will function and the key components involved. By storing metric data and utilizing a data collector and querying service, the system can effectively monitor and retrieve information about the server's performance and health.
+    The high-level design provides an overview of how the monitoring system will function and the key components involved. By storing metric data and utilizing a data collector and querying service, the system can effectively monitor and retrieve information about the server's performance and health.

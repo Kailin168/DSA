@@ -16,9 +16,9 @@ Explore the initial design of a generic monitoring system. Here are the key poin
 
     The high-level design provides an overview of how the monitoring system will function and the key components involved. By storing metric data and utilizing a data collector and querying service, the system can effectively monitor and retrieve information about the server's performance and health.
 
-Simplifying "Detailed Design of a Monitoring System":
+Detailed Design of a Monitoring System
 
-In this section, we delve into the detailed design of a monitoring system, including its components, pros, cons, and potential improvements. Here are the key points covered:
+Detailed design of a monitoring system, including its components, pros, cons, and potential improvements. Here are the key points covered:
 
 1. Storage:
    - Time-series databases are used to save data locally on the monitoring server.

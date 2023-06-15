@@ -15,3 +15,44 @@ Explore the initial design of a generic monitoring system. Here are the key poin
         - Querying service: An API that allows querying the time-series database to retrieve relevant information.
 
     The high-level design provides an overview of how the monitoring system will function and the key components involved. By storing metric data and utilizing a data collector and querying service, the system can effectively monitor and retrieve information about the server's performance and health.
+
+Simplifying "Detailed Design of a Monitoring System":
+
+In this section, we delve into the detailed design of a monitoring system, including its components, pros, cons, and potential improvements. Here are the key points covered:
+
+1. Storage:
+   - Time-series databases are used to save data locally on the monitoring server.
+   - Blob storage is utilized to store metrics, while a separate storage node is added to store rules and actions.
+
+2. Data collector:
+   - A pull-based strategy is chosen, where relevant metrics are extracted from application logs using a distributed messaging queue.
+   - The data collector retrieves metrics from services and stores them in the time-series database.
+
+3. Service discoverer:
+   - A service discovery solution is employed to locate the services that need to be monitored, integrating with platforms like EC2, Kubernetes, and Consul.
+
+4. Querying service:
+   - A service is implemented to access the database and retrieve query results for specific metrics or alerts.
+
+5. Alert Manager:
+   - Responsible for sending alerts when rules are violated, using various communication channels such as email or Slack.
+
+6. Dashboard:
+   - Metrics collected are used to create dashboards displaying relevant information, such as request counts.
+
+Pros:
+- The monitoring system ensures smooth operations and proactively identifies potential issues.
+- The pull-based approach reduces network congestion by fetching data from services.
+- The system provides higher availability.
+
+Cons:
+- Scaling can become challenging, particularly when managing an increasing number of servers to monitor.
+- Storing a large amount of data indefinitely can be resource-intensive, requiring policies and mechanisms for periodic data deletion.
+
+Improving the design:
+- To address scalability concerns, a hybrid approach combining push-based and pull-based strategies is proposed.
+- Secondary monitoring servers push data to a primary data center server, which then pushes data to a global monitoring service overseeing multiple data centers.
+- Blob storage and elastic search are used to store and visualize excessive data.
+- A hierarchy of monitoring systems allows for scaling by adding more nodes or levels as needed.
+
+The detailed design provides insights into the various components of the monitoring system, highlights its strengths and weaknesses, and suggests improvements to enhance scalability and data management.

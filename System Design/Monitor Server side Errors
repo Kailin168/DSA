@@ -56,3 +56,6 @@ Detailed Design of a Monitoring System
     - A hierarchy of monitoring systems allows for scaling by adding more nodes or levels as needed.
 
     The detailed design provides insights into the various components of the monitoring system, highlights its strengths and weaknesses, and suggests improvements to enhance scalability and data management.
+  
+
+Visualize Data in a Monitoring System

@@ -61,17 +61,14 @@ Detailed Design of a Monitoring System
 Visualize Data in a Monitoring System
 
   Explore a novel way to visualize a large amount of monitoring data using heat maps. Here are the key points covered:
-
     1. Using heat maps to troubleshoot:
       - Heat maps are effective in displaying information about thousands of servers compactly in a data center.
       - Each rack of servers is sorted and named by data center, cluster, and row, making it easy to identify problems at different levels.
       - The color of each cell in a heat map matrix represents the health of a component, with green indicating normal operation and red indicating nonresponsiveness.
-
     2. Benefits of using heat maps:
       - Heat maps can quickly identify which servers are down or experiencing issues.
       - They can be used for globally distributed systems to share health information and focus on problematic areas.
       - Heat maps can also be applied to visualize other resources like filesystems, networking switches, and links.
-
     Summary:
     Monitoring systems play a crucial role in analyzing distributed systems and notifying stakeholders about any issues. To ensure scalability, a hybrid approach combining push and pull methods can be employed. Heat maps offer a powerful visualization tool, enabling a comprehensive view of the health status of thousands of servers in a compact space.
 

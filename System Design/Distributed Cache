@@ -1,1 +1,27 @@
 The Distributed Cache
+
+Problem statement:
+- A system consists of clients, service hosts, and a database.
+- As the number of users increases, database queries overwhelm the service providers, leading to slow performance.
+- To address this, a cache is added to improve performance by storing frequently accessed data in memory.
+
+What is a distributed cache?
+- A distributed cache is a system where multiple cache servers work together to store frequently accessed data.
+- Distributed caches are used when a single cache server is insufficient to store all the data and scalability and availability are important.
+
+Benefits of distributed cache:
+- Minimizes user-perceived latency by storing frequently accessed data and precalculating results.
+- Optimizes expensive database queries by pre-generating them in the cache.
+- Temporarily stores user session data.
+- Continues to serve data from cache even if the data store is temporarily unavailable.
+- Reduces network costs by serving data from local resources.
+
+Reasons for using distributed cache:
+- Storing the entire data in one system becomes impractical due to size and potential single point of failure.
+- Caching at different layers of the system improves performance and decouples sensitive data.
+- Caching is performed at web, application, database, DNS, and client-side layers.
+
+Designing a distributed cache:
+- The design process involves building background knowledge, creating a high-level design, refining it for scalability and performance, evaluating non-functional requirements, and comparing industrial solutions like Memcached and Redis.
+
+Understanding the basics of a distributed cache helps address performance issues in systems with a large number of users by efficiently storing and serving frequently accessed data. By distributing the cache across multiple servers, scalability and availability can be ensured, resulting in improved system performance and reduced latency.

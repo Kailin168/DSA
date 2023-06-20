@@ -25,3 +25,6 @@ The Distributed Cache
   - The design process involves building background knowledge, creating a high-level design, refining it for scalability and performance, evaluating non-functional requirements, and comparing industrial solutions like Memcached and Redis.
 
   Understanding the basics of a distributed cache helps address performance issues in systems with a large number of users by efficiently storing and serving frequently accessed data. By distributing the cache across multiple servers, scalability and availability can be ensured, resulting in improved system performance and reduced latency.
+
+
+Background of Distributed Cache

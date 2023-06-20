@@ -28,3 +28,38 @@ The Distributed Cache
 
 
 Background of Distributed Cache
+Learn the fundamentals for designing a distributed cache. Here are the key points covered:
+
+Writing policies:
+- Discusses different strategies for writing data to cache and databases, such as write-through, write-back, and write-around.
+- Considers the implications of each strategy on consistency models.
+
+Eviction policies:
+- Explains the need for eviction mechanisms in small caches with limited storage capacity.
+- Mentions well-known eviction strategies like LRU, MRU, LFU, and MFU.
+- Emphasizes that the choice of eviction algorithm depends on the system requirements.
+
+Cache invalidation:
+- Addresses the issue of stale or outdated data in the cache.
+- Introduces time-to-live (TTL) value as a way to identify and remove expired entries.
+- Describes active and passive expiration methods for dealing with outdated items.
+
+Storage mechanism:
+- Explores design considerations for storing data in a distributed cache with multiple cache servers.
+- Discusses the use of hash functions to determine cache server selection and locate cache entries.
+- Mentions the use of doubly linked lists for data structure simplicity and efficiency.
+
+Sharding in cache clusters:
+- Introduces sharding as a technique to distribute cache data among multiple cache servers.
+- Presents two approaches: dedicated cache servers and co-located cache.
+- Highlights the advantages and considerations of each approach.
+
+Cache client:
+- Explains the role of a cache client in performing hash calculations, storing, and retrieving data from cache servers.
+- Mentions coordination with other system components and the use of standard transport protocols.
+
+Conclusion:
+- Summarizes the importance of distributed caches in distributed systems.
+- Reiterates the significance of understanding the design principles and mechanisms involved in building a distributed cache.
+
+Understanding the fundamentals of distributed cache design is essential for efficiently managing data storage, eviction, and cache invalidation. Sharding techniques and different cache client strategies contribute to the overall performance and scalability of a distributed cache system.

@@ -63,3 +63,5 @@ Background of Distributed Cache
     - Reiterates the significance of understanding the design principles and mechanisms involved in building a distributed cache.
 
     Understanding the fundamentals of distributed cache design is essential for efficiently managing data storage, eviction, and cache invalidation. Sharding techniques and different cache client strategies contribute to the overall performance and scalability of a distributed cache system.
+
+High-level design of a distributed cache, let's focus on the key points

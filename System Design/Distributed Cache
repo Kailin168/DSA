@@ -95,3 +95,27 @@ High-level design of a distributed cache, let's focus on the key points
     - Cache servers: Maintain the cache data and are accessible by all cache clients. Connected to the database for storing or retrieving data. Communication with cache clients is done using TCP or UDP protocols.
 
 Detailed design of a distributed cache
+
+    Find and Remove Limitations:
+    - Lack of cache server awareness: Implement a configuration mechanism, such as a configuration file or a centralized configuration service, to provide cache client with updated information about cache servers.
+    - Single point of failure: Add replica nodes to improve availability and handle failures. Use primary and backup nodes within a cache shard to ensure availability and consistency.
+    - Internals of cache server: Each cache server should use a hash map to store and locate entries, a doubly linked list for eviction, and an eviction policy, such as least recently used (LRU).
+
+    Improve Availability:
+    - Use replica nodes to ensure availability in case of failures.
+    - Divide cache data among shards to distribute load and avoid wasting hardware resources.
+    - Primary-secondary node configuration allows for reads from multiple nodes in hot shards, improving performance.
+
+    Internals of Cache Server:
+    - Utilize a hash map to store and locate entries within the cache servers' RAM.
+    - Employ a doubly linked list to order entries based on their frequency of access for eviction purposes.
+    - Choose an eviction policy, such as LRU, depending on the application requirements.
+
+    Detailed Design:
+    - Client requests pass through load balancers to reach the service hosts where cache clients reside.
+    - Consistent hashing is used by cache clients to identify the appropriate cache server and forward the request.
+    - Each cache server includes primary and replica servers, all using the same internal mechanisms for storing and evicting cache entries.
+    - Configuration service ensures cache clients have an updated and consistent view of the cache servers.
+    - Monitoring services can be added to log and report caching service metrics.
+
+    Note: The cache entries are stored and retrieved from RAM for fast access.

@@ -94,3 +94,4 @@ High-level design of a distributed cache, let's focus on the key points
     - Cache client: Resides in service application servers and holds information about cache servers. Uses a consistent hashing algorithm to select a cache server for each request.
     - Cache servers: Maintain the cache data and are accessible by all cache clients. Connected to the database for storing or retrieving data. Communication with cache clients is done using TCP or UDP protocols.
 
+High-level design of a distributed cache

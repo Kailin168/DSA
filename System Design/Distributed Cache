@@ -115,3 +115,5 @@ Detailed design of a distributed cache
     - Monitoring services can be added to log and report caching service metrics.
 
     Note: The cache entries are stored and retrieved from RAM for fast access.
+
+Evaluation of a distributed cache's design

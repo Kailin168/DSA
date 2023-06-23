@@ -117,11 +117,9 @@ Detailed design of a distributed cache
     Note: The cache entries are stored and retrieved from RAM for fast access.
 
 Evaluation of a distributed cache's design
-
-High Performance:
-
-  - Consistent hashing allows efficient key retrieval with a time complexity of O(log(N)).
-  - Hash tables and doubly linked lists are used internally in cache servers for fast access and eviction.
-  - Communication between cache clients and servers is done through fast TCP and UDP protocols.
-  - Adding more replicas improves performance under high request loads.
-  - Storing and retrieving data from RAM ensures low latency.
+  High Performance:
+    - Consistent hashing allows efficient key retrieval with a time complexity of O(log(N)).
+    - Hash tables and doubly linked lists are used internally in cache servers for fast access and eviction.
+    - Communication between cache clients and servers is done through fast TCP and UDP protocols.
+    - Adding more replicas improves performance under high request loads.
+    - Storing and retrieving data from RAM ensures low latency.

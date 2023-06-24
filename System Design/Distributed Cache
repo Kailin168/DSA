@@ -123,3 +123,9 @@ Evaluation of a distributed cache's design
     - Communication between cache clients and servers is done through fast TCP and UDP protocols.
     - Adding more replicas improves performance under high request loads.
     - Storing and retrieving data from RAM ensures low latency.
+    Scalability:
+
+Shards can be created based on requirements and changing server loads.
+Consistent hashing minimizes rehash computations when adding new cache servers.
+Adding replicas reduces load on hot shards.
+Further sharding or intelligent client-side solutions can be employed to handle hotkeys.

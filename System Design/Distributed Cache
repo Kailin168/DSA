@@ -128,7 +128,7 @@ Evaluation of a distributed cache's design
     - Consistent hashing minimizes rehash computations when adding new cache servers.
     - Adding replicas reduces load on hot shards.
     - Further sharding or intelligent client-side solutions can be employed to handle hotkeys.
-    High Availability:
+  High Availability:
 
 Redundant cache servers improve availability and fault tolerance.
 Leader-follower algorithm manages cluster shards.

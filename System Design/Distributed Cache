@@ -133,3 +133,9 @@ Evaluation of a distributed cache's design
     - Leader-follower algorithm manages cluster shards.
     - Availability can be increased by distributing leader and follower servers across different data centers, but it may impact consistency.
     - Replication within a data center can provide strong consistency with good performance.
+Consistency:
+
+Writing data to cache servers can be done synchronously or asynchronously.
+Asynchronous mode is favored for caching systems to improve performance, but it may result in inconsistencies.
+Strong consistency can be achieved with synchronous writing, but it increases latency and impacts performance.
+Inconsistencies can arise from faulty configurations and services.

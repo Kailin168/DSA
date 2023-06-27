@@ -139,6 +139,5 @@ Evaluation of a distributed cache's design
     - Strong consistency can be achieved with synchronous writing, but it increases latency and impacts performance.
     - Inconsistencies can arise from faulty configurations and services.
   Affordability:
-
-The proposed design is cost-effective as it can be implemented using commodity hardware.
-In summary, the designed distributed cache provides high performance through efficient algorithms, scalability through sharding and replicas, high availability with redundancy, and affordability using commodity hardware. Consistency can be compromised for improved performance, and careful configuration is required to avoid inconsistencies.
+    - The proposed design is cost-effective as it can be implemented using commodity hardware.
+  In summary, the designed distributed cache provides high performance through efficient algorithms, scalability through sharding and replicas, high availability with redundancy, and affordability using commodity hardware. Consistency can be compromised for improved performance, and careful configuration is required to avoid inconsistencies.

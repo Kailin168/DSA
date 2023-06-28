@@ -143,3 +143,11 @@ Evaluation of a distributed cache's design
   In summary, the designed distributed cache provides high performance through efficient algorithms, scalability through sharding and replicas, high availability with redundancy, and affordability using commodity hardware. Consistency can be compromised for improved performance, and careful configuration is required to avoid inconsistencies.
 
 Memcached and Redis are both widely adopted distributed caching tools, but they have some differences in terms of design, features, and use cases. Here's a simplified comparison of Memcached and Redis:
+  Memcached:
+  - Introduced in 2003 as a key-value store distributed cache designed for fast object storage.
+  - Stores data as key-value pairs, where both the key and value are strings. It doesn't support manipulating different data structures.
+  - Follows a client-server model with a client component and a server component.
+  - Uses a shared-nothing architecture, where servers are unaware of each other and don't synchronize or share data.
+  - Offers high throughput and low latency, achieving sub-millisecond response times.
+  - Scales well horizontally and is commonly used in read-heavy systems.
+  - Doesn't provide built-in persistence, but it can be achieved using third-party tools.

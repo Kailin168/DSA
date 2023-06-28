@@ -141,3 +141,5 @@ Evaluation of a distributed cache's design
   Affordability:
     - The proposed design is cost-effective as it can be implemented using commodity hardware.
   In summary, the designed distributed cache provides high performance through efficient algorithms, scalability through sharding and replicas, high availability with redundancy, and affordability using commodity hardware. Consistency can be compromised for improved performance, and careful configuration is required to avoid inconsistencies.
+
+Memcached and Redis are both widely adopted distributed caching tools, but they have some differences in terms of design, features, and use cases. Here's a simplified comparison of Memcached and Redis:

@@ -153,11 +153,10 @@ Memcached and Redis are both widely adopted distributed caching tools, but they 
   - Doesn't provide built-in persistence, but it can be achieved using third-party tools.
 
 Redis:
-
-- Redis is a data structure store that can be used as a cache, database, and message broker.
-- Supports various data structures such as strings, sorted sets, hash maps, bitmaps, and hyper logs.
-- Provides built-in replication, automatic failover, and different levels of persistence (e.g., append-only file and snapshot).
-- Offers features like pub/sub messaging and Lua scripting support.
-- Redis clusters provide high availability and automatic sharding.
-- Uses a single-threaded model but can be scaled horizontally by running multiple Redis processes.
-- Suitable for both read-heavy and write-heavy systems.
+  - Redis is a data structure store that can be used as a cache, database, and message broker.
+  - Supports various data structures such as strings, sorted sets, hash maps, bitmaps, and hyper logs.
+  - Provides built-in replication, automatic failover, and different levels of persistence (e.g., append-only file and snapshot).
+  - Offers features like pub/sub messaging and Lua scripting support.
+  - Redis clusters provide high availability and automatic sharding.
+  - Uses a single-threaded model but can be scaled horizontally by running multiple Redis processes.
+  - Suitable for both read-heavy and write-heavy systems.

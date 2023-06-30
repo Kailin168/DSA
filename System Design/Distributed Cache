@@ -162,3 +162,10 @@ Redis:
   - Suitable for both read-heavy and write-heavy systems.
 
 Differences:
+  - Memcached is simpler and leaves most cluster management tasks to developers, while Redis automates scalability and data division.
+  - Memcached doesn't provide built-in persistence, while Redis offers multiple persistence options.
+  - Memcached can efficiently use multicore systems with multithreading, while Redis is single-threaded but can run multiple processes for concurrency.
+  - Memcached stores objects, while Redis supports multiple data structures.
+  - Memcached's replication requires third-party tools, while Redis has built-in replication.
+  - Memcached uses an LRU (Least Recently Used) eviction policy, while Redis supports multiple eviction algorithms.
+  - Memcached is preferred for smaller, simpler read-heavy systems, while Redis is suitable for more complex systems with read and write operations.

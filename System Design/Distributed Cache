@@ -160,3 +160,5 @@ Redis:
   - Redis clusters provide high availability and automatic sharding.
   - Uses a single-threaded model but can be scaled horizontally by running multiple Redis processes.
   - Suitable for both read-heavy and write-heavy systems.
+
+Differences:

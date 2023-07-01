@@ -1,1 +1,4 @@
 Distributed Messaging Queue
+
+What is a messaging queue?
+A messaging queue is an intermediary component that facilitates communication between producers and consumers. Producers send messages to the queue, while consumers retrieve and process these messages. Multiple producers and consumers can interact with the queue simultaneously.

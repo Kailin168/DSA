@@ -9,13 +9,8 @@ A messaging queue is an intermediary component that facilitates communication be
 Motivation
 A messaging queue offers several advantages and serves various purposes:
   1. Improved performance: By enabling asynchronous communication, a messaging queue eliminates speed differences between producers and consumers. Producers can send messages without waiting for consumers, and consumers process messages when they become available. This approach helps reduce client-perceived latency and separates slower operations from critical paths.
-
   2. Better reliability: The use of a messaging queue enhances system fault tolerance. If a producer or consumer fails, it can restart independently without affecting others. Replicating the queue across multiple servers ensures availability even if some servers are down.
-
   3. Granular scalability: Asynchronous communication allows for more scalable systems. Multiple processes can communicate via a messaging queue, and when the number of requests increases, workload distribution across multiple consumers becomes possible. Applications can adjust the number of producers or consumers as needed.
-
   4. Easy decoupling: A messaging queue decouples dependencies between different entities in a system. Entities communicate via messages without needing knowledge of each other's internal workings.
-
   5. Rate limiting: Messaging queues help absorb load spikes and prevent services from becoming overloaded. They can act as a rudimentary form of rate limiting to avoid dropping incoming requests.
-
   6. Priority queue: Multiple queues can be used to implement different priorities. Each priority can have its own queue, allowing higher-priority messages to receive more service time.

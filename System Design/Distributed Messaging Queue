@@ -14,3 +14,7 @@ A messaging queue offers several advantages and serves various purposes:
   4. Easy decoupling: A messaging queue decouples dependencies between different entities in a system. Entities communicate via messages without needing knowledge of each other's internal workings.
   5. Rate limiting: Messaging queues help absorb load spikes and prevent services from becoming overloaded. They can act as a rudimentary form of rate limiting to avoid dropping incoming requests.
   6. Priority queue: Multiple queues can be used to implement different priorities. Each priority can have its own queue, allowing higher-priority messages to receive more service time.
+
+Messaging queue use cases
+
+

@@ -22,13 +22,9 @@ Messaging queue use cases
   3. Recommender systems: Messaging queues can be used to improve the performance of recommender systems. By incorporating a queue between the recommender system and requesting processes, time-consuming tasks can be processed more efficiently, delivering relevant content or information to users.
 
 How do we design a distributed messaging queue?
-The design of a distributed messaging queue can be divided into the following:
-
-Requirements: Explore the functional and non-functional requirements for designing a distributed messaging queue. Discuss the limitations of a single server messaging queue.
-
-Design considerations: Consider important factors that can influence the design, such as message ordering, extraction, visibility, and concurrency of incoming messages.
-
-Design: Dive into the detailed design of a distributed messaging queue, including replication of queues and the interaction between various components involved in the design.
-
-Evaluation: Evaluate the design based on functional and non-functional requirements to ensure its effectiveness.
+  The design of a distributed messaging queue can be divided into the following:
+  Requirements: Explore the functional and non-functional requirements for designing a distributed messaging queue. Discuss the limitations of a single server messaging queue.
+  Design considerations: Consider important factors that can influence the design, such as message ordering, extraction, visibility, and concurrency of incoming messages.
+  Design: Dive into the detailed design of a distributed messaging queue, including replication of queues and the interaction between various components involved in the design.
+  Evaluation: Evaluate the design based on functional and non-functional requirements to ensure its effectiveness.
 

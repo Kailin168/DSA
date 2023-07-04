@@ -28,3 +28,4 @@ How do we design a distributed messaging queue?
   Design: Dive into the detailed design of a distributed messaging queue, including replication of queues and the interaction between various components involved in the design.
   Evaluation: Evaluate the design based on functional and non-functional requirements to ensure its effectiveness.
 
+Requirements of a Distributed Messaging Queue's Design:

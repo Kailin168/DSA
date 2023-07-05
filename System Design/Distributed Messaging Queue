@@ -29,3 +29,10 @@ How do we design a distributed messaging queue?
   Evaluation: Evaluate the design based on functional and non-functional requirements to ensure its effectiveness.
 
 Requirements of a Distributed Messaging Queue's Design:
+A distributed messaging queue aims to fulfill specific functional and non-functional requirements. These requirements are as follows:
+  Functional requirements:
+  1. Queue creation: Clients should be able to create a queue and specify parameters like queue name, size, and maximum message size.
+  2. Send message: Producers should be able to send messages to their respective queues.
+  3. Receive message: Consumers should be able to receive messages from their designated queues.
+  4. Delete message: Consumer processes should be able to delete messages from the queue after successful processing.
+  5. Queue deletion: Clients should have the ability to delete specific queues.

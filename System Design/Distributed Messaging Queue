@@ -37,6 +37,8 @@ A distributed messaging queue aims to fulfill specific functional and non-functi
   4. Delete message: Consumer processes should be able to delete messages from the queue after successful processing.
   5. Queue deletion: Clients should have the ability to delete specific queues.
 
-
 Non-functional requirements:
-
+  1. Durability: The system should ensure the durability of data, preventing data loss even if producers or consumers fail independently. Data durability is crucial for the system's overall functionality.
+  2. Scalability: The system needs to be scalable to handle increased loads, including queues, producers, consumers, and message volume. It should also be able to scale down resources when the load decreases.
+  3. Availability: The system should maintain high availability, allowing uninterrupted sending and receiving of messages even if some components fail.
+  4. Performance: The system should provide high throughput and low latency to ensure efficient message processing.

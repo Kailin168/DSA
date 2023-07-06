@@ -36,3 +36,7 @@ A distributed messaging queue aims to fulfill specific functional and non-functi
   3. Receive message: Consumers should be able to receive messages from their designated queues.
   4. Delete message: Consumer processes should be able to delete messages from the queue after successful processing.
   5. Queue deletion: Clients should have the ability to delete specific queues.
+
+
+Non-functional requirements:
+

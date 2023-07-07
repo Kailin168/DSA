@@ -42,3 +42,7 @@ Non-functional requirements:
   2. Scalability: The system needs to be scalable to handle increased loads, including queues, producers, consumers, and message volume. It should also be able to scale down resources when the load decreases.
   3. Availability: The system should maintain high availability, allowing uninterrupted sending and receiving of messages even if some components fail.
   4. Performance: The system should provide high throughput and low latency to ensure efficient message processing.
+
+
+Single-server messaging queue:
+Before designing a distributed messaging queue, it's essential to understand the limitations of a single-server messaging queue. In a single-server scenario where producers and consumers are on the same node, access to the queue is controlled through a locking mechanism. However, this approach becomes unavailable in distributed systems due to hardware or network failures. Performance can also be impacted by contention on the lock. Additionally, single-server messaging queues lack scalability and durability.

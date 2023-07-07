@@ -45,4 +45,10 @@ Non-functional requirements:
 
 
 Single-server messaging queue:
-Before designing a distributed messaging queue, it's essential to understand the limitations of a single-server messaging queue. In a single-server scenario where producers and consumers are on the same node, access to the queue is controlled through a locking mechanism. However, this approach becomes unavailable in distributed systems due to hardware or network failures. Performance can also be impacted by contention on the lock. Additionally, single-server messaging queues lack scalability and durability.
+  Before designing a distributed messaging queue, it's essential to understand the limitations of a single-server messaging queue. In a single-server scenario where producers and consumers are on the same node, access to the queue is controlled through a locking mechanism. However, this approach becomes unavailable in distributed systems due to hardware or network failures. Performance can also be impacted by contention on the lock. Additionally, single-server messaging queues lack scalability and durability.
+
+  Building blocks used:
+  To design a distributed messaging queue, we employ the following building blocks:
+  1. Databases: Used to store queue and user metadata.
+  2. Caches: Important for storing frequently accessed data related to users and queue metadata.
+  3. Load balancers: Direct incoming requests to servers that store metadata.

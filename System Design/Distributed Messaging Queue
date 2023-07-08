@@ -54,3 +54,5 @@ Single-server messaging queue:
   3. Load balancers: Direct incoming requests to servers that store metadata.
 
 When designing a distributed messaging queue, there are several factors to consider. These include the ordering of messages, the approach to ordering (best-effort or strict), sorting messages based on timestamps, the impact on performance, and managing concurrency.
+
+Ordering of messages: Messages can be ordered in a best-effort or strict manner. Best-effort ordering puts messages in the queue in the same order they were received, while strict ordering preserves the order in which messages were produced. Various approaches, such as assigning monotonically increasing numbers or using synchronized clocks, can be used to establish the order.

@@ -52,3 +52,5 @@ Single-server messaging queue:
   1. Databases: Used to store queue and user metadata.
   2. Caches: Important for storing frequently accessed data related to users and queue metadata.
   3. Load balancers: Direct incoming requests to servers that store metadata.
+
+When designing a distributed messaging queue, there are several factors to consider. These include the ordering of messages, the approach to ordering (best-effort or strict), sorting messages based on timestamps, the impact on performance, and managing concurrency.

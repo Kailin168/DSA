@@ -56,3 +56,5 @@ Single-server messaging queue:
 When designing a distributed messaging queue, there are several factors to consider. These include the ordering of messages, the approach to ordering (best-effort or strict), sorting messages based on timestamps, the impact on performance, and managing concurrency.
 
 Ordering of messages: Messages can be ordered in a best-effort or strict manner. Best-effort ordering puts messages in the queue in the same order they were received, while strict ordering preserves the order in which messages were produced. Various approaches, such as assigning monotonically increasing numbers or using synchronized clocks, can be used to establish the order.
+
+Sorting: Once messages are received, they need to be sorted based on their timestamps. Online sorting algorithms can be used for this purpose.

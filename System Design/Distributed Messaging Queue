@@ -58,3 +58,5 @@ When designing a distributed messaging queue, there are several factors to consi
 Ordering of messages: Messages can be ordered in a best-effort or strict manner. Best-effort ordering puts messages in the queue in the same order they were received, while strict ordering preserves the order in which messages were produced. Various approaches, such as assigning monotonically increasing numbers or using synchronized clocks, can be used to establish the order.
 
 Sorting: Once messages are received, they need to be sorted based on their timestamps. Online sorting algorithms can be used for this purpose.
+
+Effect on performance: Enforcing strict ordering in distributed systems can impact performance. Online sorting introduces latency, so a time-window approach can be used to minimize it. If strict ordering is not necessary, throughput and latency can be improved.

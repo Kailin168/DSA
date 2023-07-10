@@ -60,3 +60,7 @@ Ordering of messages: Messages can be ordered in a best-effort or strict manner.
 Sorting: Once messages are received, they need to be sorted based on their timestamps. Online sorting algorithms can be used for this purpose.
 
 Effect on performance: Enforcing strict ordering in distributed systems can impact performance. Online sorting introduces latency, so a time-window approach can be used to minimize it. If strict ordering is not necessary, throughput and latency can be improved.
+
+Managing concurrency: Concurrent access to the queue needs to be properly managed. Locking mechanisms can be used, but they may have scalability and performance limitations. Another approach is to serialize requests using the system's buffer to ensure messages are placed and consumed in the correct order.
+
+Considering these factors is important for the design of a distributed messaging queue to ensure efficient message processing and maintain the desired order.

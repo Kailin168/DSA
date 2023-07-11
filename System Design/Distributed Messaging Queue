@@ -64,3 +64,5 @@ Effect on performance: Enforcing strict ordering in distributed systems can impa
 Managing concurrency: Concurrent access to the queue needs to be properly managed. Locking mechanisms can be used, but they may have scalability and performance limitations. Another approach is to serialize requests using the system's buffer to ensure messages are placed and consumed in the correct order.
 
 Considering these factors is important for the design of a distributed messaging queue to ensure efficient message processing and maintain the desired order.
+
+The high-level design of a distributed messaging queue consists of several components working together. This design addresses the scalability, availability, and durability issues of a single-server messaging queue. Let's simplify the key components of the design:

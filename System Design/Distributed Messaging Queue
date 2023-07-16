@@ -66,7 +66,6 @@ Single-server messaging queue:
   Considering these factors is important for the design of a distributed messaging queue to ensure efficient message processing and maintain the desired order.
 
 The high-level design of a distributed messaging queue consists of several components working together. This design addresses the scalability, availability, and durability issues of a single-server messaging queue. Let's simplify the key components of the design:
-
   1. Load balancer: This component receives requests from producers and consumers and forwards them to the front-end servers. It ensures minimal latency and high availability by distributing the requests across multiple servers.
 
   2. Front-end service: The front-end service consists of stateless machines distributed across data centers. It provides various services, including request validation, authentication and authorization, caching of metadata and user-related data, request dispatching to back-end and metadata services, request deduplication, and usage data collection.

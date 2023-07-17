@@ -72,4 +72,9 @@ The high-level design of a distributed messaging queue consists of several compo
   In this high-level design, load balancers ensure requests are distributed efficiently, front-end services handle request validation and dispatching, and metadata services manage the metadata of queues.
 
 The back-end service is a crucial part of the distributed messaging queue architecture, responsible for storing and managing queues and messages. There are two models for organizing the back-end servers:
+
   1. Primary-secondary model: In this model, each node serves as a primary host for a collection of queues. The primary host receives requests for a specific queue and is responsible for data replication. The front-end determines the primary host for a request through the metadata service. Messages are retrieved from the primary host and replicated on secondary hosts. The internal cluster manager maps the primary and secondary hosts to queues.
+
+
+  2. Cluster of independent hosts: This model involves multiple clusters with independent hosts distributed across data centers. The front-end determines the cluster for a message request through the external cluster manager. The message is forwarded to a random host in the cluster, which replicates the message in other hosts within the same cluster. The external cluster manager maintains the mapping between queues and clusters.
+

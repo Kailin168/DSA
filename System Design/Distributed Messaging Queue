@@ -75,3 +75,10 @@ The back-end service is a crucial part of the distributed messaging queue archit
   1. Primary-secondary model: In this model, each node serves as a primary host for a collection of queues. The primary host receives requests for a specific queue and is responsible for data replication. The front-end determines the primary host for a request through the metadata service. Messages are retrieved from the primary host and replicated on secondary hosts. The internal cluster manager maps the primary and secondary hosts to queues.
   2. Cluster of independent hosts: This model involves multiple clusters with independent hosts distributed across data centers. The front-end determines the cluster for a message request through the external cluster manager. The message is forwarded to a random host in the cluster, which replicates the message in other hosts within the same cluster. The external cluster manager maintains the mapping between queues and clusters.
   Both models ensure data replication and fault tolerance by replicating messages on multiple hosts. The primary-secondary model assigns primary and secondary hosts to queues, while the cluster of independent hosts model replicates messages within a cluster.
+
+
+The evaluation of the designed distributed messaging queue shows that it fulfills the functional and non-functional requirements:
+Functional requirements:
+- Queue creation and deletion: The system can create queues and set parameters, as well as delete specific queues.
+- Send and receive messages: Producers can send messages to specific queues, and consumers can retrieve messages from their respective queues.
+- Message deletion: Messages can be deleted either by keeping track of consumed messages or by making them temporarily invisible.

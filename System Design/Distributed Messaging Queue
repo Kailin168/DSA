@@ -82,3 +82,9 @@ The evaluation of the designed distributed messaging queue shows that it fulfill
   - Queue creation and deletion: The system can create queues and set parameters, as well as delete specific queues.
   - Send and receive messages: Producers can send messages to specific queues, and consumers can retrieve messages from their respective queues.
   - Message deletion: Messages can be deleted either by keeping track of consumed messages or by making them temporarily invisible.
+Non-functional requirements:
+
+  - Durability: The system ensures durability by replicating queue metadata and messages across multiple nodes, allowing for fault tolerance.
+  - Scalability: The design components are horizontally scalable, allowing for increased capacity in terms of the number of messages and queues.
+  - Availability: The system replicates data and uses load balancers to ensure high availability even in the presence of node failures.
+  - Performance: Caches, data replication, and partitioning are utilized to improve performance, and best-effort ordering and time-window based sorting strategies are employed to optimize throughput and reduce latency.

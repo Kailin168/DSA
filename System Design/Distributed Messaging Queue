@@ -86,3 +86,4 @@ Non-functional requirements:
   - Scalability: The design components are horizontally scalable, allowing for increased capacity in terms of the number of messages and queues.
   - Availability: The system replicates data and uses load balancers to ensure high availability even in the presence of node failures.
   - Performance: Caches, data replication, and partitioning are utilized to improve performance, and best-effort ordering and time-window based sorting strategies are employed to optimize throughput and reduce latency.
+In conclusion, the designed distributed messaging queue meets the functional requirements by providing necessary queue operations and message handling capabilities. It also satisfies the non-functional requirements by ensuring durability, scalability, availability, and performance.

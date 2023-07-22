@@ -1,8 +1,7 @@
 PUB-SUB
-
 What is a pub-sub system?
-A pub-sub system, short for publish-subscribe messaging, is a method of asynchronous communication between services in serverless and microservices architectures. It allows messages to be sent asynchronously to various subsystems of a system. In the pub-sub model, messages are published by a sender (publisher) and received by multiple recipients (subscribers) that have subscribed to the topic or channel associated with the message.
+  A pub-sub system, short for publish-subscribe messaging, is a method of asynchronous communication between services in serverless and microservices architectures. It allows messages to be sent asynchronously to various subsystems of a system. In the pub-sub model, messages are published by a sender (publisher) and received by multiple recipients (subscribers) that have subscribed to the topic or channel associated with the message.
 
 Motivation
-In distributed systems with a vast number of machines, using a pub-sub system for communication offers scalability benefits. The decoupling of producers and consumers allows independent scaling and development of components. This means adding or removing components does not affect others, leading to greater scalability.
+  In distributed systems with a vast number of machines, using a pub-sub system for communication offers scalability benefits. The decoupling of producers and consumers allows independent scaling and development of components. This means adding or removing components does not affect others, leading to greater scalability.
 

@@ -6,5 +6,4 @@ Motivation
   In distributed systems with a vast number of machines, using a pub-sub system for communication offers scalability benefits. The decoupling of producers and consumers allows independent scaling and development of components. This means adding or removing components does not affect others, leading to greater scalability.
 
 Introduction to Pub-sub
-
 Pub-sub messaging offers asynchronous communication, allowing messages to be sent asynchronously to various subsystems in a system. The pub-sub system consists of publishers who send messages and subscribers who receive the messages.

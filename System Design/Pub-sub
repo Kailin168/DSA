@@ -17,3 +17,11 @@ Pub-sub messaging offers asynchronous communication, allowing messages to be sen
   3. Real-time Monitoring: Applications can use pub-sub to monitor systems in real time by receiving raw or processed messages.
   4. Replicating Data: Pub-sub can distribute changes, allowing followers in a leader-follower protocol to update data asynchronously.
 
+Requirements:
+Functional Requirements:
+  - Create a topic: Producers should be able to create topics.
+  - Write messages: Producers should write messages to topics.
+  - Subscription: Consumers should subscribe to topics to receive messages.
+  - Read messages: Consumers should be able to read messages from topics.
+  - Specify retention time: Consumers can set the retention time for messages.
+  - Delete messages: Messages should be deleted from topics after the specified retention period.

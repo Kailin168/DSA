@@ -24,3 +24,10 @@ Functional Requirements:
   - Read messages: Consumers should be able to read messages from topics.
   - Specify retention time: Consumers can set the retention time for messages.
   - Delete messages: Messages should be deleted from topics after the specified retention period.
+Non-functional Requirements:
+
+Scalable: The system should scale with an increasing number of topics and message load.
+Available: The system should be highly available for producers and consumers.
+Durability: Messages accepted from producers must not be lost and should be delivered to subscribers.
+Fault Tolerance: The system should handle failures gracefully.
+Concurrent: The system should handle concurrency issues during reading and writing.

@@ -8,8 +8,7 @@ Motivation
 Introduction to Pub-sub
 Pub-sub messaging offers asynchronous communication, allowing messages to be sent asynchronously to various subsystems in a system. The pub-sub system consists of publishers who send messages and subscribers who receive the messages.
 
-Introduction to Pub-sub
-
+Introduction to Pub-sub:
 Pub-sub messaging offers asynchronous communication, allowing messages to be sent asynchronously to various subsystems in a system. The pub-sub system consists of publishers who send messages and subscribers who receive the messages.
   Use cases of pub-sub:
   1. Improved Performance: Pub-sub enables push-based distribution, reducing response times and delivery latency.

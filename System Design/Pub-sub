@@ -30,3 +30,11 @@ Non-functional Requirements:
   - Durability: Messages accepted from producers must not be lost and should be delivered to subscribers.
   - Fault Tolerance: The system should handle failures gracefully.
   - Concurrent: The system should handle concurrency issues during reading and writing.
+  API Design:
+
+Create a topic: create(topic_ID, topic_name)
+Write a message: write(topic_ID, message)
+Read a message: read(topic_ID)
+Subscribe to a topic: subscribe(topic_ID)
+Unsubscribe from a topic: unsubscribe(topic_ID)
+Delete a topic: delete_topic(topic_ID)

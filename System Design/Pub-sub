@@ -37,3 +37,6 @@ API Design:
   - Subscribe to a topic: subscribe(topic_ID)
   - Unsubscribe from a topic: unsubscribe(topic_ID)
   - Delete a topic: delete_topic(topic_ID)
+Building Blocks:
+The design of the pub-sub system utilizes databases, distributed messaging queues, and key-value stores to store information and handle message distribution.
+

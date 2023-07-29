@@ -41,3 +41,8 @@ Building Blocks:
 The design of the pub-sub system utilizes databases, distributed messaging queues, and key-value stores to store information and handle message distribution.
 
 Design of a Pub-sub system:
+  First Design:
+  In the first design, we used distributed messaging queues for topics. The components included topic queues, a database to store subscription details, a message director to send messages to consumers, consumer queues for individual consumers, and a subscriber to manage subscriptions.
+
+  However, this design had scalability concerns due to the large number of queues required, especially when dealing with millions of subscribers for multiple topics.
+

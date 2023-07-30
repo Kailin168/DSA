@@ -46,3 +46,5 @@ Design of a Pub-sub system:
 
   However, this design had scalability concerns due to the large number of queues required, especially when dealing with millions of subscribers for multiple topics.
 
+  Second Design:
+  In the second design, we introduced a more efficient approach using brokers and partitions. The high-level design included brokers, a cluster manager, a relational database for consumer details, and a consumer manager.

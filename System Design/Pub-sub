@@ -48,3 +48,5 @@ Design of a Pub-sub system:
 
   Second Design:
   In the second design, we introduced a more efficient approach using brokers and partitions. The high-level design included brokers, a cluster manager, a relational database for consumer details, and a consumer manager.
+
+  Brokers: The core component of the pub-sub system, handling write and read requests. Each broker has multiple topics, and each topic can have multiple partitions for storing messages. Partitions are used for improved availability and scalability.

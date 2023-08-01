@@ -50,3 +50,7 @@ Design of a Pub-sub system:
   In the second design, we introduced a more efficient approach using brokers and partitions. The high-level design included brokers, a cluster manager, a relational database for consumer details, and a consumer manager.
 
   Brokers: The core component of the pub-sub system, handling write and read requests. Each broker has multiple topics, and each topic can have multiple partitions for storing messages. Partitions are used for improved availability and scalability.
+
+  Cluster Manager: Responsible for managing multiple brokers in the cluster. It handles broker and topic registry, manages replication using the leader-follower approach, and ensures data availability.
+
+  Consumer Manager: Manages consumers, verifying their subscriptions, managing retention time, and allowing multiple methods of data retrieval (pushing data automatically or consumer-requested reading).

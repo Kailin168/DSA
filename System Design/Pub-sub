@@ -54,3 +54,6 @@ Design of a Pub-sub system:
   Cluster Manager: Responsible for managing multiple brokers in the cluster. It handles broker and topic registry, manages replication using the leader-follower approach, and ensures data availability.
 
   Consumer Manager: Manages consumers, verifying their subscriptions, managing retention time, and allowing multiple methods of data retrieval (pushing data automatically or consumer-requested reading).
+
+  Finalized Design:
+  The finalized design utilizes brokers with partitions, which efficiently handles scalability and replication. The cluster manager ensures high availability, and the consumer manager manages consumer subscriptions and message retrieval options.

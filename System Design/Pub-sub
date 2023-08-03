@@ -59,4 +59,4 @@ Design of a Pub-sub system:
   The finalized design utilizes brokers with partitions, which efficiently handles scalability and replication. The cluster manager ensures high availability, and the consumer manager manages consumer subscriptions and message retrieval options.
 
   Conclusion:
-The pub-sub system's decoupling between producers and consumers allows dynamic scaling and containment of failures. It is suitable for large-scale systems producing vast amounts of data, enabling precise control over data consumption.
+  The pub-sub system's decoupling between producers and consumers allows dynamic scaling and containment of failures. It is suitable for large-scale systems producing vast amounts of data, enabling precise control over data consumption.

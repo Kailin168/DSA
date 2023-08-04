@@ -1,0 +1,3 @@
+A rate limiter is a mechanism that puts a cap on the number of requests a service can handle within a specific time frame. It throttles incoming requests that exceed the predefined limit. For instance, if a service's API is set to allow 500 requests per minute, any client making more than 500 requests within that minute would be blocked from making further requests.
+
+The need for a rate limiter arises as a defensive layer for services to prevent excessive usage, both intentional and unintentional. It protects against abusive behaviors targeting the application layer, such as denial-of-service (DOS) attacks and brute-force password attempts.

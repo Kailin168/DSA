@@ -3,12 +3,8 @@ A rate limiter is a mechanism that puts a cap on the number of requests a servic
 The need for a rate limiter arises as a defensive layer for services to prevent excessive usage, both intentional and unintentional. It protects against abusive behaviors targeting the application layer, such as denial-of-service (DOS) attacks and brute-force password attempts.
 
 The following scenarios illustrate the usefulness of rate limiters in making services more reliable:
-
 1. Preventing resource starvation: Rate limiters protect against friendly-fire denial-of-service incidents caused by errors or misconfigurations leading to resource starvation.
-
 2. Managing policies and quotas: Rate limiters ensure fair and reasonable use of shared resources among multiple users by applying limits on time duration or quantity allocated.
-
 3. Controlling data flow: In systems handling large volumes of data, rate limiters distribute the workload evenly among different machines to avoid burdening a single machine.
-
 4. Avoiding excess costs: Rate limiting helps control the cost of operations, preventing experiments from running out of control and incurring large bills. Some cloud service providers use rate limiting to offer freemium services with limited usage.
 

@@ -15,10 +15,8 @@ To design a rate limiter, we'll cover the following steps:
 4. Rate limiter algorithms: Explain various algorithms essential for the operations of a rate limiter.
 
 Requirements of a Rate Limiter's Design:
-
 A rate limiter is designed with specific functional and non-functional requirements to limit the number of requests a client can make to an API within a defined time window. The requirements include:
-
 Functional Requirements:
-1. Limit Requests: The rate limiter restricts the number of requests a client can send within a specified time frame.
-2. Configurable Limit: The limit of requests per time window should be configurable, allowing flexibility to adjust the rate limit as needed.
-3. Notification on Threshold Crossed: The rate limiter should notify the client with an error or notification when the defined threshold is exceeded, whether on a single server or across multiple servers.
+  1. Limit Requests: The rate limiter restricts the number of requests a client can send within a specified time frame.
+  2. Configurable Limit: The limit of requests per time window should be configurable, allowing flexibility to adjust the rate limit as needed.
+  3. Notification on Threshold Crossed: The rate limiter should notify the client with an error or notification when the defined threshold is exceeded, whether on a single server or across multiple servers.

@@ -21,10 +21,7 @@ Functional Requirements:
   2. Configurable Limit: The limit of requests per time window should be configurable, allowing flexibility to adjust the rate limit as needed.
   3. Notification on Threshold Crossed: The rate limiter should notify the client with an error or notification when the defined threshold is exceeded, whether on a single server or across multiple servers.
 
-------
-
-
 Non-functional Requirements:
-1. Availability: The rate limiter must be highly available as it serves as a protective layer for the system.
-2. Low Latency: The rate limiter should operate with minimal latency to avoid impacting user experience.
-3. Scalability: The design should be highly scalable to handle an increasing number of client requests over time.
+  1. Availability: The rate limiter must be highly available as it serves as a protective layer for the system.
+  2. Low Latency: The rate limiter should operate with minimal latency to avoid impacting user experience.
+  3. Scalability: The design should be highly scalable to handle an increasing number of client requests over time.

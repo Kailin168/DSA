@@ -28,8 +28,7 @@ Non-functional Requirements:
 
 Types of Throttling:
 A rate limiter can perform three types of throttling:
-
-1. Hard Throttling: Requests that exceed the predefined limit are discarded, allowing no further processing.
-2. Soft Throttling: A certain percentage of requests exceeding the limit (e.g., 5%) may be allowed for a more lenient approach.
-3. Elastic or Dynamic Throttling: Requests can exceed the predefined limit if there are excess resources available, without a specific percentage defined for the upper limit.
+  1. Hard Throttling: Requests that exceed the predefined limit are discarded, allowing no further processing.
+  2. Soft Throttling: A certain percentage of requests exceeding the limit (e.g., 5%) may be allowed for a more lenient approach.
+  3. Elastic or Dynamic Throttling: Requests can exceed the predefined limit if there are excess resources available, without a specific percentage defined for the upper limit.
 

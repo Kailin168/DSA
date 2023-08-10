@@ -34,5 +34,7 @@ A rate limiter can perform three types of throttling:
 
 Placement of Rate Limiter:
 The rate limiter can be placed in three different ways:
-
+  1. Client-side: Placing the rate limiter on the client side is easy but insecure, as it can be tampered with by malicious activity.
+  2. Server-side: Placing the rate limiter on the server side is more secure, and each server has its rate limiter to handle incoming requests.
+  3. As Middleware: The rate limiter can act as middleware, intercepting requests to API servers and performing rate limiting functions.
 

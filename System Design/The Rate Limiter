@@ -38,3 +38,5 @@ The rate limiter can be placed in three different ways:
   2. Server-side: Placing the rate limiter on the server side is more secure, and each server has its rate limiter to handle incoming requests.
   3. As Middleware: The rate limiter can act as middleware, intercepting requests to API servers and performing rate limiting functions.
 
+Two Models for Rate Limiter Implementation:
+There are two models for implementing rate limiters with multiple nodes:

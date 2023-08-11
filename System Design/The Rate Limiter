@@ -40,3 +40,6 @@ The rate limiter can be placed in three different ways:
 
 Two Models for Rate Limiter Implementation:
 There are two models for implementing rate limiters with multiple nodes:
+1. Rate Limiter with Centralized Database: Rate limiters interact with a centralized database like Redis or Cassandra to store and retrieve counters. It ensures that clients cannot exceed predefined limits but may face increased latency and race conditions under high concurrency.
+
+2. Rate Limiter with Distributed Database: Each node in the rate limiter cluster tracks rate limits independently, but clients could momentarily exceed the limit while sending requests to different nodes. This approach requires sticky sessions in the load balancer for proper enforcement.

@@ -45,3 +45,5 @@ There are two models for implementing rate limiters with multiple nodes:
 
 Building Blocks Used:
 The design of the rate limiter involves the use of databases, caches, and queues to store rules, metadata of users, and hold incoming requests, respectively.
+
+Design of a Rate Limiter

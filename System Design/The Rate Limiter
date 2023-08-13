@@ -47,3 +47,14 @@ Building Blocks Used:
 The design of the rate limiter involves the use of databases, caches, and queues to store rules, metadata of users, and hold incoming requests, respectively.
 
 Design of a Rate Limiter
+
+To design effective rate limiters that control and manage resource consumption within a system.
+
+High-level design: Understand the overall structure of a rate limiter.
+Detailed design: Delve into the components and processes of a rate limiter.
+Request processing: Learn how the rate limiter handles incoming requests.
+Race condition: Discover potential issues with concurrency and how to address them.
+Rate limiter placement: Understand where to position the rate limiter for optimal performance.
+Conclusion: Sum up the key concepts of rate limiter design.
+High-level design
+A rate limiter is a distinct service that interacts with a web server to determine whether incoming requests should proceed or not. It follows predefined rules to decide if the request exceeds the allowed rate. These rules are defined by the service owner and include parameters such as the number of requests allowed per time unit. For instance, a rule might permit five marketing messages per day.

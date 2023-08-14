@@ -60,3 +60,8 @@ To design effective rate limiters that control and manage resource consumption w
 
 Detailed design
 The detailed design of a rate limiter involves several components:
+1. Rule database: Stores rules established by the service owner, including the maximum requests allowed per time unit.
+2. Rules retriever: Periodically checks for rule updates in the database and updates the rule cache.
+3. Throttle rules cache: Contains cached rules for faster decision-making, enhancing performance.
+4. Decision-maker: Determines if a request exceeds the rate limit based on cached rules and specified algorithms.
+5. Client identifier builder: Generates a unique ID for incoming requests to distinguish clients. The rate limiter evaluates each request against cached rules to decide whether to allow, queue, or reject it. Requests exceeding the limit may trigger error responses or queueing mechanisms.

@@ -57,3 +57,6 @@ To design effective rate limiters that control and manage resource consumption w
   Conclusion: Sum up the key concepts of rate limiter design.
   High-level design
   A rate limiter is a distinct service that interacts with a web server to determine whether incoming requests should proceed or not. It follows predefined rules to decide if the request exceeds the allowed rate. These rules are defined by the service owner and include parameters such as the number of requests allowed per time unit. For instance, a rule might permit five marketing messages per day.
+
+Detailed design
+The detailed design of a rate limiter involves several components:

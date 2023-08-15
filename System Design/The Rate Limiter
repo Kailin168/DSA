@@ -65,3 +65,6 @@ The detailed design of a rate limiter involves several components:
   3. Throttle rules cache: Contains cached rules for faster decision-making, enhancing performance.
   4. Decision-maker: Determines if a request exceeds the rate limit based on cached rules and specified algorithms.
   5. Client identifier builder: Generates a unique ID for incoming requests to distinguish clients. The rate limiter evaluates each request against cached rules to decide whether to allow, queue, or reject it. Requests exceeding the limit may trigger error responses or queueing mechanisms.
+
+Request processing
+Incoming requests are processed in a sequence of steps:

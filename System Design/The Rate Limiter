@@ -68,3 +68,8 @@ The detailed design of a rate limiter involves several components:
 
 Request processing
 Incoming requests are processed in a sequence of steps:
+The client identifier builder generates a unique ID for each request.
+The decision-maker evaluates the request based on cached rules and rate-limiting algorithms.
+Depending on the algorithm (hard, soft, or elastic throttling), the request is allowed, queued, or rejected.
+Race condition
+A race condition can occur in high-concurrency scenarios when multiple requests modify the same counter simultaneously. This can lead to incorrect rate limiting. Strategies to address this include using locking mechanisms, dividing the quota among multiple places, or implementing sharded counters.

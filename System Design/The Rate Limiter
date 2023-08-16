@@ -73,3 +73,6 @@ Incoming requests are processed in a sequence of steps:
   3. Depending on the algorithm (hard, soft, or elastic throttling), the request is allowed, queued, or rejected.
   Race condition
   A race condition can occur in high-concurrency scenarios when multiple requests modify the same counter simultaneously. This can lead to incorrect rate limiting. Strategies to address this include using locking mechanisms, dividing the quota among multiple places, or implementing sharded counters.
+
+Rate limiter placement
+Rate limiters can be positioned in various ways:

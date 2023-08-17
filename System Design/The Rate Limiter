@@ -78,3 +78,5 @@ Rate limiter placement
 Rate limiters can be positioned in various ways:
   1. Client-side: Not recommended due to security concerns and difficulty in configuration.
   2. Server-side: Secure placement, each server has its rate limiter, enhancing reliability.
+    Middleware: Acts as an intermediary between clients and API servers, a common practice.
+    A rate limiter should not hinder the critical path of clients’ requests. To minimize latency, work can be divided into offline (pre-checking) and online (updating) phases, improving performance for high request volumes.

@@ -80,3 +80,6 @@ Rate limiters can be positioned in various ways:
   2. Server-side: Secure placement, each server has its rate limiter, enhancing reliability.
   3. Middleware: Acts as an intermediary between clients and API servers, a common practice.
     A rate limiter should not hinder the critical path of clients’ requests. To minimize latency, work can be divided into offline (pre-checking) and online (updating) phases, improving performance for high request volumes.
+
+Conclusion
+A well-designed rate limiter contributes to system reliability, low latency, and scalability. By effectively controlling the flow of requests, rate limiters prevent resource exhaustion and maintain a responsive system.

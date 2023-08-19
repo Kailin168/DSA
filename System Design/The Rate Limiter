@@ -83,3 +83,11 @@ Rate limiters can be positioned in various ways:
 
 Conclusion
 A well-designed rate limiter contributes to system reliability, low latency, and scalability. By effectively controlling the flow of requests, rate limiters prevent resource exhaustion and maintain a responsive system.
+
+
+Rate Limiter Algorithms
+
+Rate limiting algorithms are crucial for effective traffic management. Such as different rate limiting algorithms, their essential parameters, advantages, and disadvantages.
+
+Algorithms for Rate Limiting
+

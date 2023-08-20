@@ -92,7 +92,6 @@ Rate limiting algorithms are crucial for effective traffic management. Such as d
 Algorithms for Rate Limiting
 
 1. **Token Bucket Algorithm**: This algorithm uses the concept of a bucket with tokens. The bucket is filled at a constant rate, and a request requires a token to be processed. If there are enough tokens, the request is allowed.
-
    - Essential Parameters:
      - Bucket Capacity (C): Maximum tokens the bucket can hold.
      - Rate Limit (R): Number of requests allowed per unit time.

@@ -97,11 +97,9 @@ Algorithms for Rate Limiting
      - Rate Limit (R): Number of requests allowed per unit time.
      - Refill Rate (1/R): Tokens added to the bucket per unit time.
      - Requests Count (N): Incoming requests to be processed.
-
    - Advantages:
      - Allows bursts within the limit if there are tokens available.
      - Space efficient, requires minimal memory.
-
    - Disadvantages:
      - Parameter tuning can be challenging.
 

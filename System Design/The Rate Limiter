@@ -103,3 +103,17 @@ Algorithms for Rate Limiting
    - Disadvantages:
      - Parameter tuning can be challenging.
 
+2. **Leaking Bucket Algorithm**: Similar to the token bucket, this algorithm uses a bucket, but instead of tokens, it processes requests at a fixed outgoing rate.
+
+   - Essential Parameters:
+     - Bucket Capacity (C)
+     - Inflow Rate (Rin): Initial capacity of the bucket.
+     - Outflow Rate (Rout): Requests processed per unit time.
+
+   - Advantages:
+     - Avoids burst of requests due to constant outflow rate.
+     - Space efficient.
+
+   - Disadvantages:
+     - Determining optimal parameters can be difficult.
+

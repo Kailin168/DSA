@@ -115,14 +115,11 @@ Algorithms for Rate Limiting
      - Determining optimal parameters can be difficult.
 
 3. **Fixed Window Counter Algorithm**: Requests are counted in fixed time windows. New requests are discarded if the window limit is reached.
-
    - Essential Parameters:
      - Window Size (W): Time interval for counting requests.
      - Rate Limit (R)
      - Requests Count (N)
-
    - Advantages:
      - Space efficient, avoids excessive requests.
-
    - Disadvantages:
      - Bursts can occur at window edges, potentially affecting performance.

@@ -123,3 +123,17 @@ Algorithms for Rate Limiting
      - Space efficient, avoids excessive requests.
    - Disadvantages:
      - Bursts can occur at window edges, potentially affecting performance.
+
+4. **Sliding Window Log Algorithm**: Requests' arrival times are logged and compared against a limit.
+
+   - Essential Parameters:
+     - Log Size (L): Number of requests allowed in a time frame.
+     - Arrival Time (T): Timestamp of incoming requests.
+     - Time Range (Tr): Time frame for request comparison.
+
+   - Advantages:
+     - Avoids edge condition issues.
+     - Flexible time frame.
+
+   - Disadvantages:
+     - Requires additional memory for timestamps.

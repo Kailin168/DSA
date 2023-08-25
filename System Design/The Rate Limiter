@@ -134,3 +134,19 @@ Algorithms for Rate Limiting
      - Flexible time frame.
    - Disadvantages:
      - Requires additional memory for timestamps.
+
+5. **Sliding Window Counter Algorithm**: Combines features of fixed window and sliding window log algorithms to provide smoother rate limiting.
+
+   - Essential Parameters:
+     - Rate Limit (R)
+     - Window Size (W)
+     - Previous Window Requests (Rp)
+     - Current Window Requests (Rc)
+     - Overlap Time (Ot)
+
+   - Advantages:
+     - Space efficient, smooths bursts.
+
+   - Disadvantages:
+     - Assumes even distribution of requests in previous window.
+

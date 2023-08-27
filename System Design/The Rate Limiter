@@ -158,3 +158,10 @@ Comparison of Rate-Limiting Algorithms
 | Sliding Window Counter  | Yes             | Yes (smooths) |
 
 Each algorithm has its merits and downsides. The choice of algorithm depends on the specific use case and desired behavior.
+
+In Conclusion:
+Rate limiting algorithms are essential tools for managing incoming traffic. Their efficiency, ability to handle bursts, and memory requirements vary. By understanding these algorithms, one can design an effective rate limiter that meets specific system requirements.
+
+
+
+

@@ -148,7 +148,6 @@ Algorithms for Rate Limiting
      - Assumes even distribution of requests in previous window.
 
 Comparison of Rate-Limiting Algorithms
-
 | Algorithm               | Space Efficient | Allows Burst? |
 |-------------------------|-----------------|---------------|
 | Token Bucket            | Yes             | Yes           |
@@ -156,7 +155,6 @@ Comparison of Rate-Limiting Algorithms
 | Fixed Window Counter    | Yes             | Yes           |
 | Sliding Window Log      | No              | No            |
 | Sliding Window Counter  | Yes             | Yes (smooths) |
-
 Each algorithm has its merits and downsides. The choice of algorithm depends on the specific use case and desired behavior.
 
 In Conclusion:

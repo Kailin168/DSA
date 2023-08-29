@@ -1,2 +1,4 @@
 Blob Store
 
+A blob store is a storage solution designed for unstructured data, such as images, videos, and other multimedia files. It employs a flat data organization, devoid of hierarchical structures. This is particularly useful for applications with a "write once, read many" (WORM) requirement, where data remains immutable after creation. Popular platforms like Microsoft Azure utilize this approach, creating blobs that can't be modified and are retained for specified periods.
+

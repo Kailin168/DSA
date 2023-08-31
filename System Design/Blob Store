@@ -3,3 +3,16 @@ A blob store is a storage solution designed for unstructured data, such as image
 
 Importance of Blob Stores:
 Blob stores are integral to data-intensive applications like YouTube, Netflix, and Facebook. These applications generate vast amounts of unstructured data daily. Their need for scalable, reliable, and highly available storage is met by blob stores. For instance, YouTube requires petabytes of storage daily due to video uploads in various resolutions and extensive replication for availability.
+
+Designing a Blob Store System:
+The design of a blob store system comprises several phases:
+
+1. Requirements: Identify functional and non-functional requirements, estimating the necessary resources.
+
+2. Design: Develop a high-level design, API design, and detailed component design. This entails explaining the workflow and components in depth.
+
+3. Design Considerations: Discuss crucial design aspects such as database schema, partitioning strategy, blob indexing, pagination, and replication.
+
+4. Evaluation: Assess the designed blob store against the established requirements.
+
+Blob stores cater to the storage needs of applications dealing with unstructured data. Their design encompasses requirements identification, high-level design, API formulation, detailed component design, and evaluation. Understanding the nuances of blob store system design is essential for developing efficient and effective storage solutions.

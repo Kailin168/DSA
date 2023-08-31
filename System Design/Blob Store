@@ -6,9 +6,8 @@ Blob stores are integral to data-intensive applications like YouTube, Netflix, a
 
 Designing a Blob Store System:
 The design of a blob store system comprises several phases:
-1. Requirements: Identify functional and non-functional requirements, estimating the necessary resources.
-2. Design: Develop a high-level design, API design, and detailed component design. This entails explaining the workflow and components in depth.
-3. Design Considerations: Discuss crucial design aspects such as database schema, partitioning strategy, blob indexing, pagination, and replication.
-4. Evaluation: Assess the designed blob store against the established requirements.
-
+    1. Requirements: Identify functional and non-functional requirements, estimating the necessary resources.
+    2. Design: Develop a high-level design, API design, and detailed component design. This entails explaining the workflow and components in depth.
+    3. Design Considerations: Discuss crucial design aspects such as database schema, partitioning strategy, blob indexing, pagination, and replication.
+    4. Evaluation: Assess the designed blob store against the established requirements.
 Blob stores cater to the storage needs of applications dealing with unstructured data. Their design encompasses requirements identification, high-level design, API formulation, detailed component design, and evaluation. Understanding the nuances of blob store system design is essential for developing efficient and effective storage solutions.

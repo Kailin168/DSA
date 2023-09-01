@@ -1,0 +1,241 @@
+import express from 'express';
+import * as pgPromise from 'pg-promise';
+require('dotenv').config();
+
+const app = express();
+const port = 3000;
+
+const InputFormat = {
+  parserOne: "parserOne",
+  parserTwo: "parserTwo"
+}
+
+class PayrollEntry {
+  constructor(
+    public dateTimeStart: Date,
+    public dateTimeEnd: Date,
+    public regularHour: number,
+    public overtimeHour: number,
+    public totalPay: number
+  ) {}
+}
+
+class Employee {
+  constructor(
+    public firstName: string,
+    public lastName: string,
+    public employeeId: string,
+    public jobTitle: string,
+    public hourlyRate: number,
+    public overTimeRate: number,
+    public workEntry: PayrollEntry[]
+  ) {}
+}
+
+class ClientData {
+  constructor(
+    public clientId: string,
+    public clientName: string,
+    public employees: Employee[]
+  ) {}
+}
+
+function clientParserOne(input: string, clientData: ClientData): ClientData {
+  // Parsing CSV type string and massaging data, then returning an object (client data)
+  /*
+    Employee ID,First Name,Last Name,Hourly Rate,Overtime Rate,Job Title,Department,Location
+    1,Jerry,Smith,21,40,Server,-,"New York, NY"
+    2,Sam,James,23.4,44,Cook,-,"New York, NY"
+  */
+
+  const lines = input.split('\n');
+  if (lines.length < 1) {
+    return clientData;
+  }
+  const headers = lines[0].split(',');
+
+  const employees: Employee[] = [];
+  const employeesMap = {}; // for quick look up in case there is a lot of employees
+
+  for (let i = 1; i < lines.length; i++) {
+    const values = lines[i].split(',');
+
+    if (values.length !== headers.length) {
+      console.error('Input data for parser one is invalid.');
+      continue;
+    }
+
+    const [
+      employeeId,
+      firstName,
+      lastName,
+      hourlyRate,
+      overTimeRate,
+      dateTimeStart,
+      dateTimeEnd,
+      regularHour,
+      overtimeHour,
+      totalPay,
+      jobTitle,
+    ] = values;
+
+    const payrollEntry = new PayrollEntry(
+      new Date(dateTimeStart),
+      new Date(dateTimeEnd),
+      parseFloat(regularHour),
+      parseFloat(overtimeHour),
+      parseFloat(totalPay)
+    );
+
+    if (employeesMap[employeeId] !== undefined) {
+      employees[employeesMap[employeeId]].workEntry.push(payrollEntry);
+    } else {
+      employeesMap[employeeId] = employees.length;
+      employees.push(new Employee(
+        firstName,
+        lastName,
+        employeeId,
+        jobTitle,
+        parseFloat(hourlyRate),
+        parseFloat(overTimeRate),
+        [payrollEntry] // Creating a new array with the initial payroll entry
+      ));
+    }
+  }
+
+  clientData.employees = employees;
+  return clientData;
+}
+
+// Create a database connection
+const pgp = pgPromise();
+const db = pgp({
+  connectionString: process.env.DB_CONNECTION_STRING,
+});
+
+async function insertIntoDatabase(clientData: ClientData): Promise<{ success: boolean; message: string }> {
+  try {
+    await db.tx(async (transaction) => {
+      // Check if the client exists
+      const existingClient = await transaction.oneOrNone('SELECT id FROM clients WHERE client_id = $1', [clientData.clientId]);
+
+      let clientId: number;
+      if (!existingClient) {
+        // Insert the ClientData
+        const clientQuery = `
+          INSERT INTO clients (client_id, client_name)
+          VALUES ($1, $2)
+          RETURNING id
+        `;
+        const insertedClient = await transaction.one(clientQuery, [clientData.clientId, clientData.clientName]);
+        clientId = insertedClient.id;
+      } else {
+        clientId = existingClient.id;
+      }
+
+      // Insert Employees and related PayrollEntries
+      const employeeQueries = clientData.employees.map(async (employee) => {
+        // Check if the employee exists
+        const existingEmployee = await transaction.oneOrNone('SELECT id FROM employees WHERE employee_id = $1', [employee.employeeId]);
+
+        let employeeId: number;
+        if (!existingEmployee) {
+          const employeeQuery = `
+            INSERT INTO employees (first_name, last_name, employee_id, job_title, hourly_rate, overtime_rate, client_id)
+            VALUES ($1, $2, $3, $4, $5, $6, $7)
+            RETURNING id
+          `;
+          const insertedEmployee = await transaction.one(employeeQuery, [
+            employee.firstName,
+            employee.lastName,
+            employee.employeeId,
+            employee.jobTitle,
+            employee.hourlyRate,
+            employee.overTimeRate,
+            clientId,
+          ]);
+          employeeId = insertedEmployee.id;
+        } else {
+          employeeId = existingEmployee.id;
+        }
+
+        // Insert PayrollEntries
+        const payrollEntryQueries = employee.workEntry.map(async (entry) => {
+          const payrollEntryQuery = `
+            INSERT INTO payroll_entries (employee_id, date_time_start, date_time_end, regular_hour, overtime_hour, total_pay)
+            VALUES ($1, $2, $3, $4, $5, $6)
+          `;
+          await transaction.none(payrollEntryQuery, [
+            employeeId,
+            entry.dateTimeStart,
+            entry.dateTimeEnd,
+            entry.regularHour,
+            entry.overtimeHour,
+            entry.totalPay,
+          ]);
+        });
+
+        await transaction.batch(payrollEntryQueries);
+      });
+
+      await transaction.batch(employeeQueries);
+    });
+
+    return { success: true, message: 'ClientData inserted successfully' };
+  } catch (error) {
+    return { success: false, message: `Error inserting ClientData: ${error.message}` };
+  }
+}
+
+function processData(inputData: string, clientData: ClientData, format: string): ClientData {
+  // Processing the input data and returning processed client data
+  let result: ClientData | null = null;
+  switch(format) {
+    case InputFormat.parserOne:
+      result = clientParserOne(inputData, clientData);
+      break;
+    case InputFormat.parserTwo:
+      result = clientParserOne(inputData, clientData); // will need to implement different parser
+      break;
+  }
+  if (result && validResult(result)) {
+    return result;
+  }
+}
+
+app.post('/insertEmployeeData', async (req, res) => {
+  const data = readDataFromInput(req); // Reading data from the request
+  const clientDataFromDb = retrieveBasicClientInfoFromDb(req);
+  const parserFormat = determineWhichParserToUse(data, clientDataFromDb); // Determining which parser format to use based on the data using regex and company info
+  const clientData = processData(data, clientDataFromDb, parserFormat);
+  if (clientData) {
+    try {
+      const result = await insertIntoDatabase(clientData);
+      res.json(result);
+    } catch (error) {
+      res.status(500).json({ success: false, message: 'Internal server error' });
+    }
+  }
+});
+
+app.get('/generateEmployeePayrollSheet', (req, res) => {
+  const clientData = fetchClientWithEmployeeWithTimeRange(req); // Fetching client data with employees based on the request
+  if (clientData.employees.length === 0) {
+    res.status(500).json({ success: false, message: 'No Employees found' });
+    return;
+  }
+
+  const payrollResult: any[] = [];
+
+  for (const employee of clientData.employees) {
+    payrollResult.push(generatePayrollData(employee)); // Generating payroll data for an employee
+  }
+
+  const payrollPDFs = generatePDFForPayroll(payrollResult); Generating PDFs for payroll data
+
+  responseWithZipOfPDF(payrollPDFs, res); // Responding with a zip containing the PDFs
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});

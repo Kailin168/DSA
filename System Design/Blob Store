@@ -18,10 +18,10 @@ Requirements and Estimations for Blob Store System Design
 To design an efficient blob store system, it's crucial to identify the functional and non-functional requirements as well as make estimations regarding resource needs. Here's a breakdown of the requirements and estimations:
 
 **Functional Requirements:**
-1. Create a Container: Users should be able to create containers to group blobs, facilitating organized data storage for different purposes. A user can create multiple containers, each containing multiple blobs.
-2. Put Data: Users must be able to upload blobs to the created containers. This involves data insertion into the blob store.
-3. Get Data: The system should generate URLs for uploaded blobs, enabling users to access them later via these URLs.
-4. Delete Data: Users should have the ability to delete blobs. Data can be retained for a specified retention time before permanent deletion.
-5. List Blobs: Users should be able to retrieve a list of blobs within a specific container.
-6. Delete a Container: Users should be able to delete a container and all the blobs it contains.
-7. List Containers: Users should have the capability to list all containers under a specific account.
+  1. Create a Container: Users should be able to create containers to group blobs, facilitating organized data storage for different purposes. A user can create multiple containers, each containing multiple blobs.
+  2. Put Data: Users must be able to upload blobs to the created containers. This involves data insertion into the blob store.
+  3. Get Data: The system should generate URLs for uploaded blobs, enabling users to access them later via these URLs.
+  4. Delete Data: Users should have the ability to delete blobs. Data can be retained for a specified retention time before permanent deletion.
+  5. List Blobs: Users should be able to retrieve a list of blobs within a specific container.
+  6. Delete a Container: Users should be able to delete a container and all the blobs it contains.
+  7. List Containers: Users should have the capability to list all containers under a specific account.

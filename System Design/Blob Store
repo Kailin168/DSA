@@ -27,16 +27,10 @@ To design an efficient blob store system, it's crucial to identify the functiona
   7. List Containers: Users should have the capability to list all containers under a specific account.
 
 **Non-Functional Requirements:**
-
-1. **Availability:** The system needs to be highly available, ensuring uninterrupted access to stored blobs.
-
-2. **Durability:** Uploaded data should remain safe and retrievable. Data loss should only occur if explicitly deleted.
-
-3. **Scalability:** The system should be able to handle a massive volume of blobs, accommodating billions of entries.
-
-4. **Throughput:** The system should offer high data throughput for efficient data transfer, especially for large files.
-
-5. **Reliability:** Given the likelihood of failures in distributed systems, the design should promptly detect and recover from failures.
-
-6. **Consistency:** The system should maintain strong consistency, ensuring that all users see the same version of a blob.
+  1. **Availability:** The system needs to be highly available, ensuring uninterrupted access to stored blobs.
+  2. **Durability:** Uploaded data should remain safe and retrievable. Data loss should only occur if explicitly deleted.
+  3. **Scalability:** The system should be able to handle a massive volume of blobs, accommodating billions of entries.
+  4. **Throughput:** The system should offer high data throughput for efficient data transfer, especially for large files.
+  5. **Reliability:** Given the likelihood of failures in distributed systems, the design should promptly detect and recover from failures.
+  6. **Consistency:** The system should maintain strong consistency, ensuring that all users see the same version of a blob.
 

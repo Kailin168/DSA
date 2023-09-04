@@ -34,3 +34,7 @@ To design an efficient blob store system, it's crucial to identify the functiona
   5. Reliability: Given the likelihood of failures in distributed systems, the design should promptly detect and recover from failures.
   6. Consistency: The system should maintain strong consistency, ensuring that all users see the same version of a blob.
 
+Resource Estimations:
+
+Number of Servers Estimation:
+Based on the assumption of 5 million daily active users and a blob store server handling 500 queries per second, approximately 10,000 servers are required to meet this demand.

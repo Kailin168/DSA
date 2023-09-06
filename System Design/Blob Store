@@ -40,3 +40,6 @@ Resource Estimations:
 
   Storage Estimation:
   Assuming an average video size of 50 MB and an average thumbnail size of 20 KB, with 250,000 videos uploaded daily, the total storage required for YouTube videos and thumbnails is approximately 12.51 terabytes per day.
+
+  Bandwidth Estimation:
+For incoming traffic, the bandwidth required is calculated based on the total data uploaded per day, resulting in 12.51 terabytes per day. For outgoing traffic, the bandwidth needed is calculated considering user queries and data size, resulting in the bandwidth needed for downloading videos.

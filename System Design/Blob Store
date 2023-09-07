@@ -46,3 +46,5 @@ Resource Estimations:
 
   Building Blocks:
   The design of the blob store system relies on several essential building blocks, including a rate limiter to control user interactions, a load balancer for distributing requests, a database for metadata storage, and monitoring for storage device inspection.
+
+Designing an effective blob store system involves understanding the functional and non-functional requirements, making accurate estimations for resource needs, and utilizing appropriate building blocks to create a robust and scalable solution.

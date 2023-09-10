@@ -66,3 +66,8 @@ Designing a blob store system involves incorporating various requirements into t
   5. List Blobs: Retrieve a list of blobs within a specific container.
   6. Delete Container: Mark containers for deletion, along with their blobs.
   7. List Containers: List containers under a user's account.
+
+Detailed Design:
+
+Components: Key components include Clients, Rate Limiter, Load Balancer, Front-end Servers, Data Nodes, Manager Node, Metadata Storage, Monitoring Service, and Administrator.
+Workflow: The workflow involves operations like writing a blob, reading a blob, and deleting a blob.

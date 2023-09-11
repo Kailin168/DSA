@@ -72,3 +72,7 @@ Detailed Design:
   Workflow: The workflow involves operations like writing a blob, reading a blob, and deleting a blob.
 
 Components and Workflow:
+Client: Initiates API requests for various operations.
+Rate Limiter: Ensures request limits are not exceeded.
+Load Balancer: Distributes requests among servers, possibly based on location or data centers.
+Front-end Servers: Process user requests and forward them to appropriate storage servers.

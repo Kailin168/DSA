@@ -81,3 +81,5 @@ Components and Workflow:
   7. Metadata Storage: Stores metadata including account, container, and blob information.
   8. Monitoring Service: Monitors the health of data nodes and manager nodes, alerts administrators in case of issues.
   9. Administrator: Manages notifications, conducts routine system checkups.
+
+Components and Workflow:

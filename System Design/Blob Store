@@ -90,3 +90,6 @@ Front-end Servers: Process user requests and forward them to appropriate storage
 Data Nodes: Store actual blob data, possibly in chunks.
 Manager Node: Manages data nodes, assigns unique IDs to blobs, handles replication, and maintains metadata.
 Metadata Storage: Stores metadata including account, container, and blob information.
+Monitoring Service: Monitors the health of data nodes and manager nodes, alerts administrators in case of issues.
+Administrator: Manages notifications, conducts routine system checkups.
+Workflow:

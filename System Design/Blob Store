@@ -83,12 +83,12 @@ Components and Workflow:
   9. Administrator: Manages notifications, conducts routine system checkups.
 
 Components and Workflow:
-1. Client: Initiates API requests for various operations.
-2. Rate Limiter: Ensures request limits are not exceeded.
-3. Load Balancer: Distributes requests among servers, possibly based on location or data centers.
-4. Front-end Servers: Process user requests and forward them to appropriate storage servers.
-5. Data Nodes: Store actual blob data, possibly in chunks.
-6. Manager Node: Manages data nodes, assigns unique IDs to blobs, handles replication, and maintains metadata.
-7. Metadata Storage: Stores metadata including account, container, and blob information.
-8. Monitoring Service: Monitors the health of data nodes and manager nodes, alerts administrators in case of issues.
-9. Administrator: Manages notifications, conducts routine system checkups.
+  1. Client: Initiates API requests for various operations.
+  2. Rate Limiter: Ensures request limits are not exceeded.
+  3. Load Balancer: Distributes requests among servers, possibly based on location or data centers.
+  4. Front-end Servers: Process user requests and forward them to appropriate storage servers.
+  5. Data Nodes: Store actual blob data, possibly in chunks.
+  6. Manager Node: Manages data nodes, assigns unique IDs to blobs, handles replication, and maintains metadata.
+  7. Metadata Storage: Stores metadata including account, container, and blob information.
+  8. Monitoring Service: Monitors the health of data nodes and manager nodes, alerts administrators in case of issues.
+  9. Administrator: Manages notifications, conducts routine system checkups.

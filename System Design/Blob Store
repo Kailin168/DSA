@@ -83,3 +83,6 @@ Components and Workflow:
   9. Administrator: Manages notifications, conducts routine system checkups.
 
 Components and Workflow:
+Client: Initiates API requests for various operations.
+Rate Limiter: Ensures request limits are not exceeded.
+Load Balancer: Distributes requests among servers, possibly based on location or data centers.

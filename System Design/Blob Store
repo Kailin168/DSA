@@ -92,3 +92,12 @@ Components and Workflow:
   7. Metadata Storage: Stores metadata including account, container, and blob information.
   8. Monitoring Service: Monitors the health of data nodes and manager nodes, alerts administrators in case of issues.
   9. Administrator: Manages notifications, conducts routine system checkups.
+
+Workflow:
+  Write a Blob:
+    1. Client sends an upload request.
+    2. Request passes through rate limiter and load balancer.
+    3. Front-end servers contact manager node for data node information.
+    4. Manager node assigns a unique ID to the blob, splits it into chunks, and assigns data nodes.
+    5. Chunks are written to data nodes, and metadata is stored.
+    6. A fully qualified path of the blob is returned to the client.

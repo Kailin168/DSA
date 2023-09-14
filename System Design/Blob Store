@@ -102,3 +102,8 @@ Workflow:
     5. Chunks are written to data nodes, and metadata is stored.
     6. A fully qualified path of the blob is returned to the client.
   Read a Blob:
+    1. Front-end server requests metadata from the manager node.
+    2. Manager node checks authorization and retrieves chunk information.
+    3. Client reads chunk data from data nodes.
+    4. Caches metadata at the client reduces subsequent requests.
+    

@@ -101,3 +101,4 @@ Workflow:
     4. Manager node assigns a unique ID to the blob, splits it into chunks, and assigns data nodes.
     5. Chunks are written to data nodes, and metadata is stored.
     6. A fully qualified path of the blob is returned to the client.
+  Read a Blob:

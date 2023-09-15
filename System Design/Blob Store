@@ -106,4 +106,6 @@ Workflow:
     2. Manager node checks authorization and retrieves chunk information.
     3. Client reads chunk data from data nodes.
     4. Caches metadata at the client reduces subsequent requests.
+  Delete a Blob:
     
+

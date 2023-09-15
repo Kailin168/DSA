@@ -107,5 +107,7 @@ Workflow:
     3. Client reads chunk data from data nodes.
     4. Caches metadata at the client reduces subsequent requests.
   Delete a Blob:
-    
+    1. Upon delete request, the manager node marks the blob as deleted in metadata.
+    2. Space is freed during garbage collection.
+
 

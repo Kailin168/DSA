@@ -109,5 +109,5 @@ Workflow:
   Delete a Blob:
     1. Upon delete request, the manager node marks the blob as deleted in metadata.
     2. Space is freed during garbage collection.
-
+This design ensures efficient data storage and retrieval while meeting functional and non-functional requirements.
 

@@ -109,6 +109,16 @@ Workflow:
   Delete a Blob:
     1. Upon delete request, the manager node marks the blob as deleted in metadata.
     2. Space is freed during garbage collection.
-This design ensures efficient data storage and retrieval while meeting functional and non-functional requirements.
+  This design ensures efficient data storage and retrieval while meeting functional and non-functional requirements.
 
 Delving in into the design of a block store system, addressing key considerations to ensure efficient and reliable storage and retrieval of data.
+
+Key Design Aspects:
+1. Blob Metadata:
+   - Purpose: Maintain essential metadata for efficient blob storage and retrieval.
+   - Explanation: Metadata contains information about blob chunks, including chunk IDs, data node assignments, and replicas.
+
+2. Partitioning:
+   - Purpose: Determine how to distribute blobs among data nodes.
+   - Explanation: Blob distribution is based on user accounts, containers, and blob IDs, enhancing performance by keeping related data together.
+

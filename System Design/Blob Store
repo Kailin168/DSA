@@ -175,3 +175,14 @@ Key Design Aspects:
    - Purpose: Improve response time and throughput.
    - Explanation: Caching occurs at multiple levels, reducing the need for redundant data retrieval.
 
+Evaluating Blob Store Design
+1. Availability:
+   - Replication ensures high availability.
+   - Four replicas per blob distribute request load and handle node failures.
+   - Regional disasters are managed with replica placement strategies.
+   - Monitoring maintains timely replication.
+
+2. Durability:
+   - Replication and monitoring guarantee data durability.
+   - Data is synchronously replicated within storage clusters.
+   - Lost data can be recovered from other nodes.

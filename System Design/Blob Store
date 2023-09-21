@@ -117,19 +117,15 @@ Key Design Aspects:
 1. Blob Metadata:
    - Purpose: Maintain essential metadata for efficient blob storage and retrieval.
    - Explanation: Metadata contains information about blob chunks, including chunk IDs, data node assignments, and replicas.
-
 2. Partitioning:
    - Purpose: Determine how to distribute blobs among data nodes.
    - Explanation: Blob distribution is based on user accounts, containers, and blob IDs, enhancing performance by keeping related data together.
-
 3. Blob Indexing:
    - Purpose: Efficiently search for blobs within a vast storage system.
    - Explanation: Indexing uses key-value attributes like container name, blob name, and upload time to categorize and sort blobs.
-
 4. Pagination for Listing:
    - Purpose: Enable users to retrieve a limited number of blobs for improved readability.
    - Explanation: Pagination divides large lists of blobs into smaller, manageable sections, enhancing user experience.
-
 5. Replication:
    - Purpose: Ensure data availability and consistency.
    - Explanation: Replication occurs both synchronously within storage clusters and asynchronously across data centers and regions.
@@ -142,35 +138,27 @@ Introduction:
 This article delves into the design of a blob store system, addressing key considerations to ensure efficient and reliable storage and retrieval of data.
 
 Key Design Aspects:
-
 1. Blob Metadata:
    - Purpose: Maintain essential metadata for efficient blob storage and retrieval.
    - Explanation: Metadata contains information about blob chunks, including chunk IDs, data node assignments, and replicas.
-
 2. Partitioning:
    - Purpose: Determine how to distribute blobs among data nodes.
    - Explanation: Blob distribution is based on user accounts, containers, and blob IDs, enhancing performance by keeping related data together.
-
 3. Blob Indexing:
    - Purpose: Efficiently search for blobs within a vast storage system.
    - Explanation: Indexing uses key-value attributes like container name, blob name, and upload time to categorize and sort blobs.
-
 4. Pagination for Listing:
    - Purpose: Enable users to retrieve a limited number of blobs for improved readability.
    - Explanation: Pagination divides large lists of blobs into smaller, manageable sections, enhancing user experience.
-
 5. Replication:
    - Purpose: Ensure data availability and consistency.
    - Explanation: Replication occurs both synchronously within storage clusters and asynchronously across data centers and regions.
-
 6. Garbage Collection:
    - Purpose: Efficiently manage blob deletion without performance sacrifice.
    - Explanation: Deleted blobs are marked as "DELETED" in metadata and later cleaned up by a garbage collector.
-
 7. Streaming:
    - Purpose: Enable chunk-by-chunk streaming for large files.
    - Explanation: Files are read in defined chunks, allowing for interactivity during streaming.
-
 8. Caching:
    - Purpose: Improve response time and throughput.
    - Explanation: Caching occurs at multiple levels, reducing the need for redundant data retrieval.
@@ -181,18 +169,15 @@ Evaluating Blob Store Design
    - Four replicas per blob distribute request load and handle node failures.
    - Regional disasters are managed with replica placement strategies.
    - Monitoring maintains timely replication.
-
 2. Durability:
    - Replication and monitoring guarantee data durability.
    - Data is synchronously replicated within storage clusters.
    - Lost data can be recovered from other nodes.
-
 3. Scalability:
    - Partitioning and chunking handle billions of blob requests.
    - Partition mappings and load balancing between servers.
    - Horizontal scalability for storage by adding more data nodes.
    - Manager node scaling considerations for high query loads.
-
 4. Throughput:
    - Data chunk distribution among nodes improves throughput.
    - Caching at different layers reduces latency and enhances throughput.

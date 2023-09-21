@@ -186,3 +186,14 @@ Evaluating Blob Store Design
    - Replication and monitoring guarantee data durability.
    - Data is synchronously replicated within storage clusters.
    - Lost data can be recovered from other nodes.
+
+3. Scalability:
+   - Partitioning and chunking handle billions of blob requests.
+   - Partition mappings and load balancing between servers.
+   - Horizontal scalability for storage by adding more data nodes.
+   - Manager node scaling considerations for high query loads.
+
+4. Throughput:
+   - Data chunk distribution among nodes improves throughput.
+   - Caching at different layers reduces latency and enhances throughput.
+

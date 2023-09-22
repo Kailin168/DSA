@@ -181,4 +181,12 @@ Evaluating Blob Store Design
 4. Throughput:
    - Data chunk distribution among nodes improves throughput.
    - Caching at different layers reduces latency and enhances throughput.
-
+5. **Reliability**:
+   - Heartbeat protocol and monitoring techniques ensure reliability.
+   - Manager node requests data from reliable nodes.
+   - Precautions taken in case of node failures.
+   - Alerts for hardware issues like failed disks or network problems.
+6. **Consistency**:
+   - Synchronous replication within storage clusters ensures strong data consistency.
+   - Read requests served from the same storage cluster.
+   - Asynchronous replication for cross-region consistency.

@@ -190,3 +190,5 @@ Evaluating Blob Store Design
    - Synchronous replication within storage clusters ensures strong data consistency.
    - Read requests served from the same storage cluster.
    - Asynchronous replication for cross-region consistency.
+Conclusion:
+Blob stores efficiently manage large, unstructured data and are used in various applications like social media and video-sharing platforms. Our design meets essential functional requirements and has been evaluated based on non-functional requirements, demonstrating its robustness and suitability for storing and retrieving blobs.

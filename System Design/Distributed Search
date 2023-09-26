@@ -19,3 +19,15 @@ Functional Requirements:
 
 9. Logging and Analytics: Capture search analytics and logs for system monitoring and improvements.
 
+Non-Functional Requirements:
+1. Performance: Deliver search results within a few seconds or less to ensure a seamless user experience.
+
+2. Availability: Maintain high availability to prevent service disruptions, even during server failures or maintenance.
+
+3. Reliability: Minimize the risk of errors and system failures to ensure consistent search functionality.
+
+4. Scalability: Design the system to scale horizontally to accommodate increasing query loads.
+
+5. Data Consistency: Ensure that the search index remains consistent with the underlying data source.
+
+6. Resource Utilization: Optimize resource utilization, including server resources, storage, and bandwidth.

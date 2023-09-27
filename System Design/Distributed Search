@@ -23,3 +23,16 @@ Non-Functional Requirements:
 5. Data Consistency: Ensure that the search index remains consistent with the underlying data source.
 
 6. Resource Utilization: Optimize resource utilization, including server resources, storage, and bandwidth.
+
+7. Fault Tolerance: Implement measures to handle and recover from system failures gracefully.
+
+8. Security: Protect against security threats, including data breaches and unauthorized access.
+
+9. Monitoring and Logging: Set up monitoring tools and logging mechanisms to track system performance and diagnose issues.
+
+10. Compliance: Ensure compliance with relevant data protection and privacy regulations, such as GDPR or HIPAA.
+
+11. Cost-Effectiveness: Design the system with cost-efficient resource allocation and management.
+
+12. User Experience: Prioritize a user-friendly interface and responsive search results presentation.
+

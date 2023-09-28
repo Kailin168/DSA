@@ -25,4 +25,11 @@ Non-Functional Requirements:
 11. Cost-Effectiveness: Design the system with cost-efficient resource allocation and management.
 12. User Experience: Prioritize a user-friendly interface and responsive search results presentation.
 
-Requirements and Resource Estimation for Distributed Search System Design:
+Requirements and Resource Estimation for Distributed Search System Design
+Functional Requirements:
+  Search: The system must provide users with relevant content based on their search queries.
+  Non-Functional Requirements:
+  Availability: The system should maintain high availability for users.
+  Scalability: It should be capable of handling large amounts of data and queries efficiently.
+  Fast Search on Big Data: Regardless of the content's volume, users should receive quick search results.
+  Reduced Cost: The overall cost of building and maintaining the search system should be minimized.

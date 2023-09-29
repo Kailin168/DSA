@@ -34,3 +34,8 @@ Functional Requirements:
   Fast Search on Big Data: Regardless of the content's volume, users should receive quick search results.
   Reduced Cost: The overall cost of building and maintaining the search system should be minimized.
 Resource Estimation:
+  Number of Servers Estimation:
+  Daily active users for YouTube search: 3 million.
+  Queries handled per server: 1,000.
+  Number of Servers Required = (Daily Active Users) / (Queries Handled per Server)
+  Number of Servers Required = 3,000 servers

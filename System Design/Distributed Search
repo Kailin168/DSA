@@ -33,3 +33,4 @@ Functional Requirements:
   Scalability: It should be capable of handling large amounts of data and queries efficiently.
   Fast Search on Big Data: Regardless of the content's volume, users should receive quick search results.
   Reduced Cost: The overall cost of building and maintaining the search system should be minimized.
+Resource Estimation:

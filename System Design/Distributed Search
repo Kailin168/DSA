@@ -39,3 +39,12 @@ Resource Estimation:
   Queries handled per server: 1,000.
   Number of Servers Required = (Daily Active Users) / (Queries Handled per Server)
   Number of Servers Required = 3,000 servers
+Storage Estimation:
+  - Size of a single JSON document: 200 KB.
+  - Unique terms extracted from a single JSON document: 1,000.
+  - Storage space required per term in the index table: 100 Bytes.
+  - Average number of videos uploaded per day on YouTube: 6,000.
+  Total Storage Required to Index One Video on YouTube = (Size of a Single JSON Document) + (Unique Terms per Document × Storage Space per Term)
+  Total Storage Required to Index One Video on YouTube = 200 KB + (1,000 × 100 Bytes) = 300 KB
+  Total Storage Required to Index Videos per Day on YouTube = (Number of Videos Uploaded per Day) × (Total Storage Required to Index One Video)
+  Total Storage Required to Index Videos per Day on YouTube = 6,000 videos × 300 KB = 1.8 GB

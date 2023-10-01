@@ -48,3 +48,9 @@ Storage Estimation:
   Total Storage Required to Index One Video on YouTube = 200 KB + (1,000 × 100 Bytes) = 300 KB
   Total Storage Required to Index Videos per Day on YouTube = (Number of Videos Uploaded per Day) × (Total Storage Required to Index One Video)
   Total Storage Required to Index Videos per Day on YouTube = 6,000 videos × 300 KB = 1.8 GB
+Bandwidth Estimation:
+  Incoming Traffic:
+  Number of search requests per day: 150 million.
+  Search query size: 100 Bytes.
+  Bandwidth Required for Incoming Search Queries per Second = (Total Requests per Second) × (Total Query Size)
+  Bandwidth Required for Incoming Search Queries per Second = 150 million requests/day / (24 hours × 3600 seconds/hour) × 100 Bytes = ~1.74 GB/s

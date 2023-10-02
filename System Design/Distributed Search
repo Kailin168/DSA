@@ -59,3 +59,5 @@ Outgoing Traffic:
   - Response size: 4,000 Bytes (for 80 suggestions of 50 Bytes each).
   Bandwidth Required for Outgoing Traffic per Second = (Total Requests per Second) × (Total Response Size)
   Bandwidth Required for Outgoing Traffic per Second = 150 million requests/day / (24 hours × 3600 seconds/hour) × 4,000 Bytes = ~34.72 GB/s  
+
+Indexing in Distributed Search Systems

@@ -50,7 +50,12 @@ Storage Estimation:
   Total Storage Required to Index Videos per Day on YouTube = 6,000 videos × 300 KB = 1.8 GB
 Bandwidth Estimation:
   Incoming Traffic:
-  Number of search requests per day: 150 million.
-  Search query size: 100 Bytes.
+  - Number of search requests per day: 150 million.
+  - Search query size: 100 Bytes.
   Bandwidth Required for Incoming Search Queries per Second = (Total Requests per Second) × (Total Query Size)
   Bandwidth Required for Incoming Search Queries per Second = 150 million requests/day / (24 hours × 3600 seconds/hour) × 100 Bytes = ~1.74 GB/s
+Outgoing Traffic:
+  - Number of search requests per day: 150 million.
+  - Response size: 4,000 Bytes (for 80 suggestions of 50 Bytes each).
+  Bandwidth Required for Outgoing Traffic per Second = (Total Requests per Second) × (Total Response Size)
+  Bandwidth Required for Outgoing Traffic per Second = 150 million requests/day / (24 hours × 3600 seconds/hour) × 4,000 Bytes = ~34.72 GB/s  

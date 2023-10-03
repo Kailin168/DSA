@@ -65,4 +65,9 @@ Indexing in Distributed Search Systems
     Indexing involves organizing and structuring data to facilitate fast and accurate information retrieval.
   Building a Searchable Index:
     A straightforward way to create a searchable index is by assigning a unique ID to each document and storing these IDs alongside the document content in a database table. However, this method many become inefficient when dealing with a large number of documents, as search queries require traversing all documents.
+  Inverted Index:
+    An inverted index is a more efficient data structure used in document retrieval. Instead of storing complete documents, it breaks documents into individual words. It maintains a term level index, identifying unique words and discarding common ones like "the" or "is". For each term, the index records:
+    - The list of documents containing the term.
+    - The frequency of the term in each document.
+    - The position of the term in each document (since a term may appear multiple times in one documents).
     

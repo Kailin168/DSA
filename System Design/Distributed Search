@@ -61,3 +61,8 @@ Outgoing Traffic:
   Bandwidth Required for Outgoing Traffic per Second = 150 million requests/day / (24 hours × 3600 seconds/hour) × 4,000 Bytes = ~34.72 GB/s  
 
 Indexing in Distributed Search Systems
+  Indexing:
+    Indexing involves organizing and structuring data to facilitate fast and accurate information retrieval.
+  Building a Searchable Index:
+    A straightforward way to create a searchable index is by assigning a unique ID to each document and storing these IDs alongside the document content in a database table. However, this method many become inefficient when dealing with a large number of documents, as search queries require traversing all documents.
+    

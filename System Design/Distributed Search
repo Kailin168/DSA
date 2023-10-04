@@ -70,4 +70,9 @@ Indexing in Distributed Search Systems
     - The list of documents containing the term.
     - The frequency of the term in each document.
     - The position of the term in each document (since a term may appear multiple times in one documents).
-    
+  Advantages of Inverted Index:
+    Facilitates full-text searches.
+    Reduces runtime search time as mappings for each term are available.
+  Disadvantages of Inverted Index:
+    Requires additional storage for maintaining the index.
+    Imposes processing costs for adding, updating, or deleting documents.

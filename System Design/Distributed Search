@@ -76,3 +76,13 @@ Indexing in Distributed Search Systems
   Disadvantages of Inverted Index:
     Requires additional storage for maintaining the index.
     Imposes processing costs for adding, updating, or deleting documents.
+  Searching from an Inverted Index:
+    To search using an inverted index, we identify the documents that contain the searched terms. For example, if we search for "search engine," the index tells us that both terms are present in documents 1, 2, and 3, each appearing once. It also specifies the positions of these terms within the documents.
+
+  Factors in Index Design:
+    While designing an index, several factors need to be considered:
+      Size of the Index: The memory and RAM required to store the index efficiently.
+      Search Speed: How quickly we can locate a word in the index.
+      Maintenance: Efficiency in updating the index when adding, updating, or removing documents.
+      Fault Tolerance: The system's ability to handle failures and data corruption.
+      Resilience: Guarding against attempts to manipulate search results through SEO schemes.

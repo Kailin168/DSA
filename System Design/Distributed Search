@@ -86,3 +86,11 @@ Indexing in Distributed Search Systems
       Maintenance: Efficiency in updating the index when adding, updating, or removing documents.
       Fault Tolerance: The system's ability to handle failures and data corruption.
       Resilience: Guarding against attempts to manipulate search results through SEO schemes.
+
+  Indexing on a Centralized System:
+    In a centralized search system, all components operate on a single powerful node. This approach presents several challenges:
+    - Single Point of Failure (SPOF): The entire system relies on a single node, making it vulnerable to failures.
+    - Server Overload: Complex queries or a high number of users can overwhelm the server.
+    - Large Index Size: As the number of documents grows, the index's size increases, demanding more resources and increasing costs.
+    Centralized systems require the entire inverted index to fit into RAM for efficient operations, limiting their scalability.
+

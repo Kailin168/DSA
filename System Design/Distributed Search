@@ -93,4 +93,5 @@ Indexing in Distributed Search Systems
     - Server Overload: Complex queries or a high number of users can overwhelm the server.
     - Large Index Size: As the number of documents grows, the index's size increases, demanding more resources and increasing costs.
     Centralized systems require the entire inverted index to fit into RAM for efficient operations, limiting their scalability.
+Distributed search systems address these challenges by distributing the index across multiple nodes, enabling parallelization, fault tolerance, and efficient resource utilization.
 

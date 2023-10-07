@@ -95,3 +95,5 @@ Indexing in Distributed Search Systems
     Centralized systems require the entire inverted index to fit into RAM for efficient operations, limiting their scalability.
 Distributed search systems address these challenges by distributing the index across multiple nodes, enabling parallelization, fault tolerance, and efficient resource utilization.
 
+Designing a Distributed Search System:
+Explore the design of a distributed search system that can efficiently handle a large number of queries per second. This design is divided into high-level components and considerations for API design, distributed indexing and searching, replication, and replica distribution.

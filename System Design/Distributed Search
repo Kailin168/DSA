@@ -97,3 +97,15 @@ Distributed search systems address these challenges by distributing the index ac
 
 Designing a Distributed Search System:
 Explore the design of a distributed search system that can efficiently handle a large number of queries per second. This design is divided into high-level components and considerations for API design, distributed indexing and searching, replication, and replica distribution.
+
+High-Level Design:
+
+The distributed search system can be divided into two main phases: offline and online.
+
+1. Offline Phase:
+- Crawler: Collects content from the intended resource (e.g., YouTube videos) and extracts textual content like video titles, descriptions, and annotations.
+- Indexer: Fetches documents from distributed storage and indexes them using MapReduce, running on a distributed cluster of commodity machines.
+Distributed Storage: Stores both the documents and the constructed index.
+2. Online Phase:
+- User Query: Users enter search queries.
+- Searcher: Parses the query, searches for mappings from the index stored in distributed storage, and returns relevant results to the user. It handles incorrect spellings and ranks documents based on relevance.

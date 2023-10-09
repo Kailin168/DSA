@@ -109,3 +109,15 @@ Distributed Storage: Stores both the documents and the constructed index.
 2. Online Phase:
 - User Query: Users enter search queries.
 - Searcher: Parses the query, searches for mappings from the index stored in distributed storage, and returns relevant results to the user. It handles incorrect spellings and ranks documents based on relevance.
+
+API Design:
+The API design is simple due to user queries being textual strings.
+
+- Search Function:
+  - search(query): Accepts a textual query entered by the user and returns search results.
+Detailed Discussion:
+
+Distributed Indexing and Searching:
+Data partitioning is crucial in a distributed indexing system. Two common techniques are document partitioning and term partitioning. Document partitioning, where documents are divided among nodes, is typically preferred.
+
+- Document Partitioning: Each query is distributed across all nodes, and results are merged before being shown to the user. This method requires less inter-node communication.

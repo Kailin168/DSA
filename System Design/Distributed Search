@@ -123,14 +123,12 @@ Data partitioning is crucial in a distributed indexing system. Two common techni
 - Document Partitioning: Each query is distributed across all nodes, and results are merged before being shown to the user. This method requires less inter-node communication.
 
 Replication:
-
 Replicating indexing nodes improves system resilience and query throughput. A replication factor of three is common.
   - Replicas ensure high availability and fault tolerance.
   - Each group of nodes has replicas that contain all the partitions required to answer user queries.
   - Load balancers distribute queries across different replica groups and retry in case of errors.
 
 Replica Distribution:
-
 Replicas are distributed across different availability zones for performance and availability.
   - For each partition, one node is designated as the primary, while others are replicas.
   - Replicas ensure that if a primary node fails, the system can still function without interruption.

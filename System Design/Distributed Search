@@ -133,3 +133,8 @@ Replicas are distributed across different availability zones for performance and
   - For each partition, one node is designated as the primary, while others are replicas.
   - Replicas ensure that if a primary node fails, the system can still function without interruption.
   - Replicas also improve query throughput as multiple copies of each partition's index can be queried concurrently.
+
+This distributed search system design scales efficiently for handling a large volume of queries and data:
+
+- Parallel indexing and searching are colocated on the same nodes.
+- Replicating partitions improves fault tolerance and query throughput.

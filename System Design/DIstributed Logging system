@@ -1,0 +1,3 @@
+Distributed Logging System Design
+
+Definition: A log file is a record that documents events within a software application. It captures details such as microservices, transactions, and service actions, providing a means to troubleshoot and monitor the application's flow.

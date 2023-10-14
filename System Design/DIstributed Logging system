@@ -1,3 +1,13 @@
 Distributed Logging System Design
 
 Definition: A log file is a record that documents events within a software application. It captures details such as microservices, transactions, and service actions, providing a means to troubleshoot and monitor the application's flow.
+
+Need for Logging:
+
+1. Understanding Distributed Systems: Logging is crucial in comprehending the flow of events in a distributed system. It plays a vital role in pinpointing the timing and causes of system failures or security breaches, ultimately reducing downtime.
+
+2. Efficient Debugging: Instead of relying on simple print statements, structured logging provides a more organized and efficient way to monitor applications. Print statements lack severity tracking and don't suit the needs of storing data in a structured manner.
+
+3. Causality Management: Distributed systems often require causality information to ensure events are correctly sequenced across multiple nodes. Logging services effectively manage diagnostic and exploratory data in distributed software.
+
+4. Performance and Error Detection: Logging aids in understanding code, locating unforeseen errors, and optimizing application performance. It provides insight into how processes are running in the system.

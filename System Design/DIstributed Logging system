@@ -25,13 +25,13 @@ User Behavior Insights: Log analysis is valuable for understanding user actions,
 
 Designing a Distributed Logging System:
 
-- The design of a distributed logging system can be broken down into two main sections:
+The design of a distributed logging system can be broken down into two main sections:
 
 - Introduction: This section covers the fundamentals of distributed logging. It addresses the challenge of managing large log files and the need for structured log data. It sets the stage for understanding the system's logging requirements.
 
 - Design: In this part, we delve into the specifics of designing a distributed logging system. We define the system's requirements, consider API design, and explore the detailed design of the logging system.
 
-- The goal of a distributed logging system is to efficiently capture, store, and analyze log data to maintain system health, diagnose issues, and ensure security and compliance.
+The goal of a distributed logging system is to efficiently capture, store, and analyze log data to maintain system health, diagnose issues, and ensure security and compliance.
 
 
 

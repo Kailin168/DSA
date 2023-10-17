@@ -1,1 +1,5 @@
 Distributed Task Scheduler System Design
+
+What is a Task Scheduler?
+
+At its core, a task scheduler manages and allocates computational resources to various tasks. A task can be any piece of computational work that requires CPU time, memory, storage, network bandwidth, and more. Task schedulers ensure that resources are efficiently assigned to these tasks, allowing for seamless execution.

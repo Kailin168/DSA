@@ -1,5 +1,9 @@
 Distributed Task Scheduler System Design
 
 What is a Task Scheduler?
-
 At its core, a task scheduler manages and allocates computational resources to various tasks. A task can be any piece of computational work that requires CPU time, memory, storage, network bandwidth, and more. Task schedulers ensure that resources are efficiently assigned to these tasks, allowing for seamless execution.
+
+When to Use a Task Scheduler?
+Task schedulers are essential in scenarios where many tasks compete for limited computational resources. Some key use cases include:
+1. Single-OS-based Node: In systems with multiple processes or tasks vying for a node's limited resources, a local OS task scheduler is beneficial. It efficiently allocates resources using techniques like multi-feedback queues.
+2. Cloud Computing Services: Cloud environments involve numerous distributed resources and tasks from multiple tenants. Here, a task scheduler becomes crucial to optimize resource utilization and meet tenant demands. Traditional local OS task schedulers are insufficient for such diverse and distributed systems.

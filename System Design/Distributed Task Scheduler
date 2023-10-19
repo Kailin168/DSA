@@ -7,3 +7,8 @@ When to Use a Task Scheduler?
 Task schedulers are essential in scenarios where many tasks compete for limited computational resources. Some key use cases include:
 1. Single-OS-based Node: In systems with multiple processes or tasks vying for a node's limited resources, a local OS task scheduler is beneficial. It efficiently allocates resources using techniques like multi-feedback queues.
 2. Cloud Computing Services: Cloud environments involve numerous distributed resources and tasks from multiple tenants. Here, a task scheduler becomes crucial to optimize resource utilization and meet tenant demands. Traditional local OS task schedulers are insufficient for such diverse and distributed systems.
+3. Large Distributed Systems: Systems like Facebook, WhatsApp, or Instagram, serving millions to billions of users, rely on task schedulers to handle billions of tasks efficiently. These systems often require a distributed task scheduler, as tasks originate from diverse sources and tenants.
+
+Distributed Task Scheduling:
+Distributed task scheduling involves the allocation of resources to tasks coming from various sources and tenants. This approach is essential for managing large-scale systems with dispersed resources. A data center-level task scheduler handles billions of tasks from multiple tenants, making it visually distinct from an OS-level task scheduler.
+

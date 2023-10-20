@@ -12,3 +12,16 @@ Task schedulers are essential in scenarios where many tasks compete for limited 
 Distributed Task Scheduling:
 Distributed task scheduling involves the allocation of resources to tasks coming from various sources and tenants. This approach is essential for managing large-scale systems with dispersed resources. A data center-level task scheduler handles billions of tasks from multiple tenants, making it visually distinct from an OS-level task scheduler.
 
+How to Design a Task Scheduling System?
+
+The design of a task scheduler is divided into four lessons:
+
+1. Requirements: Identify both functional and non-functional requirements for a task scheduling system.
+
+2. Design: Discuss the system design, including components and database schema.
+
+3. Design Considerations: Explore key design factors, such as task prioritization and resource optimization.
+
+4. Evaluation: Assess the design of the task scheduler against the established requirements.
+
+The goal is to create a scalable, reliable, and fault-tolerant task scheduling system capable of handling tasks from diverse sources and efficiently allocating computational resources.

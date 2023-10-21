@@ -1,0 +1,6 @@
+The Sharded Counters
+
+Managing Heavy Traffic with Sharded Counters:
+
+Problem: Counting Heavy Hitters
+Picture this: famous celebrities posting images or videos on social media, resulting in millions of likes within seconds. This scenario presents a challenge known as the "heavy hitters problem." It's easy to count likes for one image, but when thousands of images or tweets flood in, each with millions of likes, precision and performance become major issues.

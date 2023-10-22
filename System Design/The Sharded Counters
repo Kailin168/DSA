@@ -2,5 +2,11 @@ The Sharded Counters
 
 Managing Heavy Traffic with Sharded Counters:
 
-Problem: Counting Heavy Hitters
+**Problem: Counting Heavy Hitters
 Picture this: famous celebrities posting images or videos on social media, resulting in millions of likes within seconds. This scenario presents a challenge known as the "heavy hitters problem." It's easy to count likes for one image, but when thousands of images or tweets flood in, each with millions of likes, precision and performance become major issues.
+
+**The Challenge: Millions of Likes
+To put it in perspective, consider the scale of user interactions. On Twitter, 6,000 tweets can be sent in just one second, totaling 360,000 tweets per minute and a whopping 500 million tweets per day. Counting billions of likes on these tweets is no small task. As the number of concurrent write requests for a counter increases, the problem intensifies due to lock contention, where acquiring the lock becomes a time-consuming hurdle.
+
+**Designing Sharded Counters:
+The solution to this challenge lies in sharded counters. Sharding involves breaking down a large task into smaller, manageable parts. In the context of counters, it means dividing the counting operation into smaller pieces to handle high write loads efficiently.

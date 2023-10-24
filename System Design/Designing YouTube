@@ -8,3 +8,20 @@ YouTube's simplicity, free content hosting, and continuous improvements have dri
 
 Impressive Growth:
 Since its inception in 2005, YouTube has exploded in popularity. Over 2.5 billion users visit monthly, and it's one of the top streaming websites.
+
+Functional Requirements:
+
+1. Stream videos
+2. Upload videos
+3. Search videos by titles
+4. Like and dislike videos
+5. Add comments to videos
+6. View thumbnails
+
+Non-Functional Requirements:
+
+1. High availability
+2. Scalability
+3. Good performance
+
+

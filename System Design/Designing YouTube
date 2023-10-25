@@ -24,4 +24,7 @@ Non-Functional Requirements:
 2. Scalability
 3. Good performance
 
-
+Three key building blocks:
+1. Video Storage: To handle all the videos efficiently.
+2. Database Management: For swift and accurate searches, likes, dislikes, and comments.
+3. Content Delivery Network (CDN): For good performance and scalability, distributing all that video data effectively.

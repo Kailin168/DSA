@@ -11,3 +11,22 @@ Key Functions of Quora:
 4. Social Features: Users can follow, upvote/downvote answers, and leave comments.
 5. Personalized Feeds: Content is tailored to a user's interests and activity.
 Mobile-Friendly: The design is responsive and optimized for mobile.
+
+Scaling Requirements (Small Scale):
+- Daily Active Users: 20 million
+- Posts on Home Page: 10
+- Visits per User per Day: 3
+- Total Home Page Visits: 60 million/day
+- Total Storage for Posts: 2.62 PB for 3 years
+
+Components:
+1. Client: Both mobile and web users.
+2. Application Servers: Communicate with each other.
+3. Load Balancers: Distribute requests using consistent hashing.
+4. Database: Cassandra or Hbase for horizontal scaling and low latency.
+5. Sessions Service: Store user session information.
+6. Cache
+7. Media Storage (S3): Store photos and videos.
+8. Content Delivery Network
+9. Notification Service: Push notifications to users.
+10. Services: Several services like Session, Post, Notification, User Profile, Feed, Ranking, and Search.

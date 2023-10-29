@@ -30,3 +30,17 @@ Components:
 8. Content Delivery Network
 9. Notification Service: Push notifications to users.
 10. Services: Several services like Session, Post, Notification, User Profile, Feed, Ranking, and Search.
+
+Data Model:
+Users: User_id, Username, Password, User_profiledetails.
+Post: Post_id, Post_title, User_id, Post_url, Post_date.
+Comment: Comment_id, User_id, Post_id, Comment_text.
+Vote: Vote_id, User_id, Post_id, Comment_id, Count, Vote_type.
+
+Assumptions on Technical Aspects:
+Highly reliable and available system.
+Read-heavy workload.
+Both mobile and web interfaces.
+Handling a huge amount of data (text, photos, videos).
+Horizontal scaling.
+High consistency and availability.

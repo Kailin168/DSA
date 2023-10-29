@@ -32,15 +32,15 @@ Components:
 10. Services: Several services like Session, Post, Notification, User Profile, Feed, Ranking, and Search.
 
 Data Model:
-Users: User_id, Username, Password, User_profiledetails.
-Post: Post_id, Post_title, User_id, Post_url, Post_date.
-Comment: Comment_id, User_id, Post_id, Comment_text.
-Vote: Vote_id, User_id, Post_id, Comment_id, Count, Vote_type.
+1. Users: User_id, Username, Password, User_profiledetails.
+2. Post: Post_id, Post_title, User_id, Post_url, Post_date.
+3. Comment: Comment_id, User_id, Post_id, Comment_text.
+4. Vote: Vote_id, User_id, Post_id, Comment_id, Count, Vote_type.
 
 Assumptions on Technical Aspects:
-Highly reliable and available system.
-Read-heavy workload.
-Both mobile and web interfaces.
-Handling a huge amount of data (text, photos, videos).
-Horizontal scaling.
-High consistency and availability.
+1. Highly reliable and available system.
+2. Read-heavy workload.
+3. Both mobile and web interfaces.
+4. Handling a huge amount of data (text, photos, videos).
+5. Horizontal scaling.
+6. High consistency and availability.

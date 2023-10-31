@@ -2,3 +2,11 @@ Google Maps Design
 
 What is Google Maps?
 Google Maps is a service that helps users find the best routes from one place to another, considering factors like transportation mode, distance, and time. It provides multiple path options and real-time traffic information. Google Maps can answer questions about routes, distances, and estimated travel times.
+
+When do we use a maps service?
+
+Maps services are used in various situations:
+1. Individual Navigation: People use maps to find directions to new places, reducing travel time and costs.
+2. Estimated Time of Arrival (ETA): Maps provide ETAs based on current traffic data.
+3. Applications and Services: Modern apps like ride-sharing and delivery services rely on maps for efficient navigation.
+

@@ -10,3 +10,8 @@ Maps services are used in various situations:
 2. Estimated Time of Arrival (ETA): Maps provide ETAs based on current traffic data.
 3. Applications and Services: Modern apps like ride-sharing and delivery services rely on maps for efficient navigation.
 
+Building Blocks for Google Maps:
+1. Location Search: The system should enable searching for locations on the map.
+2. Key-Value Metadata Storage: Efficient data management requires storing metadata in a key-value format.
+3. Event Handling: The system should generate and handle events, notifying other services when needed.
+4. Structured Graph Data: Road data is effectively represented using a structured graph format for storing and retrieving information.

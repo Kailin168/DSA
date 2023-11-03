@@ -3,3 +3,8 @@ Yelp Design
 What is Yelp?
 - Yelp is a platform that helps people discover and connect with local businesses. Users can find businesses, read reviews, make reservations, schedule appointments, and even purchase products. It's like a one-stop-shop for local business interactions. Users can also upload photos and videos related to these places. 
 
+Functional Requirements:
+1. Business Profile: Yelp allows business owners or customers to create pages for businesses.
+2. Search by Location: Users can search for attractions by location or GPS coordinates. They can also search for nearby places.
+3. Reviews and Ratings: Users can leave reviews and ratings (in stars out of 5) for places they've visited or services they've used.
+4. Photo and Video Upload: Users can upload photos and videos related to a place.

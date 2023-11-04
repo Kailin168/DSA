@@ -8,3 +8,13 @@ Functional Requirements:
 2. Search by Location: Users can search for attractions by location or GPS coordinates. They can also search for nearby places.
 3. Reviews and Ratings: Users can leave reviews and ratings (in stars out of 5) for places they've visited or services they've used.
 4. Photo and Video Upload: Users can upload photos and videos related to a place.
+
+Non-Functional Requirements:
+- High Availability: Yelp's search service should be highly available.
+- Scalability: The system should handle peak demands during holiday seasons or at tourist attractions.
+- Low Latency: Users should access information quickly.
+
+Data Estimations:
+- Storing data for 500M places with a 20% yearly growth.
+- 1MB (excluding media) for metadata related to a location.
+- Read-heavy system with a 1:1000 write to read ratio and up to 100k concurrent users at peak.

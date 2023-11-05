@@ -18,3 +18,11 @@ Data Estimations:
 - Storing data for 500M places with a 20% yearly growth.
 - 1MB (excluding media) for metadata related to a location.
 - Read-heavy system with a 1:1000 write to read ratio and up to 100k concurrent users at peak.
+
+Database Schema:
+- Primary entities include users, media, reviews, locations, and attractions tables.
+- Various one-to-many relationships, e.g., users to reviews and attractions to reviews.
+
+APIs:
+- REST APIs for searching nearby places, adding/modifying listings, reviews, ratings, and media upload.
+- APIs include parameters like search term, search criteria, and API key.

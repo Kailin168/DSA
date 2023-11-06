@@ -26,3 +26,13 @@ Database Schema:
 APIs:
 - REST APIs for searching nearby places, adding/modifying listings, reviews, ratings, and media upload.
 - APIs include parameters like search term, search criteria, and API key.
+
+High-Level Design:
+
+- Yelp's core feature is finding nearby places with minimal latency.
+- Geohash, a geospatial indexing system, is used to represent locations with a 12-character code.
+- To find nearby places, geohashes of user locations and places are compared.
+- Data can be stored and indexed using NoSQL databases like Redis, Elasticsearch, or MongoDB, which offer geospatial features.
+
+Data Partitioning:
+- If using custom partitioning, data can be divided based on regions or consistent hashing to ensure even distribution.

@@ -36,3 +36,10 @@ High-Level Design:
 
 Data Partitioning:
 - If using custom partitioning, data can be divided based on regions or consistent hashing to ensure even distribution.
+
+Additional Features:
+- Image and video processing to enhance media.
+- Spam detection using machine learning models.
+- Caching with Memcache or Redis for improved performance, especially for frequently searched places.
+
+Yelp's system design focuses on efficient searching of nearby places and user-generated content while addressing high availability, scalability, and low latency. Geohash and NoSQL databases play vital roles in achieving these goals. Caching and machine learning enhance performance and data quality.

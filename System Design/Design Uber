@@ -1,0 +1,9 @@
+System Design Uber
+
+Uber is a ride-hailing service that connects riders with drivers using a mobile app. Here's a simplified overview of its system design:
+
+What is Uber?
+
+Uber is an app-based platform for ride-hailing services.
+It allows users to book rides from one location to another using the app.
+Drivers register their vehicles and offer rides to users through the app.

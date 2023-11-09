@@ -7,3 +7,11 @@ What is Uber?
 Uber is an app-based platform for ride-hailing services.
 It allows users to book rides from one location to another using the app.
 Drivers register their vehicles and offer rides to users through the app.
+
+Uber, despite its seemingly simple user experience, relies on a complex infrastructure to make each ride happen. Behind the scenes, there's a vast network of services and a huge volume of data to support the platform.
+
+Uber's backend started as a single, monolithic software architecture using Python and SQLAlchemy for database management. However, it has since evolved into a service-oriented architecture with hundreds of services.
+
+Uber's backend doesn't just handle ride hailing but also food delivery and cargo services. It primarily serves mobile app traffic over mobile data.
+
+At its core, Uber uses a Dispatch system that acts like a real-time market, matching drivers (supply) with riders (demand).

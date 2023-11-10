@@ -15,3 +15,11 @@ Uber's backend started as a single, monolithic software architecture using Pytho
 Uber's backend doesn't just handle ride hailing but also food delivery and cargo services. It primarily serves mobile app traffic over mobile data.
 
 At its core, Uber uses a Dispatch system that acts like a real-time market, matching drivers (supply) with riders (demand).
+
+- Supply Service tracks cars using geolocation and various attributes like the number of seats and the presence of car seats or wheelchair accessibility. It also manages vehicle allocation.
+
+- Demand Service tracks rider GPS locations and their requirements for rides.
+
+- DISCO (Dispatch Optimization) is the service that matches riders to drivers in real-time, ensuring efficient routing and minimizing waiting times.
+
+Uber's geospatial design divides the Earth into small cells using Google S2 library. These cells have unique IDs used as sharding keys for scaling.

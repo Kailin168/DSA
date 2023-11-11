@@ -23,3 +23,17 @@ At its core, Uber uses a Dispatch system that acts like a real-time market, matc
 - DISCO (Dispatch Optimization) is the service that matches riders to drivers in real-time, ensuring efficient routing and minimizing waiting times.
 
 Uber's geospatial design divides the Earth into small cells using Google S2 library. These cells have unique IDs used as sharding keys for scaling.
+
+The system uses Apache Kafka for data transfer. GPS locations from cabs are sent to Kafka, loaded into memory, and then persisted to a database. Mapping and routing utilize historical travel times and AI algorithms.
+
+Scaling Dispatch is achieved through Node.js and Ringpop, a protocol for distributed applications. It uses gossip protocols for cooperation and coordination.
+
+The supply and demand data is stored in various databases, including Redis and custom clustering. MySQL is used to handle trip data, while Apache Kafka is used for location data.
+
+Analyzing log data involves pushing logs to a Kafka cluster, applying filters with log stash, and analyzing with tools like Elasticsearch or Graphana.
+
+Uber has systems in place for fraud detection, payment processing, promotions, and coupons. Load balancing is achieved at multiple layers (Layer 3, Layer 4, and Layer 7).
+
+After a trip, post-trip actions include collecting ratings, sending emails, updating databases, and scheduling payments.
+
+Uber's surge pricing model increases fares during high demand, which is determined by prediction algorithms.

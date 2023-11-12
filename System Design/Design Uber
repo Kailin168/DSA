@@ -37,3 +37,7 @@ Uber has systems in place for fraud detection, payment processing, promotions, a
 After a trip, post-trip actions include collecting ratings, sending emails, updating databases, and scheduling payments.
 
 Uber's surge pricing model increases fares during high demand, which is determined by prediction algorithms.
+
+In case of a total data center failure, Uber maintains a backup data center and relies on driver phones as a source of trip data. It sends encrypted state digests to driver phones, which can be used to recover trip information when needed.
+
+So, while the Uber app may seem straightforward to users, it relies on a sophisticated and robust backend infrastructure to manage the complexities of ride hailing and related services.

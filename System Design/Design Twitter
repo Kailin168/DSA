@@ -1,3 +1,18 @@
 Twitter System Design
 
 Twitter is a widely-used microblogging social network where users can post and interact with short messages called "Tweets." With about 397 million users as of 2021, Twitter is known for its real-time sharing of news, engagement with diverse communities, and cultural interactions.
+
+1. Requirements:
+
+- Functional Requirements:
+  - Ability to post new tweets (text, image, video, etc.).
+  - Ability to follow other users.
+  - Newsfeed feature consisting of tweets from followed users.
+  - Search functionality for tweets.
+- Non-Functional Requirements:
+  - High availability with minimal latency.
+  - Scalability and efficiency.
+- Extended Requirements:
+  - Metrics and analytics.
+  - Retweet functionality.
+  - Favorite tweets.

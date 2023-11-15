@@ -16,3 +16,16 @@ Twitter is a widely-used microblogging social network where users can post and i
   - Metrics and analytics.
   - Retweet functionality.
   - Favorite tweets.
+
+2. Estimation and Constraints:
+
+- Traffic:
+  - 1 billion tweets per day.
+  - 100 million media files per day (10% of tweets).
+  - Resulting in 12K requests per second.
+- Storage:
+  - 100 GB of database storage per day for text tweets.
+  - 5 TB of storage per day for media files.
+  - Total of 19 PB of storage for 10 years.
+- Bandwidth:
+  - Requires a minimum bandwidth of around 60 MB per second.

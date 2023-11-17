@@ -16,7 +16,7 @@ Twitter is a widely-used microblogging social network where users can post and i
   - Retweet functionality.
   - Favorite tweets.
 
-2. Estimation and Constraints:
+  Estimation and Constraints:
 - Traffic:
   - 1 billion tweets per day.
   - 100 million media files per day (10% of tweets).
@@ -27,3 +27,12 @@ Twitter is a widely-used microblogging social network where users can post and i
   - Total of 19 PB of storage for 10 years.
 - Bandwidth:
   - Requires a minimum bandwidth of around 60 MB per second.
+
+2. Data Model Design:
+  - Tables: users, tweets, favorites, followers, feeds, feeds_tweets.
+  - Relational database (e.g., PostgreSQL) or distributed NoSQL database (e.g., Apache Cassandra).
+
+3. API Design:
+  - Post a Tweet API.
+  - Follow/Unfollow API.
+  - Get Newsfeed API.

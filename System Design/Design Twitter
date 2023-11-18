@@ -36,3 +36,21 @@ Twitter is a widely-used microblogging social network where users can post and i
   - Post a Tweet API.
   - Follow/Unfollow API.
   - Get Newsfeed API.
+
+4. High-Level Design:
+- Microservices Architecture:
+    -User Service.
+    -Newsfeed Service.
+    -Tweet Service.
+    -Search Service.
+    -Media Service.
+    -Notification Service.
+    -Analytics Service.
+- Inter-Service Communication:
+    -REST, HTTP, or gRPC.
+- Newsfeed:
+    -Generation: Retrieve followed entities, fetch relevant tweets, ranking algorithm, paginated response.
+    -Publishing: Pull model, push model, or hybrid model.
+- Ranking Algorithm:
+    -Affinity, Weight, Decay.
+    -Machine learning models for complex ranking.

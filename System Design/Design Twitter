@@ -54,3 +54,13 @@ Twitter is a widely-used microblogging social network where users can post and i
 - Ranking Algorithm:
     -Affinity, Weight, Decay.
     -Machine learning models for complex ranking.
+- Retweets:
+    -Represented as a new tweet linked to the original tweet.
+- Search:
+    -Use Elasticsearch for efficient search.
+- Notifications:
+    -Use a message queue (e.g., Apache Kafka) for push notifications.
+- Metrics and Analytics:
+    -Use Apache Kafka and Apache Spark for processing events and analytics.
+- Caching:
+    -Cache top 20% of tweets with LRU eviction policy.

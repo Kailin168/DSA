@@ -64,3 +64,11 @@ Twitter is a widely-used microblogging social network where users can post and i
     -Use Apache Kafka and Apache Spark for processing events and analytics.
 - Caching:
     -Cache top 20% of tweets with LRU eviction policy.
+- Media Storage:
+    -Use object storage or distributed file storage (e.g., HDFS, GlusterFS).
+- CDN:
+    -Use CDN (e.g., Amazon CloudFront, Cloudflare) for serving static files.
+    -Identify and Resolve Bottlenecks:
+- Multiple service instances, load balancers, read replicas, distributed cache.
+    -Use message brokers for robustness.
+    -Media processing and compression in the media service.

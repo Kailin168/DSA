@@ -68,7 +68,9 @@ Twitter is a widely-used microblogging social network where users can post and i
     -Use object storage or distributed file storage (e.g., HDFS, GlusterFS).
 - CDN:
     -Use CDN (e.g., Amazon CloudFront, Cloudflare) for serving static files.
-    -Identify and Resolve Bottlenecks:
-- Multiple service instances, load balancers, read replicas, distributed cache.
+- Identify and Resolve Bottlenecks:
+    -Multiple service instances, load balancers, read replicas, distributed cache.
     -Use message brokers for robustness.
     -Media processing and compression in the media service.
+Conclusion:
+This system design provides a comprehensive approach to building a scalable and resilient microblogging platform like Twitter, addressing various functionalities and potential challenges in a large-scale social media system.

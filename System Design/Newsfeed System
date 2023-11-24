@@ -20,3 +20,15 @@ A newsfeed on social media platforms, such as Twitter, Facebook, or Instagram, i
       - High availability and scalability.
       - Low latency for real-time updates.
       - Consistent user experience across devices.
+2. Design:**
+   - High-Level Design:**
+      - **Entities:** Users, Posts, Groups, Pages.
+      - **Components:** Newsfeed Generator, Content Ranking, Real-time Updates.
+      - **Database:** NoSQL database for fast retrieval.
+      - **APIs:** Post API, User API, Feed API.
+
+   - Detailed Design:**
+      - **User Timeline:** Track user interactions, preferences, and followed entities.
+      - **Content Ranking Algorithm:** Consider relevance, engagement, and recency.
+      - **Real-time Updates:** Use WebSockets for instant notifications.
+      - **Database Schema:** Optimize for read-heavy operations.

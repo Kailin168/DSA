@@ -25,3 +25,8 @@ A newsfeed on social media platforms, such as Twitter, Facebook, or Instagram, i
       - **Content Ranking Algorithm:** Consider relevance, engagement, and recency.
       - **Real-time Updates:** Use WebSockets for instant notifications.
       - **Database Schema:** Optimize for read-heavy operations.
+3. Evaluation:**
+   - Assessment of Non-Functional Requirements:**
+      - Measure latency for real-time updates.
+      - Evaluate system scalability under heavy user load.
+      - Verify consistent user experience.

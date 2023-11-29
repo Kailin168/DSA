@@ -2,3 +2,16 @@ System design Instagram
 
 What is Instagram?
 Instagram is a popular social networking application where users share photos and short videos. It allows users to caption their posts, use hashtags, and add geotags for indexing and searchability. The platform enables posts to appear in followers' feeds and be discoverable publicly through hashtags. Users can choose to keep their profiles private for restricted access.
+
+Designing Instagram:
+1. Requirements:**
+   - Functional Requirements:**
+      - Users can post photos and short videos.
+      - Caption addition for each post.
+      - Hashtags and geotags for post indexing.
+      - Follower-based feed visibility.
+      - Public or private profile options.
+   - Non-Functional Requirements:**
+      - Scalability for user growth.
+      - Low-latency content delivery.
+      - Efficient search and indexing.

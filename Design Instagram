@@ -15,3 +15,19 @@ Designing Instagram:
       - Scalability for user growth.
       - Low-latency content delivery.
       - Efficient search and indexing.
+2. Design:**
+   - Workflow:
+      - Users post content with captions, hashtags, and geotags.
+      - Posts appear in followers' feeds.
+      - Public posts are discoverable through hashtags.
+      - Users can set profiles to private for restricted access.
+   - Components:
+      - Post Management, Follower System, Search Indexing.
+      - Feed Generator, Content Delivery Network (CDN).
+      - User Authentication, Privacy Settings.
+   - API Design:
+      - Post API, User API, Search API.
+      - Authentication API, Feed API.
+   - Database Schema:
+      - User Profile, Post Data, Follower Relationships.
+      - Hashtag and Geotag Indexing.

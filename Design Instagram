@@ -31,3 +31,16 @@ Designing Instagram:
    - Database Schema:
       - User Profile, Post Data, Follower Relationships.
       - Hashtag and Geotag Indexing.
+3. Detailed Design:
+   - Components Exploration:
+      - Post Management: Store images/videos, captions, metadata.
+      - Follower System: Manage follower relationships for feed visibility.
+      - Search Indexing: Efficient indexing for hashtag and geotag search.
+      - Feed Generator: Algorithm for personalized feed generation.
+      - CDN: Storage and retrieval of media content.
+      - User Authentication: Secure user authentication mechanisms.
+      - Privacy Settings:** Controls for public/private profiles.
+   - Timeline Generation Approaches:
+      - Following-based: Display posts from followed users.
+      - Interest-based: Consider user preferences and engagement.
+      - Real-time Updates: Instant feed updates for users.

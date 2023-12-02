@@ -44,3 +44,8 @@ Designing Instagram:
       - Following-based: Display posts from followed users.
       - Interest-based: Consider user preferences and engagement.
       - Real-time Updates: Instant feed updates for users.
+4. Evaluation:
+   - Assessment Criteria:
+      - Scalability under user growth.
+      - Latency measurement for content delivery.
+      - Effectiveness of search and indexing.

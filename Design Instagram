@@ -15,7 +15,12 @@ Designing Instagram:
       - Scalability for user growth.
       - Low-latency content delivery.
       - Efficient search and indexing.
-2. Design:**
+   - Additional:
+      1. Users can add tags to posts.
+      2. Users can comment on posts.
+      3. Users can search for photos based on tags.
+
+2. Design:
    - Workflow:
       - Users post content with captions, hashtags, and geotags.
       - Posts appear in followers' feeds.
@@ -49,3 +54,5 @@ Designing Instagram:
       - Scalability under user growth.
       - Latency measurement for content delivery.
       - Effectiveness of search and indexing.
+
+

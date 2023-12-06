@@ -19,7 +19,7 @@ Designing Instagram:
       1. Users can add tags to posts.
       2. Users can comment on posts.
       3. Users can search for photos based on tags.
-Capacity Estimation:
+   Capacity Estimation:
    - Traffic: 500 million daily users, 5 million uploads/day.
    - Storage: 1 TB/day (assuming 200KB/upload).
 2. Design:

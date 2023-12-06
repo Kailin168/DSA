@@ -5,7 +5,7 @@ Instagram is a popular social networking application where users share photos an
 
 Designing Instagram:
 1. Requirements:
-   - Functional Requirements:**
+   - Functional Requirements:
       - Users can post photos and short videos.
       - Caption addition for each post.
       - Hashtags and geotags for post indexing.
@@ -57,4 +57,14 @@ Capacity Estimation:
       - Latency measurement for content delivery.
       - Effectiveness of search and indexing.
 
-
+Components:
+1. Client: Mobile/desktop applications.
+2. Load Balancer: Distributes traffic among servers.
+3. Image Service: Manages image upload and metadata.
+4. S3: Object storage for images, integrated with CloudFront for faster rendering.
+5. CloudFront: Content Delivery Network (CDN) for high performance.
+6. Image DDB: DynamoDB for storing image metadata.
+7. SNS & SQS: Notification service and message queue for events.
+8. Feed Generation Service: Generates user feeds based on events.
+9. Feed DDB: DynamoDB for storing user feed data.
+10. Redis Cache: Caching layer to reduce read latency.

@@ -56,7 +56,6 @@ Designing Instagram:
       - Scalability under user growth.
       - Latency measurement for content delivery.
       - Effectiveness of search and indexing.
-
 Components:
 1. Client: Mobile/desktop applications.
 2. Load Balancer: Distributes traffic among servers.

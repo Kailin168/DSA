@@ -67,7 +67,6 @@ Components:
 8. Feed Generation Service: Generates user feeds based on events.
 9. Feed DDB: DynamoDB for storing user feed data.
 10. Redis Cache: Caching layer to reduce read latency.
-
 Bottlenecks & Future Extensions:
 1. User explore page for public account uploads.
 2. Optimization for user feed generation.

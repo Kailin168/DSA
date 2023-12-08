@@ -72,3 +72,5 @@ Bottlenecks & Future Extensions:
 2. Optimization for user feed generation.
 3. Advanced search based on various parameters.
 
+Conclusion:
+The Instagram-like app design focuses on meeting functional and non-functional requirements, utilizing AWS services for scalability, reliability, and low latency. Components like S3, DynamoDB, CloudFront, and Redis Cache enhance the system's performance. Future extensions include an explore page, feed generation optimization, and advanced search features.

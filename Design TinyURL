@@ -1,10 +1,6 @@
 SYSTEM DESIGN FOR TinyURL
 
 URL shortening simplifies long URLs into short aliases for better usability. Clicking on the short link redirects to the original URL.
-**Simplified System Design for TinyURL**
-
-**Introduction:**
-URL shortening simplifies long URLs into short aliases for better usability. Clicking on the short link redirects to the original URL.
 
 Advantages:
 1. Convenient and optimized for various devices.

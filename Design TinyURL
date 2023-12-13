@@ -13,3 +13,16 @@ Disadvantages:
 2. Risk of service shutdown affecting all shortened URLs.
 3. Business brand image depends on service trustworthiness.
 4. Competition for desirable custom short URLs.
+
+Building Blocks for TinyURL:
+1. URL Storage:
+   - Manages storage for original and shortened URLs.
+
+2. ID Generator:
+   - Generates unique IDs for each shortened URL.
+
+3. Request Handler:
+   - Stores and efficiently serves frequent URL-related requests.
+  
+4. Rate Limiter:
+   - Limits the number of incoming requests to prevent abuse.

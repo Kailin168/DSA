@@ -24,7 +24,10 @@ Building Blocks for TinyURL:
 4. Rate Limiter:
    - Limits the number of incoming requests to prevent abuse.
 
-
-**Design and Deployment:**
+Design and Deployment:
 - Explains the working of each component and their collaboration.
 - Describes the overall mechanism of the components working as a unit.
+
+Encoder:
+- Details the inner workings of the encoder.
+- Provides reasons for usage and mathematical explanations.

@@ -29,3 +29,6 @@ Design and Deployment:
 Encoder:
 - Details the inner workings of the encoder.
 - Provides reasons for usage and mathematical explanations.
+Evaluation:
+- Tests the design considering various requirements.
+- Explores possibilities for improvement.

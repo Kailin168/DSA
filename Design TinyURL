@@ -34,3 +34,5 @@ Evaluation:
 - Explores possibilities for improvement.
 
 TinyURL system design incorporates essential building blocks to manage URL storage, generate unique IDs, handle requests efficiently, and prevent abuse through rate limiting. The design aims to balance convenience and potential drawbacks associated with third-party services.
+
+Functional Requirements:

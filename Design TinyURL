@@ -48,3 +48,15 @@ Functional Requirements:
    - Allow users to update the associated long URL.
 6. Expiry Time:
    - Set a default expiration time for short links, with user customization.
+
+Non-functional Requirements:
+1. Availability:
+   - Ensure high availability to avoid URL redirection failures.
+2. Scalability:
+   - Horizontally scale the system to handle increasing demand.
+3. Readability:
+   - Generate short links that are easily readable and typeable.
+4. Latency:
+   - Provide low-latency performance for a smooth user experience.
+5. Unpredictability:
+   - Generate highly unpredictable short URLs for security.

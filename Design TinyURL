@@ -60,3 +60,13 @@ Non-functional Requirements:
    - Provide low-latency performance for a smooth user experience.
 5. Unpredictability:
    - Generate highly unpredictable short URLs for security.
+
+Resource Estimation:
+1. Storage Estimation:
+   - Total storage required for 5 years: 6 TB.
+2. Query Rate Estimation:
+   - New URL shortening requests per second: 76 URLs/s.
+   - Redirection rate per second: 7.6 K URLs/s.
+3. Bandwidth Estimation:
+   - Incoming data: 304 Kbps.
+   - Outgoing data: 30.4 Mbps.

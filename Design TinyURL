@@ -70,3 +70,10 @@ Resource Estimation:
 3. Bandwidth Estimation:
    - Incoming data: 304 Kbps.
    - Outgoing data: 30.4 Mbps.
+
+Memory Estimation:
+   - Memory requirement for cache: 66 GB.
+
+Number of Servers Estimation:
+   - Number of servers needed: 12,500.
+

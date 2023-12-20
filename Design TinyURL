@@ -77,3 +77,19 @@ Memory Estimation:
 Number of Servers Estimation:
    - Number of servers needed: 12,500.
 
+Building Blocks:
+1. Database(s):
+   - Store the mapping of long URLs to short URLs.
+2. Sequencer:
+   - Provide unique IDs for short URL generation.
+3. Load Balancers:
+   - Distribute requests among servers.
+4. Caches:
+   - Store frequently accessed short URLs.
+5. Rate Limiters:
+   - Prevent system exploitation.
+6. Servers:
+   - Handle service requests and run application logic.
+7. Base-58 Encoder:
+   - Transform numeric IDs for better readability.
+

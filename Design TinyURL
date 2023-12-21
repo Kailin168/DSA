@@ -93,3 +93,7 @@ Building Blocks:
 7. Base-58 Encoder:
    - Transform numeric IDs for better readability.
 
+   TinyURL design focuses on functionality, performance, and scalability, with key components like databases, sequencers, load balancers, caches, rate limiters, servers, and encoders. Estimations guide resource allocation for an efficient and effective system.
+
+
+

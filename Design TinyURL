@@ -96,3 +96,11 @@ Building Blocks:
    TinyURL design focuses on functionality, performance, and scalability, with key components like databases, sequencers, load balancers, caches, rate limiters, servers, and encoders. Estimations guide resource allocation for an efficient and effective system.
 
 Design and Deployment of TinyURL 
+1. Shortening a URL
+   - API: `shortURL(api_dev_key, original_url, custom_alias=None, expiry_date=None)`
+   - Parameters:
+      - `api_dev_key`: User's unique identifier.
+      - `original_url`: Long URL to be shortened.
+      - `custom_alias`: User-defined short URL (optional).
+      - `expiry_date`: Expiration date for the short URL (optional).
+   - Returns: Shortened URL or an error code.

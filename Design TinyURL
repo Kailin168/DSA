@@ -104,3 +104,10 @@ Design and Deployment of TinyURL
       - `custom_alias`: User-defined short URL (optional).
       - `expiry_date`: Expiration date for the short URL (optional).
    - Returns: Shortened URL or an error code.
+
+2. Redirecting a short URL
+   - API: `redirectURL(api_dev_key, url_key)`
+   - Parameters:
+      - `api_dev_key`: User's unique identifier.
+      - `url_key`: Shortened URL to be redirected.
+   - Redirects user to the original URL associated with the `url_key`.

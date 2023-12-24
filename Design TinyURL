@@ -111,3 +111,10 @@ Design and Deployment of TinyURL
       - `api_dev_key`: User's unique identifier.
       - `url_key`: Shortened URL to be redirected.
    - Redirects user to the original URL associated with the `url_key`.
+
+3. Deleting a short URL
+   - API: `deleteURL(api_dev_key, url_key)`
+   - Parameters:
+      - `api_dev_key`: User's unique identifier.
+      - `url_key`: Shortened URL to be deleted.
+   - Returns: System message, "URL Removed," upon successful deletion.

@@ -118,3 +118,11 @@ Design and Deployment of TinyURL
       - `api_dev_key`: User's unique identifier.
       - `url_key`: Shortened URL to be deleted.
    - Returns: System message, "URL Removed," upon successful deletion.
+
+Design Components:
+1. Database:
+   - Stores user details and URL mappings.
+   - NoSQL database like MongoDB for scalability.
+   - Read-heavy, supports leader-follower protocol for replicas.
+
+

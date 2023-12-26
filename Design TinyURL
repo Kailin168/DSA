@@ -125,4 +125,6 @@ Design Components:
    - NoSQL database like MongoDB for scalability.
    - Read-heavy, supports leader-follower protocol for replicas.
 
-
+2. Short URL Generator:
+   - Includes a sequencer for generating unique numeric IDs.
+   - Utilizes a Base-58 encoder for converting numeric IDs to alphanumeric for short URLs.

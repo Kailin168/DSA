@@ -128,3 +128,17 @@ Design Components:
 2. Short URL Generator:
    - Includes a sequencer for generating unique numeric IDs.
    - Utilizes a Base-58 encoder for converting numeric IDs to alphanumeric for short URLs.
+
+3. Other Building Blocks:
+   - Load Balancing:
+      - Global Server Load Balancing (GSLB) for improved availability.
+      - Geographically consistent database allows safe global distribution.
+
+   - Cache:
+      - Memcached for read-intensive caching needs.
+      - Data-center-specific caching layer to handle native requests.
+
+   - Rate Limiter:
+      - Applies a fixed window counter algorithm for rate limiting.
+      - Uses `api_dev_key` for user identification and quota allocation.
+

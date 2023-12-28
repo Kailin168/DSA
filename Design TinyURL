@@ -142,3 +142,5 @@ Design Components:
       - Applies a fixed window counter algorithm for rate limiting.
       - Uses `api_dev_key` for user identification and quota allocation.
 
+Why Use Encoding:
+The encoder comes into play to enhance the readability of our short URLs. While our sequencer generates a 64-bit ID in base-10, opting for base-64 encoding brings about challenges. To avoid confusion with look-alike characters (e.g., O and 0), and to ensure better readability, we choose base-58 encoding instead of base-64.

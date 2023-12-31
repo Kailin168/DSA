@@ -164,3 +164,7 @@ Base-58 involves a set of characters from A-Z, a-z, and 0-9, excluding potential
 | 12    | D         | 27    | U         | 42    | j         | 57    | z         |
 | 13    | E         | 28    | V         | 43    | k         |       |           |
 | 14    | F         | 29    | W         | 44    | m         |       |           |
+
+Converting base-10 to base-58:
+To grasp the inner workings, let's see how we convert a base-10 numeric ID (e.g., 2468135791013) to base-58 alphanumeric. We repeatedly divide by 58, noting the remainders and assigning corresponding characters. The result is a base-58 short URL.
+

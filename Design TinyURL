@@ -168,3 +168,5 @@ Base-58 involves a set of characters from A-Z, a-z, and 0-9, excluding potential
 Converting base-10 to base-58:
 To grasp the inner workings, let's see how we convert a base-10 numeric ID (e.g., 2468135791013) to base-58 alphanumeric. We repeatedly divide by 58, noting the remainders and assigning corresponding characters. The result is a base-58 short URL.
 
+Converting base-58 to base-10:
+Reverse engineering involves multiplying each character's index by powers of 58 and summing them up. This process yields the original base-10 numeric ID, ensuring bidirectional functionality.

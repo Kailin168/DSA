@@ -170,3 +170,6 @@ To grasp the inner workings, let's see how we convert a base-10 numeric ID (e.g.
 
 Converting base-58 to base-10:
 Reverse engineering involves multiplying each character's index by powers of 58 and summing them up. This process yields the original base-10 numeric ID, ensuring bidirectional functionality.
+
+The Scope of the Short URL Generator:
+The generator's output adheres to design-imposed limitations, ensuring alphanumeric characters, distinctiveness, and a minimum default length of six characters. Sequencer IDs start from 1 billion, and the maximum digits in an ID are around 20, limiting the encoded short URL to approximately 11 characters.

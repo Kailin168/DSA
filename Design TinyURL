@@ -176,3 +176,5 @@ The generator's output adheres to design-imposed limitations, ensuring alphanume
 
 The Sequencer's Lifetime:
 The sequencer's life expectancy is extensive. With over 7.6 billion yearly requests and a starting range of 1 billion, it boasts a lifespan of around 7.7 billion years before depletion. This makes it a robust foundation for our URL shortening service.
+
+Evaluation of TinyURL's Design Unveiled

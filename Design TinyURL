@@ -173,3 +173,6 @@ Reverse engineering involves multiplying each character's index by powers of 58 
 
 The Scope of the Short URL Generator:
 The generator's output adheres to design-imposed limitations, ensuring alphanumeric characters, distinctiveness, and a minimum default length of six characters. Sequencer IDs start from 1 billion, and the maximum digits in an ID are around 20, limiting the encoded short URL to approximately 11 characters.
+
+The Sequencer's Lifetime:
+The sequencer's life expectancy is extensive. With over 7.6 billion yearly requests and a starting range of 1 billion, it boasts a lifespan of around 7.7 billion years before depletion. This makes it a robust foundation for our URL shortening service.

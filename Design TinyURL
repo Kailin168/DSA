@@ -178,3 +178,5 @@ The Sequencer's Lifetime:
 The sequencer's life expectancy is extensive. With over 7.6 billion yearly requests and a starting range of 1 billion, it boasts a lifespan of around 7.7 billion years before depletion. This makes it a robust foundation for our URL shortening service.
 
 Evaluation of TinyURL's Design Unveiled
+   Availability:
+      TinyURL guarantees high availability for generating and redirecting short URLs. With built-in replication in databases, caches, and application servers, it ensures fault tolerance. Backups are conducted twice daily using Amazon S3, offering cross-zonal replication. Global server load balancing handles traffic intelligently, and rate limiters prevent resource abuse and protect against DoS attacks.

@@ -180,3 +180,5 @@ The sequencer's life expectancy is extensive. With over 7.6 billion yearly reque
 Evaluation of TinyURL's Design Unveiled
    Availability:
       TinyURL guarantees high availability for generating and redirecting short URLs. With built-in replication in databases, caches, and application servers, it ensures fault tolerance. Backups are conducted twice daily using Amazon S3, offering cross-zonal replication. Global server load balancing handles traffic intelligently, and rate limiters prevent resource abuse and protect against DoS attacks.
+   Scalability:
+      The design is scalable with horizontal sharding in databases, consistent hashing for load balancing, and the use of MongoDB, a NoSQL database. The flexibility of NoSQL databases suits our needs, and the large number of unique IDs from the sequencer ensures scalability.

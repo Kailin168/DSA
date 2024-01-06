@@ -184,3 +184,5 @@ Evaluation of TinyURL's Design Unveiled
       The design is scalable with horizontal sharding in databases, consistent hashing for load balancing, and the use of MongoDB, a NoSQL database. The flexibility of NoSQL databases suits our needs, and the large number of unique IDs from the sequencer ensures scalability.
    Readability:
       The choice of a base-58 encoder enhances readability by eliminating confusing characters (e.g., 0 and O) and non-alphanumeric characters (e.g., + and /). This ensures user-friendly short URLs and compatibility with various systems.
+   Latency:
+      The system ensures low latency by minimizing delays in short URL generation and utilizing MongoDB's efficiency in reading tasks. A distributed cache further reduces service delays, providing high throughput.

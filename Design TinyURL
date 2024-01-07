@@ -186,3 +186,5 @@ Evaluation of TinyURL's Design Unveiled
       The choice of a base-58 encoder enhances readability by eliminating confusing characters (e.g., 0 and O) and non-alphanumeric characters (e.g., + and /). This ensures user-friendly short URLs and compatibility with various systems.
    Latency:
       The system ensures low latency by minimizing delays in short URL generation and utilizing MongoDB's efficiency in reading tasks. A distributed cache further reduces service delays, providing high throughput.
+   Unpredictability:
+      To enhance security, the system ensures unpredictability by randomly associating unique IDs with requests. This randomness prevents easy prediction of short URLs.

@@ -1,3 +1,10 @@
 Web Crawler Basics
 
 A web crawler is like a smart robot that explores the internet to gather information. It starts by visiting specific web addresses and collects data from those pages. This collected data is then stored for later use.
+
+Why do we use web crawlers?
+
+1. Testing Web Pages: Web crawlers help check if web page links and structures are correct.
+2. Monitoring Changes: They keep an eye on updates in web page content or structure.
+3. Site Mirroring: Web crawlers can effectively copy popular websites.
+4. Copyright Check: They fetch content and look for copyright issues.

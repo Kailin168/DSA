@@ -8,3 +8,12 @@ Why do we use web crawlers?
 2. Monitoring Changes: They keep an eye on updates in web page content or structure.
 3. Site Mirroring: Web crawlers can effectively copy popular websites.
 4. Copyright Check: They fetch content and look for copyright issues.
+
+1. Requirements Clarification: Our web crawler needs to:
+   - Receive a list of starting web addresses (seed URLs) to begin the search.
+   - Follow links on web pages to explore more of the internet gradually.
+   - Respect politeness policies, meaning setting a delay before revisiting a website.
+   - Distinguish between links to files and links to other pages.
+   - Prioritize crawling based on factors like regularity and content type.
+   - Avoid indexing the same page more than once.
+   - Meet non-functional requirements: reliability, scalability, and availability.

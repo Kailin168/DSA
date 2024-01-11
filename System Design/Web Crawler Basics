@@ -17,3 +17,7 @@ Why do we use web crawlers?
    - Prioritize crawling based on factors like regularity and content type.
    - Avoid indexing the same page more than once.
    - Meet non-functional requirements: reliability, scalability, and availability.
+2. Design Approach: Our design approach involves several steps:
+   - Back-of-the-Envelope Estimation: Calculate system performance needs based on estimated data size, storage, and bandwidth.
+   - System Interface Design: Define how the system will interact with users and how pages will be fetched from the internet.
+ 

@@ -20,4 +20,7 @@ Why do we use web crawlers?
 2. Design Approach: Our design approach involves several steps:
    - Back-of-the-Envelope Estimation: Calculate system performance needs based on estimated data size, storage, and bandwidth.
    - System Interface Design: Define how the system will interact with users and how pages will be fetched from the internet.
- 
+   - Data Model Design: Decide how to store URLs for crawling and downloaded HTML pages.
+   - Logical Design: Plan the flow of the system, from seeding URLs to storing and processing HTML content.
+   - Physical Design: Determine the server architecture, using serverless components like AWS Lambda and storage solutions like S3.
+   - Identify and Resolve Bottlenecks: Address potential issues, such as DNS resolution delays and system resiliency.

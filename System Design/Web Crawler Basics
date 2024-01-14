@@ -25,3 +25,4 @@ Why do we use web crawlers?
    - Physical Design: Determine the server architecture, using serverless components like AWS Lambda and storage solutions like S3.
    - Identify and Resolve Bottlenecks: Address potential issues, such as DNS resolution delays and system resiliency.
 3. Improvements: Address any issues or challenges in the design, such as traps that can confuse the web crawler.
+4. Evaluation: Thoroughly assess our design choices to ensure they meet standards and expectations.

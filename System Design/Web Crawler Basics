@@ -26,3 +26,5 @@ Why do we use web crawlers?
    - Identify and Resolve Bottlenecks: Address potential issues, such as DNS resolution delays and system resiliency.
 3. Improvements: Address any issues or challenges in the design, such as traps that can confuse the web crawler.
 4. Evaluation: Thoroughly assess our design choices to ensure they meet standards and expectations.
+
+The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

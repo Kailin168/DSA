@@ -1,1 +1,4 @@
 Whatsapp System Design
+
+What is WhatsApp?
+WhatsApp is a widely-used chat application providing instant messaging services to over 2 billion users across 180+ countries. It allows one-on-one and group chats, supports file sharing (images, videos, etc.), and ensures high availability with minimal latency. Let's delve into the system design to understand its structure and functionality.

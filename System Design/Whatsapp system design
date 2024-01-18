@@ -13,3 +13,9 @@ Functional Requirements:
 Non-functional Requirements:
 1. Ensure high availability with minimal latency.
 2. Design a scalable and efficient system.
+
+Extended Requirements
+
+1. Provide message status indications (Sent, Delivered, and Read receipts).
+2. Display the last seen time of users.
+3. Implement push notifications.

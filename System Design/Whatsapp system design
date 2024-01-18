@@ -9,3 +9,7 @@ Functional Requirements:
 1. Support one-on-one chat.
 2. Enable group chats with a maximum of 100 people.
 3. Facilitate file sharing (images, videos, etc.).
+
+Non-functional Requirements:
+1. Ensure high availability with minimal latency.
+2. Design a scalable and efficient system.

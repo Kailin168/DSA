@@ -19,3 +19,9 @@ Extended Requirements
 1. Provide message status indications (Sent, Delivered, and Read receipts).
 2. Display the last seen time of users.
 3. Implement push notifications.
+
+Estimation and Constraints
+
+Traffic:
+Assuming 50 million daily active users, with each user sending 20 messages daily, the system would handle 2 billion messages per day.
+

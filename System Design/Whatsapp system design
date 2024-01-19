@@ -25,3 +25,6 @@ Estimation and Constraints
 Traffic:
 Assuming 50 million daily active users, with each user sending 20 messages daily, the system would handle 2 billion messages per day.
 
+Storage:
+- 200 GB of database storage per day for messages.
+- 10 TB of storage per day for media files, totaling 38 PB over 10 years.

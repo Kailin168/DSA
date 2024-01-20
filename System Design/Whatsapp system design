@@ -28,3 +28,14 @@ Assuming 50 million daily active users, with each user sending 20 messages daily
 Storage:
 - 200 GB of database storage per day for messages.
 - 10 TB of storage per day for media files, totaling 38 PB over 10 years.
+
+Bandwidth:
+The system requires a minimum bandwidth of around 120 MB per second for handling 10.2 TB of data ingress daily.
+
+Data Model Design
+
+The data model includes tables like users, messages, chats, users_chats, groups, and users_groups, linking users to chats and groups.
+
+Database Selection
+
+Considering the relational nature of the data model, a combination of PostgreSQL or a distributed NoSQL database like Apache Cassandra is suitable for scalability.

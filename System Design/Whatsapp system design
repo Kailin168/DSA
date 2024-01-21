@@ -39,3 +39,17 @@ The data model includes tables like users, messages, chats, users_chats, groups,
 Database Selection
 
 Considering the relational nature of the data model, a combination of PostgreSQL or a distributed NoSQL database like Apache Cassandra is suitable for scalability.
+
+API Design
+
+1. Get all chats or groups:
+   - API to retrieve all chats or groups for a given user.
+
+2. Get messages:
+   - Retrieve all messages for a user from a specific channel (chat or group).
+
+3. Send message:
+   - Send a message from a user to a channel (chat or group).
+
+4. Join or leave a group:
+   - APIs to join or leave a group.

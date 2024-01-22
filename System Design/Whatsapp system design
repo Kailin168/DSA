@@ -59,3 +59,7 @@ High-level Design
 Architecture:
 - Microservices architecture for scalability.
 - Core services include User Service, Chat Service, Notification Service, Presence Service, and Media Service.
+
+Real-time Messaging:
+- Use WebSockets for efficient push model messaging.
+- Implement heartbeat mechanism for last seen functionality.

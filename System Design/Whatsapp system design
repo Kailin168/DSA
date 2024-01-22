@@ -53,3 +53,9 @@ API Design
 
 4. Join or leave a group:
    - APIs to join or leave a group.
+
+High-level Design
+
+Architecture:
+- Microservices architecture for scalability.
+- Core services include User Service, Chat Service, Notification Service, Presence Service, and Media Service.

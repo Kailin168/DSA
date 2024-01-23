@@ -63,3 +63,7 @@ Architecture:
 Real-time Messaging:
 - Use WebSockets for efficient push model messaging.
 - Implement heartbeat mechanism for last seen functionality.
+
+Notifications:
+- Utilize message queues (Amazon SQS or RabbitMQ) for sending push notifications.
+- Consider client's activity and last seen to determine notification delivery.

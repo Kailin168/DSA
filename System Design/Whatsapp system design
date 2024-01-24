@@ -67,3 +67,11 @@ Real-time Messaging:
 Notifications:
 - Utilize message queues (Amazon SQS or RabbitMQ) for sending push notifications.
 - Consider client's activity and last seen to determine notification delivery.
+
+Read Receipts:
+- Implement acknowledgment (ACK) from clients to handle message delivery and read receipts.
+
+Detailed Design
+
+Data Partitioning:
+- Utilize horizontal partitioning (sharding) with consistent hashing for even data distribution.

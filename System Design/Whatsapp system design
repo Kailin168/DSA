@@ -79,3 +79,7 @@ Data Partitioning:
 Caching:
 - Implement Least Recently Used (LRU) cache eviction policy.
 - Use Redis or Memcached for caching older messages.
+
+Media Access and Storage:
+- Employ object storage (e.g., Amazon S3) for efficient media file storage.
+- Use Content Delivery Network (CDN) for serving static files.

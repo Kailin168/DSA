@@ -75,3 +75,7 @@ Detailed Design
 
 Data Partitioning:
 - Utilize horizontal partitioning (sharding) with consistent hashing for even data distribution.
+
+Caching:
+- Implement Least Recently Used (LRU) cache eviction policy.
+- Use Redis or Memcached for caching older messages.

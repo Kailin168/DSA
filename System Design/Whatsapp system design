@@ -83,3 +83,18 @@ Caching:
 Media Access and Storage:
 - Employ object storage (e.g., Amazon S3) for efficient media file storage.
 - Use Content Delivery Network (CDN) for serving static files.
+
+API Gateway:
+- Implement API Gateway for managing multiple protocols, authentication, and other features.
+
+Identify and Resolve Bottlenecks
+
+- Run multiple instances of services.
+- Introduce load balancers to distribute traffic.
+- Utilize multiple read replicas for databases.
+- Ensure redundancy with standby replicas and load balancing for API Gateway.
+- Implement message broker (e.g., Apache Kafka) for robust notification systems.
+- Add media processing and compression to reduce storage costs.
+- Consider separating the group service from the chat service for better system decoupling.
+
+By following this comprehensive system design, WhatsApp ensures a robust, scalable, and efficient messaging platform for its vast user base.

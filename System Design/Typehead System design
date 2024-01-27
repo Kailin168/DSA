@@ -1,2 +1,4 @@
 Typehead System Design 
 
+Typeahead suggestion, or autocomplete, is a feature that suggests queries as users type in a search box. It offers a list of suggestions based on the user's search history, the current context, and popular content. Although it doesn't speed up the search, it helps users form sentences quickly, enhancing the overall search experience.
+

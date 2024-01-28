@@ -5,3 +5,15 @@ Typeahead suggestion, or autocomplete, is a feature that suggests queries as use
 Design Process Overview
 
 Requirements
+
+Requirements are vital for system design. Key considerations include:
+Functioning Backwards:
+  - Identify customers and their characteristics.
+  - Consider user use cases.
+  - Address business problems from a business standpoint.
+Functional Requirements:
+  - Provide a list of suggestions as users type.
+  - Address questions related to the number and order of suggestions, local storage, and personalization.
+Non-Functional Requirements:
+  - Define scaling, latency, and availability requirements.
+  - Discuss topics such as traffic estimates, storage estimates, and bandwidth requirements.

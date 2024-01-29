@@ -17,3 +17,9 @@ Functional Requirements:
 Non-Functional Requirements:
   - Define scaling, latency, and availability requirements.
   - Discuss topics such as traffic estimates, storage estimates, and bandwidth requirements.
+
+Scalability Estimation
+- Consider the number of searches per day (5 billion).
+- Estimate unique queries (20% of 5 billion).
+- Calculate storage requirements for daily unique queries.
+- Estimate bandwidth for handling 60K searches per second.

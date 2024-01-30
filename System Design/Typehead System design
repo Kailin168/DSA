@@ -23,3 +23,9 @@ Scalability Estimation
 - Estimate unique queries (20% of 5 billion).
 - Calculate storage requirements for daily unique queries.
 - Estimate bandwidth for handling 60K searches per second.
+
+Algorithm Discussion: Trie Data Structure
+
+- Introduce trie as a tree structure for efficient string searches.
+- Explain trie's usage in constructing suggestions based on user prefixes.
+- Discuss trie's benefits, such as ease of construction and traversal.

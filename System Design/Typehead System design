@@ -29,3 +29,14 @@ Algorithm Discussion: Trie Data Structure
 - Introduce trie as a tree structure for efficient string searches.
 - Explain trie's usage in constructing suggestions based on user prefixes.
 - Discuss trie's benefits, such as ease of construction and traversal.
+
+High-Level System Design
+
+- Present a high-level architecture diagram.
+- Address questions about scaling trie databases, database selection, cache usage, snapshots, eventual consistency, and fault tolerance.
+
+Low-Level Design
+
+- Discuss the storage of precomputed data using key-value structures.
+- Present basic APIs for getting suggestions and storing new queries.
+- Share a class diagram for better understanding.

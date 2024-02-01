@@ -40,3 +40,9 @@ Low-Level Design
 - Discuss the storage of precomputed data using key-value structures.
 - Present basic APIs for getting suggestions and storing new queries.
 - Share a class diagram for better understanding.
+
+Considerations
+
+- Emphasize minimizing opportunities for errors in the design.
+- Decouple error-prone areas from critical components.
+- Prioritize thorough testing, quick recovery from human errors, and detailed monitoring.

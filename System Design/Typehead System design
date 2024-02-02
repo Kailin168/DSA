@@ -42,3 +42,13 @@ Considerations
 - Emphasize minimizing opportunities for errors in the design.
 - Decouple error-prone areas from critical components.
 - Prioritize thorough testing, quick recovery from human errors, and detailed monitoring.
+
+Summary for Scaling to Millions of Users
+- Keep the web tier stateless.
+- Introduce redundancy at every tier.
+- Utilize caching extensively.
+- Support multiple data centers.
+- Leverage CDNs for hosting static assets.
+- Scale the data tier through sharding.
+- Split tiers into individual services.
+- Implement robust monitoring and automation tools.

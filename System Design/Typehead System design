@@ -52,3 +52,6 @@ Summary for Scaling to Millions of Users
 - Scale the data tier through sharding.
 - Split tiers into individual services.
 - Implement robust monitoring and automation tools.
+
+Conclusion
+Designing a system involves understanding requirements, clarifying factors, and balancing considerations. High-level components, scalability, consistency, and availability should be addressed. Careful consideration of downtime tolerance, traffic waves, and budget constraints is crucial. System design is an iterative process that requires continuous testing, monitoring, and adaptation to ensure optimal performance and reliability.

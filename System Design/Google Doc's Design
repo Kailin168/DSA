@@ -4,7 +4,6 @@ Intro:
 Google Docs is a tool for working together on documents. When creating a collaborative document editing service, we can choose between two approaches: a centralized client-server model or a peer-to-peer model. Since most commercial solutions prefer the client-server model, we'll focus on that in this discussion.
 
 Requirements
-
 Functional Requirements:
 1. Document Collaboration:
    - Allow multiple users to edit a document simultaneously.

@@ -17,3 +17,13 @@ Functional Requirements:
    - Show the view count of the document.
 5. History:
    - Allow users to see the collaboration history of the document.
+
+Non-functional Requirements:
+1. Latency:
+   - Maintain low latency for users collaborating from different regions.
+2. Consistency:
+   - Resolve conflicts and ensure a consistent document view.
+3. Availability:
+   - Ensure the service is available at all times.
+4. Scalability:
+   - Handle a large number of users simultaneously.

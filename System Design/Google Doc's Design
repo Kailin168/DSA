@@ -27,3 +27,12 @@ Non-functional Requirements:
    - Ensure the service is available at all times.
 4. Scalability:
    - Handle a large number of users simultaneously.
+
+Components
+
+1. Data Stores:
+   - Relational database for user and document information.
+   - NoSQL for user comments.
+   - Time series for document edit history.
+   - Blob storage for videos and images.
+   - Cache (Redis) and CDN for performance.

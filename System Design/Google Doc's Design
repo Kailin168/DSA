@@ -29,7 +29,6 @@ Non-functional Requirements:
    - Handle a large number of users simultaneously.
 
 Components
-
 1. Data Stores:
    - Relational database for user and document information.
    - NoSQL for user comments.

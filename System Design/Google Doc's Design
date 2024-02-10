@@ -35,3 +35,10 @@ Components
    - Time series for document edit history.
    - Blob storage for videos and images.
    - Cache (Redis) and CDN for performance.
+
+2. Processing Queue:
+   - Utilize WebSockets for efficient real-time collaboration.
+
+3. Other Components:
+   - Session servers for managing user sessions and document access.
+   - Configuration, monitoring, pub-sub, and logging services for additional tasks.

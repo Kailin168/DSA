@@ -42,3 +42,5 @@ Components
 3. Other Components:
    - Session servers for managing user sessions and document access.
    - Configuration, monitoring, pub-sub, and logging services for additional tasks.
+
+Workflow

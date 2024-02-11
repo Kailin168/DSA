@@ -44,3 +44,8 @@ Components
    - Configuration, monitoring, pub-sub, and logging services for additional tasks.
 
 Workflow
+
+1. Collaborative Editing:
+   - Resolve conflicts in the operations queue.
+   - Batch and store data in the time series database.
+   - Compress videos and images for storage efficiency.

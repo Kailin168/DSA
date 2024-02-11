@@ -44,8 +44,13 @@ Components
    - Configuration, monitoring, pub-sub, and logging services for additional tasks.
 
 Workflow
-
 1. Collaborative Editing:
    - Resolve conflicts in the operations queue.
    - Batch and store data in the time series database.
    - Compress videos and images for storage efficiency.
+
+2. History:
+   - Retrieve different document versions from the time series database.
+
+3. Asynchronous Operations:
+   - Use pub-sub (e.g., Kafka) for notifications, emails, view counts, and comments.

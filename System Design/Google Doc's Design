@@ -54,3 +54,8 @@ Workflow
 
 3. Asynchronous Operations:
    - Use pub-sub (e.g., Kafka) for notifications, emails, view counts, and comments.
+
+4. Suggestions:
+   - Implement a typeahead service for autocomplete suggestions.
+   - Use NoSQL for storing frequently used words.
+   - Utilize caching (Redis) for performance.

@@ -59,3 +59,7 @@ Workflow
    - Implement a typeahead service for autocomplete suggestions.
    - Use NoSQL for storing frequently used words.
    - Utilize caching (Redis) for performance.
+
+5. Import and Export Documents:
+   - Application servers handle tasks like importing/exporting documents.
+   - Convert documents between formats.

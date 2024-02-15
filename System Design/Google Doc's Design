@@ -68,3 +68,7 @@ Detailed Design
 1.Document Editor:
    - Perform insert(), delete(), and edit() operations on characters.
    - Manage the composition of characters within the document.
+
+2. Concurrency:
+   - Address concurrency issues when multiple users edit the same document portion.
+   - Implement conflict resolution techniques (OT or CRDT).

@@ -63,3 +63,8 @@ Workflow
 5. Import and Export Documents:
    - Application servers handle tasks like importing/exporting documents.
    - Convert documents between formats.
+
+Detailed Design
+1.Document Editor:
+   - Perform insert(), delete(), and edit() operations on characters.
+   - Manage the composition of characters within the document.

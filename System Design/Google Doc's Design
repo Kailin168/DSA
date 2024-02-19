@@ -65,3 +65,8 @@ Detailed Design
 2. Concurrency:
    - Address concurrency issues when multiple users edit the same document portion.
    - Implement conflict resolution techniques (OT or CRDT).
+
+Evaluation
+1. Consistency:
+   - Achieve strong consistency through OT or CRDT.
+   - Use a time series database for preserving the order of events.

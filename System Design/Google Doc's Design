@@ -70,3 +70,8 @@ Evaluation
 1. Consistency:
    - Achieve strong consistency through OT or CRDT.
    - Use a time series database for preserving the order of events.
+
+2. Availability:
+   - Ensure availability through replicas, monitoring, and peer-to-peer protocols (e.g., Gossip protocol).
+   - Use caching services and CDNs for improved availability.
+

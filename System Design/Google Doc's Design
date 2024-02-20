@@ -75,3 +75,13 @@ Evaluation
    - Ensure availability through replicas, monitoring, and peer-to-peer protocols (e.g., Gossip protocol).
    - Use caching services and CDNs for improved availability.
 
+3. Scalability:
+   - Employ microservices for scalable individual components.
+   - Use multiple operations queues for horizontal scalability.
+
+Conclusion
+The collaborative document editing service design prioritizes functionality, low latency, consistency, availability, and scalability. Techniques like Operational Transformation (OT) or Conflict-free Replicated Data Types (CRDTs) address concurrency issues, ensuring smooth collaboration. The architecture is robust, with considerations for various scenarios, making it suitable for handling a large user base effectively.
+
+
+
+

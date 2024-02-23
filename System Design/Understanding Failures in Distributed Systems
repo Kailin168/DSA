@@ -1,1 +1,5 @@
 Understanding Failures in Distributed Systems
+
+Introduction
+
+Sometimes, even well-established services face failures, making us wonder how meticulously designed systems can still encounter issues. Exploring major failures in known services and strategies to minimize such incidents.

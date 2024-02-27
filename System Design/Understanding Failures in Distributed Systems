@@ -14,7 +14,6 @@ Types of Failures in Distributed Systems:
 1. System Failure:
    - Commonly caused by software or hardware issues.
    - Primary memory contents are lost, but secondary storage or replicas remain intact.
-
 2. Method Failure:
    - Halts distributed system operations.
    - Can lead to incorrect process execution or deadlock.

@@ -10,3 +10,7 @@ Sometimes, even well-established services face failures, making us wonder how me
    - System complexity results in emergent properties.
    - The collective complexity surpasses individual components.
 
+Types of Failures in Distributed Systems:
+1. System Failure:
+   - Commonly caused by software or hardware issues.
+   - Primary memory contents are lost, but secondary storage or replicas remain intact.

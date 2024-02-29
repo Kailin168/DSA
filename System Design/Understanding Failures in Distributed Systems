@@ -17,3 +17,6 @@ Types of Failures in Distributed Systems:
 2. Method Failure:
    - Halts distributed system operations.
    - Can lead to incorrect process execution or deadlock.
+
+3. Communication Medium Failure:
+   - Occurs when a system component can't reach other internal or external entities.

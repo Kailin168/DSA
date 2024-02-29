@@ -20,3 +20,7 @@ Types of Failures in Distributed Systems:
 
 3. Communication Medium Failure:
    - Occurs when a system component can't reach other internal or external entities.
+
+4. Secondary Storage Failure:
+   - Replicas or secondary storage is inaccessible.
+   - Primary nodes create new replicas for reliability.

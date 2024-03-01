@@ -24,3 +24,5 @@ Types of Failures in Distributed Systems:
 4. Secondary Storage Failure:
    - Replicas or secondary storage is inaccessible.
    - Primary nodes create new replicas for reliability.
+
+Vantage Points:

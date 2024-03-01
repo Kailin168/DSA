@@ -26,3 +26,7 @@ Types of Failures in Distributed Systems:
    - Primary nodes create new replicas for reliability.
 
 Vantage Points:
+
+- Services often experience failures, but a graceful degradation limits impact.
+- Globally dispersed vantage points independently monitor service status.
+- Independent services like Downdetector offer crowd-sourced problem reporting.

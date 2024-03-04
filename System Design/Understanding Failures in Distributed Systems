@@ -17,23 +17,20 @@ Types of Failures in Distributed Systems:
 2. Method Failure:
    - Halts distributed system operations.
    - Can lead to incorrect process execution or deadlock.
-
 3. Communication Medium Failure:
    - Occurs when a system component can't reach other internal or external entities.
-
 4. Secondary Storage Failure:
    - Replicas or secondary storage is inaccessible.
    - Primary nodes create new replicas for reliability.
 
 Vantage Points:
-
 - Services often experience failures, but a graceful degradation limits impact.
 - Globally dispersed vantage points independently monitor service status.
 - Independent services like Downdetector offer crowd-sourced problem reporting.
 
 Importance of Independent Service Providers:
-
 - Original Internet design aimed for resilience against failures.
 - Concerns arise with the centralization of service providers.
 - Independent third-party services are crucial for failure detection and status dissemination.
 
+Conclusion:

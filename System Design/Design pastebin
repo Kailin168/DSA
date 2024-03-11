@@ -2,3 +2,12 @@ Designing Pastebin
 
 1. What is Pastebin?
 Pastebin is like an online notepad where you can put plain text or images. It gives you a special web link to easily share what you've uploaded.
+**Simple Explanation: Designing a Text Storage Service**
+
+2. Requirements and Goals
+Functional Requirements:
+- Users can upload text and get a unique link.
+- Only text uploads are allowed.
+- Data and links expire after a set time, which users can choose.
+- Users can pick a custom name for their text.
+

@@ -16,3 +16,7 @@ Non-Functional Requirements:
 - It should always be available for users.
 - Quick and real-time access to pasted text.
 - Links shouldn't be easy to guess.
+
+Extended Requirements:
+- Keep track of how often a text is viewed.
+- Allow other services to use our system through REST APIs.

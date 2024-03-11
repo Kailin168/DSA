@@ -10,13 +10,11 @@ Functional Requirements:
 - Only text uploads are allowed.
 - Data and links expire after a set time, which users can choose.
 - Users can pick a custom name for their text.
-
 Non-Functional Requirements:
 - The system must be reliable; no data loss.
 - It should always be available for users.
 - Quick and real-time access to pasted text.
 - Links shouldn't be easy to guess.
-
 Extended Requirements:
 - Keep track of how often a text is viewed.
 - Allow other services to use our system through REST APIs.

@@ -18,3 +18,8 @@ Non-Functional Requirements:
 Extended Requirements:
 - Keep track of how often a text is viewed.
 - Allow other services to use our system through REST APIs.
+
+3. Some Design Considerations
+- Limit the size of pastes to prevent misuse (e.g., 10MB).
+- Consider size limits for custom URLs to keep things organized.
+

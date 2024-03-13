@@ -23,3 +23,10 @@ Extended Requirements:
 - Limit the size of pastes to prevent misuse (e.g., 10MB).
 - Consider size limits for custom URLs to keep things organized.
 
+4. Capacity Estimation and Constraints
+
+- Expect more reads than new pastes (5:1 ratio).
+- Assume 1 million new pastes daily, leading to 5 million daily reads.
+- Storage: 10GB daily, needing 36TB over 10 years.
+- Unique keys (using base64 encoding) require 22GB.
+- Bandwidth: 12 new pastes/sec (write) and 58 reads/sec.

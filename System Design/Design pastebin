@@ -34,3 +34,14 @@ Extended Requirements:
 5. System APIs
 
 - Use SOAP or REST APIs for functionalities like creating, retrieving, and deleting pastes.
+
+6. Database Design
+
+- Two tables for paste information and user data.
+- External storage for paste content.
+
+7. High-Level Design
+
+- Application layer for read and write requests.
+- Separate storage for metadata and paste content.
+

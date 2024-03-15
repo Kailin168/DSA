@@ -30,3 +30,7 @@ Extended Requirements:
 - Storage: 10GB daily, needing 36TB over 10 years.
 - Unique keys (using base64 encoding) require 22GB.
 - Bandwidth: 12 new pastes/sec (write) and 58 reads/sec.
+
+5. System APIs
+
+- Use SOAP or REST APIs for functionalities like creating, retrieving, and deleting pastes.

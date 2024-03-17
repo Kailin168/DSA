@@ -45,3 +45,9 @@ Extended Requirements:
 - Application layer for read and write requests.
 - Separate storage for metadata and paste content.
 
+8. Component Design
+
+a. Application Layer:
+- Handles user requests and interacts with the backend.
+- Generates unique keys for pastes.
+- Manages custom keys, avoiding duplicates.

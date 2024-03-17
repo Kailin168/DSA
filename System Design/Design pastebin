@@ -51,3 +51,7 @@ a. Application Layer:
 - Handles user requests and interacts with the backend.
 - Generates unique keys for pastes.
 - Manages custom keys, avoiding duplicates.
+
+b. Datastore Layer:
+- Metadata Database (e.g., MySQL or Dynamo): Stores paste info.
+- Object Storage (e.g., Amazon S3): Stores paste content.

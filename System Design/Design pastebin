@@ -55,3 +55,7 @@ a. Application Layer:
 b. Datastore Layer:
 - Metadata Database (e.g., MySQL or Dynamo): Stores paste info.
 - Object Storage (e.g., Amazon S3): Stores paste content.
+
+9. Purging or DB Cleanup
+
+- Similar to designing a URL shortening service.

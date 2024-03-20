@@ -59,3 +59,7 @@ b. Datastore Layer:
 9. Purging or DB Cleanup
 
 - Similar to designing a URL shortening service.
+
+10. Data Partitioning and Replication
+
+- Similar to designing a URL shortening service.

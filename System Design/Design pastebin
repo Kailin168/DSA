@@ -63,3 +63,8 @@ b. Datastore Layer:
 10. Data Partitioning and Replication
 
 - Similar to designing a URL shortening service.
+
+11. Cache and Load Balancer
+
+- Similar to designing a URL shortening service.
+

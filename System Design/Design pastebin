@@ -24,7 +24,6 @@ Extended Requirements:
 - Consider size limits for custom URLs to keep things organized.
 
 4. Capacity Estimation and Constraints
-
 - Expect more reads than new pastes (5:1 ratio).
 - Assume 1 million new pastes daily, leading to 5 million daily reads.
 - Storage: 10GB daily, needing 36TB over 10 years.
@@ -32,42 +31,33 @@ Extended Requirements:
 - Bandwidth: 12 new pastes/sec (write) and 58 reads/sec.
 
 5. System APIs
-
 - Use SOAP or REST APIs for functionalities like creating, retrieving, and deleting pastes.
 
 6. Database Design
-
 - Two tables for paste information and user data.
 - External storage for paste content.
 
 7. High-Level Design
-
 - Application layer for read and write requests.
 - Separate storage for metadata and paste content.
 
 8. Component Design
-
 a. Application Layer:
 - Handles user requests and interacts with the backend.
 - Generates unique keys for pastes.
 - Manages custom keys, avoiding duplicates.
-
 b. Datastore Layer:
 - Metadata Database (e.g., MySQL or Dynamo): Stores paste info.
 - Object Storage (e.g., Amazon S3): Stores paste content.
 
 9. Purging or DB Cleanup
-
 - Similar to designing a URL shortening service.
 
 10. Data Partitioning and Replication
-
 - Similar to designing a URL shortening service.
 
 11. Cache and Load Balancer
-
 - Similar to designing a URL shortening service.
 
 12. Security and Permissions
-
 - Similar to designing a URL shortening service.

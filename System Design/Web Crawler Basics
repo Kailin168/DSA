@@ -14,4 +14,12 @@ Our web crawler needs to be:
 - Scalable: Capable of handling millions of web documents.
 - Extensible: Designed to add new features and handle different types of content.
 
+3. Some Design Considerations
+Before diving in, we need to consider:
+- Content Types: Will our crawler fetch only HTML pages or also images, videos, etc.?
+- Protocols: Initially, we'll focus on HTTP, with room to add FTP and others later.
+- Scale: Expecting to crawl billions of pages, so storage and processing must be efficient.
+- Robots.txt: Handling rules from websites on what can be crawled (Robots Exclusion Protocol).
+
+
 The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

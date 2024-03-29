@@ -9,5 +9,9 @@ A web crawler is like a smart robot that explores the internet to gather informa
 3. Site Mirroring: Web crawlers can effectively copy popular websites.
 4. Copyright Check: They fetch content and look for copyright issues.
 
+2. Requirements and Goals
+Our web crawler needs to be:
+- Scalable: Capable of handling millions of web documents.
+- Extensible: Designed to add new features and handle different types of content.
 
 The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

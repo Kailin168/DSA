@@ -21,5 +21,10 @@ Before diving in, we need to consider:
 - Scale: Expecting to crawl billions of pages, so storage and processing must be efficient.
 - Robots.txt: Handling rules from websites on what can be crawled (Robots Exclusion Protocol).
 
+4. Capacity Estimation and Constraints
+For example, if we aim to crawl 15 billion pages in four weeks:
+- Fetch rate: Around 6200 pages/second.
+- Storage: Approximately 2.14 petabytes for the crawled data.
+- URL Frontier Size: Hundreds of millions of URLs.
 
 The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

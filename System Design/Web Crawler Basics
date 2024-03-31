@@ -36,4 +36,9 @@ Our crawler will follow these steps:
 5. Add valid URLs to the list for future visits.
 6. Process and store the downloaded content.
 
+How to Crawl?
+
+We'll use a breadth-first approach, starting from seed URLs and gradually exploring outward. This helps in covering a wide range of pages efficiently.
+
+
 The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

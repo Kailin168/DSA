@@ -27,4 +27,13 @@ For example, if we aim to crawl 15 billion pages in four weeks:
 - Storage: Approximately 2.14 petabytes for the crawled data.
 - URL Frontier Size: Hundreds of millions of URLs.
 
+5. High-Level Design
+Our crawler will follow these steps:
+1. Pick a URL from the list to visit.
+2. Get the IP address of the website.
+3. Download the webpage content.
+4. Extract new URLs from the page.
+5. Add valid URLs to the list for future visits.
+6. Process and store the downloaded content.
+
 The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

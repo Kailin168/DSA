@@ -40,5 +40,12 @@ How to Crawl?
 
 We'll use a breadth-first approach, starting from seed URLs and gradually exploring outward. This helps in covering a wide range of pages efficiently.
 
+Difficulties in Implementing
+
+Two major challenges are:
+
+1. Volume: There are billions of web pages, so we need smart strategies to prioritize what to crawl.
+2. Dynamic Web: Pages change frequently, making it challenging to keep our index up to date.
+
 
 The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

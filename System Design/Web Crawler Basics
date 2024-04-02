@@ -47,5 +47,13 @@ Two major challenges are:
 1. Volume: There are billions of web pages, so we need smart strategies to prioritize what to crawl.
 2. Dynamic Web: Pages change frequently, making it challenging to keep our index up to date.
 
+6. Detailed Component Design
+Our crawler's key components:
+1. URL Frontier: Stores URLs to be visited, with prioritization.
+2. HTML Fetcher: Downloads web pages using HTTP.
+3. Extractor: Finds new URLs within downloaded pages.
+4. Duplicate Checker: Ensures we don't download the same content repeatedly.
+5. Datastore: Stores crawled pages, URLs, and metadata.
+
 
 The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

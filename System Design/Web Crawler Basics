@@ -58,6 +58,9 @@ Our crawler's key components:
 7. Fault Tolerance
 We use consistent hashing to distribute workload among crawler servers. Regular checkpoints and data backups ensure we can recover from failures.
 
+8. Data Partitioning
+Data like URLs, checksums, and downloaded documents can be partitioned based on the hostname. Each server handles its assigned data subset.
+
 
 
 The web crawler is designed to systematically explore the internet, collect data, and store it for various applications. The proposed design involves thoughtful consideration of requirements, estimation, interface, data storage, system flow, and physical implementation, with ongoing improvements and evaluations to enhance its efficiency.

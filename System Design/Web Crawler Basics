@@ -3,57 +3,52 @@ Web Crawler Basics
 A web crawler is like a smart robot that explores the internet to gather information. It starts by visiting specific web addresses and collects data from those pages. This collected data is then stored for later use.
 
 1. Why do we use web crawlers?
-
-1. Testing Web Pages: Web crawlers help check if web page links and structures are correct.
-2. Monitoring Changes: They keep an eye on updates in web page content or structure.
-3. Site Mirroring: Web crawlers can effectively copy popular websites.
-4. Copyright Check: They fetch content and look for copyright issues.
+   1. Testing Web Pages: Web crawlers help check if web page links and structures are correct.
+   2. Monitoring Changes: They keep an eye on updates in web page content or structure.
+   3. Site Mirroring: Web crawlers can effectively copy popular websites.
+   4. Copyright Check: They fetch content and look for copyright issues.
 
 2. Requirements and Goals
-Our web crawler needs to be:
-- Scalable: Capable of handling millions of web documents.
-- Extensible: Designed to add new features and handle different types of content.
+   Our web crawler needs to be:
+   - Scalable: Capable of handling millions of web documents.
+   - Extensible: Designed to add new features and handle different types of content.
 
 3. Some Design Considerations
-Before diving in, we need to consider:
-- Content Types: Will our crawler fetch only HTML pages or also images, videos, etc.?
-- Protocols: Initially, we'll focus on HTTP, with room to add FTP and others later.
-- Scale: Expecting to crawl billions of pages, so storage and processing must be efficient.
-- Robots.txt: Handling rules from websites on what can be crawled (Robots Exclusion Protocol).
+   Before diving in, we need to consider:
+   - Content Types: Will our crawler fetch only HTML pages or also images, videos, etc.?
+   - Protocols: Initially, we'll focus on HTTP, with room to add FTP and others later.
+   - Scale: Expecting to crawl billions of pages, so storage and processing must be efficient.
+   - Robots.txt: Handling rules from websites on what can be crawled (Robots Exclusion Protocol).
 
 4. Capacity Estimation and Constraints
-For example, if we aim to crawl 15 billion pages in four weeks:
-- Fetch rate: Around 6200 pages/second.
-- Storage: Approximately 2.14 petabytes for the crawled data.
-- URL Frontier Size: Hundreds of millions of URLs.
+   For example, if we aim to crawl 15 billion pages in four weeks:
+   - Fetch rate: Around 6200 pages/second.
+   - Storage: Approximately 2.14 petabytes for the crawled data.
+   - URL Frontier Size: Hundreds of millions of URLs.
 
 5. High-Level Design
-Our crawler will follow these steps:
-1. Pick a URL from the list to visit.
-2. Get the IP address of the website.
-3. Download the webpage content.
-4. Extract new URLs from the page.
-5. Add valid URLs to the list for future visits.
-6. Process and store the downloaded content.
+   Our crawler will follow these steps:
+   1. Pick a URL from the list to visit.
+   2. Get the IP address of the website.
+   3. Download the webpage content.
+   4. Extract new URLs from the page.
+   5. Add valid URLs to the list for future visits.
+   6. Process and store the downloaded content.
 
 How to Crawl?
-
 We'll use a breadth-first approach, starting from seed URLs and gradually exploring outward. This helps in covering a wide range of pages efficiently.
-
 Difficulties in Implementing
-
 Two major challenges are:
-
-1. Volume: There are billions of web pages, so we need smart strategies to prioritize what to crawl.
-2. Dynamic Web: Pages change frequently, making it challenging to keep our index up to date.
+   1. Volume: There are billions of web pages, so we need smart strategies to prioritize what to crawl.
+   2. Dynamic Web: Pages change frequently, making it challenging to keep our index up to date.
 
 6. Detailed Component Design
-Our crawler's key components:
-1. URL Frontier: Stores URLs to be visited, with prioritization.
-2. HTML Fetcher: Downloads web pages using HTTP.
-3. Extractor: Finds new URLs within downloaded pages.
-4. Duplicate Checker: Ensures we don't download the same content repeatedly.
-5. Datastore: Stores crawled pages, URLs, and metadata.
+   Our crawler's key components:
+   1. URL Frontier: Stores URLs to be visited, with prioritization.
+   2. HTML Fetcher: Downloads web pages using HTTP.
+   3. Extractor: Finds new URLs within downloaded pages.
+   4. Duplicate Checker: Ensures we don't download the same content repeatedly.
+   5. Datastore: Stores crawled pages, URLs, and metadata.
 
 7. Fault Tolerance
 We use consistent hashing to distribute workload among crawler servers. Regular checkpoints and data backups ensure we can recover from failures.

@@ -15,3 +15,10 @@ Building Blocks for Google Maps:
 2. Key-Value Metadata Storage: Efficient data management requires storing metadata in a key-value format.
 3. Event Handling: The system should generate and handle events, notifying other services when needed.
 4. Structured Graph Data: Road data is effectively represented using a structured graph format for storing and retrieving information.
+
+Google Maps is a popular web mapping tool that provides various geographic data like street maps, satellite imagery, real-time traffic updates, and directions for users. It can be accessed via web browsers or mobile apps. 
+
+1. What is Google Maps?
+Google Maps is a service developed by Google that offers satellite images, street maps, real-time traffic updates, and route planning for different modes of transportation.
+
+

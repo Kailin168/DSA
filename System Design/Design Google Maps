@@ -21,4 +21,14 @@ Google Maps is a popular web mapping tool that provides various geographic data 
 1. What is Google Maps?
 Google Maps is a service developed by Google that offers satellite images, street maps, real-time traffic updates, and route planning for different modes of transportation.
 
-
+2. Requirements for Google Maps System Design
+Functional Requirements:
+- Display maps with zoom levels and different views (satellite, terrain, street).
+- Allow location search by addresses or landmarks and recommend optimal routes based on transportation type.
+- Display real-time traffic conditions and weather updates.
+- Provide "near me" searches for places with ratings, opening times, services, and routes.
+Non-functional Requirements:
+- High availability with minimal downtime.
+- Scalability to support a large number of users and requests.
+- Accurate and current information.
+- Secure user data and system.

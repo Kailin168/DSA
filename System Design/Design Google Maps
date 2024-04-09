@@ -32,3 +32,14 @@ Non-functional Requirements:
 - Scalability to support a large number of users and requests.
 - Accurate and current information.
 - Secure user data and system.
+
+3. Capacity Estimation
+Data Storage:
+- Map data estimated at 1 Petabyte (PB).
+- Traffic data around 500 Terabytes (TB) daily.
+- Point of Interest (POI) data over 100 TB.
+Server Resources:
+- Massive computational power for handling user requests and real-time updates.
+- Millions of servers globally with varying specifications.
+Network Bandwidth:
+- Billions of requests daily, requiring massive bandwidth.

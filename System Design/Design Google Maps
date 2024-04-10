@@ -43,3 +43,6 @@ Server Resources:
 - Millions of servers globally with varying specifications.
 Network Bandwidth:
 - Billions of requests daily, requiring massive bandwidth.
+
+4. Why Quad Tree in Google Maps?
+Google Maps doesn't strictly use quad trees but employs similar concepts for spatial efficiency and fast lookups, especially for dynamic data like traffic flow.

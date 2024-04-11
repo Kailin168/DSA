@@ -46,3 +46,11 @@ Network Bandwidth:
 
 4. Why Quad Tree in Google Maps?
 Google Maps doesn't strictly use quad trees but employs similar concepts for spatial efficiency and fast lookups, especially for dynamic data like traffic flow.
+
+5. Low-Level Design
+- Map data stored in distributed file systems.
+- Real-time traffic data processed using stream processing frameworks.
+- POI data stored in geospatial databases.
+- Efficient map tile serving, traffic flow calculations, and POI search implemented.
+
+

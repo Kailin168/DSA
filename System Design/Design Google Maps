@@ -53,4 +53,9 @@ Google Maps doesn't strictly use quad trees but employs similar concepts for spa
 - POI data stored in geospatial databases.
 - Efficient map tile serving, traffic flow calculations, and POI search implemented.
 
+6. High-Level Design
+- Presentation layer for rendering maps and user interactions.
+- Application layer for real-time data processing and routing.
+- Data layer for database management.
+
 

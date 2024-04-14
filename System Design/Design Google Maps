@@ -58,4 +58,6 @@ Google Maps doesn't strictly use quad trees but employs similar concepts for spa
 - Application layer for real-time data processing and routing.
 - Data layer for database management.
 
+7. Database Design
+Google Maps uses a distributed database architecture with databases for map data, routing, places, and real-time data storage.
 

@@ -61,3 +61,5 @@ Google Maps doesn't strictly use quad trees but employs similar concepts for spa
 7. Database Design
 Google Maps uses a distributed database architecture with databases for map data, routing, places, and real-time data storage.
 
+8. Scalability
+Google Maps employs load balancing, replication, and caching for scalability and high availability.

@@ -63,3 +63,6 @@ Google Maps uses a distributed database architecture with databases for map data
 
 8. Scalability
 Google Maps employs load balancing, replication, and caching for scalability and high availability.
+
+9. Microservices and APIs
+Google Maps is based on microservices with APIs like Maps, Directions, Places, Geocoding, and Distance Matrix for various functionalities.

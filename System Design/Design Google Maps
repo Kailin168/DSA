@@ -71,3 +71,4 @@ Google Maps is based on microservices with APIs like Maps, Directions, Places, G
 - Map Server: Stores and serves map data.
 - Routing Service: Calculates efficient routes using algorithms.
 
+This simplified overview covers the key aspects of Google Maps' system design.

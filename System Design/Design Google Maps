@@ -66,3 +66,8 @@ Google Maps employs load balancing, replication, and caching for scalability and
 
 9. Microservices and APIs
 Google Maps is based on microservices with APIs like Maps, Directions, Places, Geocoding, and Distance Matrix for various functionalities.
+
+10. Components Details
+- Map Server: Stores and serves map data.
+- Routing Service: Calculates efficient routes using algorithms.
+

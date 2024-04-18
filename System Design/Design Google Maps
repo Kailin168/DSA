@@ -20,7 +20,6 @@ Google Maps is a popular web mapping tool that provides various geographic data 
 
 1. What is Google Maps?
 Google Maps is a service developed by Google that offers satellite images, street maps, real-time traffic updates, and route planning for different modes of transportation.
-
 2. Requirements for Google Maps System Design
 Functional Requirements:
 - Display maps with zoom levels and different views (satellite, terrain, street).
@@ -32,7 +31,6 @@ Non-functional Requirements:
 - Scalability to support a large number of users and requests.
 - Accurate and current information.
 - Secure user data and system.
-
 3. Capacity Estimation
 Data Storage:
 - Map data estimated at 1 Petabyte (PB).
@@ -43,30 +41,23 @@ Server Resources:
 - Millions of servers globally with varying specifications.
 Network Bandwidth:
 - Billions of requests daily, requiring massive bandwidth.
-
 4. Why Quad Tree in Google Maps?
 Google Maps doesn't strictly use quad trees but employs similar concepts for spatial efficiency and fast lookups, especially for dynamic data like traffic flow.
-
 5. Low-Level Design
 - Map data stored in distributed file systems.
 - Real-time traffic data processed using stream processing frameworks.
 - POI data stored in geospatial databases.
 - Efficient map tile serving, traffic flow calculations, and POI search implemented.
-
 6. High-Level Design
 - Presentation layer for rendering maps and user interactions.
 - Application layer for real-time data processing and routing.
 - Data layer for database management.
-
 7. Database Design
 Google Maps uses a distributed database architecture with databases for map data, routing, places, and real-time data storage.
-
 8. Scalability
 Google Maps employs load balancing, replication, and caching for scalability and high availability.
-
 9. Microservices and APIs
 Google Maps is based on microservices with APIs like Maps, Directions, Places, Geocoding, and Distance Matrix for various functionalities.
-
 10. Components Details
 - Map Server: Stores and serves map data.
 - Routing Service: Calculates efficient routes using algorithms.

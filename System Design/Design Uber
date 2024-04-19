@@ -42,16 +42,14 @@ In case of a total data center failure, Uber maintains a backup data center and 
 
 So, while the Uber app may seem straightforward to users, it relies on a sophisticated and robust backend infrastructure to manage the complexities of ride hailing and related services.
 
-Requirements
+Requirements:
+  For Customers:
+  - See nearby cabs with estimated time of arrival (ETA) and pricing.
+  - Book a cab to a destination.
+  - Track the location of the driver.
 
-For Customers:
-- See nearby cabs with estimated time of arrival (ETA) and pricing.
-- Book a cab to a destination.
-- Track the location of the driver.
-
-
-For Drivers:
-- Accept or deny ride requests.
-- See the pickup location of the customer.
-- Mark trips as complete upon reaching the destination.
+  For Drivers:
+  - Accept or deny ride requests.
+  - See the pickup location of the customer.
+  - Mark trips as complete upon reaching the destination.
 

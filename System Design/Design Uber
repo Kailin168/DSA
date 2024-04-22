@@ -57,3 +57,6 @@ We need high reliability, availability with low latency, scalability, and effici
 
 Extended Features
 Customers can rate trips, process payments, and collect metrics and analytics.
+
+Estimation
+Assuming 100 million daily active users (DAU), 1 million drivers, and 10 million rides daily, we'd handle about 1 billion requests daily, translating to about 12K requests per second.

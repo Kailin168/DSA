@@ -60,3 +60,6 @@ Extended Features
 
 Estimation
   Assuming 100 million daily active users (DAU), 1 million drivers, and 10 million rides daily, we'd handle about 1 billion requests daily, translating to about 12K requests per second.
+
+Storage and Bandwidth
+  With an average message size of 400 bytes, we'd need 400 GB of storage daily and about 1.4 PB over 10 years. Bandwidth requirements would be around 5 MB/s.

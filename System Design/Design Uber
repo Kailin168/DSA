@@ -63,3 +63,7 @@ Estimation
 
 Storage and Bandwidth
   With an average message size of 400 bytes, we'd need 400 GB of storage daily and about 1.4 PB over 10 years. Bandwidth requirements would be around 5 MB/s.
+
+Data Model
+  We'd use tables like 'customers', 'drivers', 'trips', 'cabs', 'ratings', and 'payments' in our database.
+

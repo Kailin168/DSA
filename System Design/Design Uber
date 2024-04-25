@@ -67,3 +67,5 @@ Storage and Bandwidth
 Data Model
   We'd use tables like 'customers', 'drivers', 'trips', 'cabs', 'ratings', and 'payments' in our database.
 
+Database Choice
+We could use PostgreSQL or Apache Cassandra, distributing data across services for scalability.

@@ -69,3 +69,6 @@ Data Model
 
 Database Choice
   We could use PostgreSQL or Apache Cassandra, distributing data across services for scalability.
+
+API Design
+  We'd design APIs for ride requests, cancellations, accepting/denying rides, trip management, and rating trips.

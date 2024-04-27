@@ -72,3 +72,7 @@ Database Choice
 
 API Design
   We'd design APIs for ride requests, cancellations, accepting/denying rides, trip management, and rating trips.
+
+High-Level Design
+  Using microservices architecture, we'd have services for customers, drivers, rides, trips, payments, notifications, and analytics.
+

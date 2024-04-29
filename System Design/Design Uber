@@ -76,3 +76,5 @@ API Design
 High-Level Design
   Using microservices architecture, we'd have services for customers, drivers, rides, trips, payments, notifications, and analytics.
 
+Inter-Service Communication
+  REST or gRPC for communication, with service discovery using a service mesh.

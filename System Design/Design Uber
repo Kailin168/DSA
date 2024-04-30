@@ -78,3 +78,6 @@ High-Level Design
 
 Inter-Service Communication
   REST or gRPC for communication, with service discovery using a service mesh.
+
+Location Tracking
+  Clients can use a push model (WebSockets) for live location updates to minimize latency.

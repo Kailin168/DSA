@@ -83,4 +83,4 @@ Location Tracking
   Clients can use a push model (WebSockets) for live location updates to minimize latency.
 
 Ride Matching
-We'd use Geohashing or Quadtree algorithms for efficient nearby driver searches.
+  We'd use Geohashing or Quadtree algorithms for efficient nearby driver searches.

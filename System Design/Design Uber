@@ -84,3 +84,6 @@ Location Tracking
 
 Ride Matching
   We'd use Geohashing or Quadtree algorithms for efficient nearby driver searches.
+
+Payments and Notifications
+  Third-party payment processors like Stripe, and push notifications via Firebase Cloud Messaging or APNS.

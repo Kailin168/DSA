@@ -87,3 +87,6 @@ Ride Matching
 
 Payments and Notifications
   Third-party payment processors like Stripe, and push notifications via Firebase Cloud Messaging or APNS.
+
+Data Partitioning and Caching
+  Sharding, consistent hashing, and caching strategies (e.g., LRU) for scalability and performance.

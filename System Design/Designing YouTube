@@ -9,6 +9,10 @@ YouTube's simplicity, free content hosting, and continuous improvements have dri
 Impressive Growth:
 Since its inception in 2005, YouTube has exploded in popularity. Over 2.5 billion users visit monthly, and it's one of the top streaming websites.
 
+Goals of YouTube System Design:
+1. Smooth Video Playback: Ensure videos play without buffering for both uploaded and real-time content.
+
+
 Functional Requirements:
 
 1. Stream videos

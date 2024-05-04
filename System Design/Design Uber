@@ -90,3 +90,5 @@ Payments and Notifications
 
 Data Partitioning and Caching
   Sharding, consistent hashing, and caching strategies (e.g., LRU) for scalability and performance.
+
+Bottleneck Handling

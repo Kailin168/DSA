@@ -92,3 +92,4 @@ Data Partitioning and Caching
   Sharding, consistent hashing, and caching strategies (e.g., LRU) for scalability and performance.
 
 Bottleneck Handling
+  Multiple service instances, load balancers, database replicas, distributed cache, and a robust notification system using message brokers like Kafka or NATS.

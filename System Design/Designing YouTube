@@ -11,6 +11,7 @@ Since its inception in 2005, YouTube has exploded in popularity. Over 2.5 billio
 
 Goals of YouTube System Design:
 1. Smooth Video Playback: Ensure videos play without buffering for both uploaded and real-time content.
+2. High Availability: Keep the platform always accessible with minimal delays.
 
 
 Functional Requirements:

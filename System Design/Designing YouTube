@@ -13,7 +13,7 @@ Goals of YouTube System Design:
 1. Smooth Video Playback: Ensure videos play without buffering for both uploaded and real-time content.
 2. High Availability: Keep the platform always accessible with minimal delays.
 3. Reliable Storage: Safeguard uploaded videos to prevent data loss.
-
+4. Scalability: Accommodate a growing number of users and videos.
 
 Functional Requirements:
 

@@ -16,12 +16,8 @@ Goals of YouTube System Design:
 4. Scalability: Accommodate a growing number of users and videos.
 
 Functional Requirements:
-1. Stream videos
-2. Upload videos
-3. Search videos by titles
-4. Like and dislike videos
-5. Add comments to videos
-6. View thumbnails
+1. Upload/View/Share Videos: Make it easy for users to upload, watch, and share videos. Convert videos into various formats for compatibility.
+
 
 Non-Functional Requirements:
 1. High availability
@@ -32,3 +28,9 @@ Three key building blocks:
 1. Video Storage: To handle all the videos efficiently.
 2. Database Management: For swift and accurate searches, likes, dislikes, and comments.
 3. Content Delivery Network (CDN): For good performance and scalability, distributing all that video data effectively.
+
+
+
+
+
+

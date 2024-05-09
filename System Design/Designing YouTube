@@ -18,6 +18,8 @@ Goals of YouTube System Design:
 Functional Requirements:
 1. Upload/View/Share Videos: Make it easy for users to upload, watch, and share videos. Convert videos into various formats for compatibility.
 2. Comments: Allow users to comment on videos, with features like threading and real-time updates.
+3. Search: Provide a robust search feature based on video titles, descriptions, tags, and filters.
+4. Recommendations: Personalize users' homepages with recommended videos based on their activity.
 
 Non-Functional Requirements:
 1. High availability

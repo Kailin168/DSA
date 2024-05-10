@@ -20,6 +20,9 @@ Functional Requirements:
 2. Comments: Allow users to comment on videos, with features like threading and real-time updates.
 3. Search: Provide a robust search feature based on video titles, descriptions, tags, and filters.
 4. Recommendations: Personalize users' homepages with recommended videos based on their activity.
+5. Social Features: Include options for liking, disliking, sharing, subscribing, and managing notifications.
+6. View thumbnails
+
 
 Non-Functional Requirements:
 1. High availability

@@ -23,11 +23,9 @@ Functional Requirements:
 5. Social Features: Include options for liking, disliking, sharing, subscribing, and managing notifications.
 6. View thumbnails
 
-
 Non-Functional Requirements:
-1. High availability
-2. Scalability
-3. Good performance
+1. Reliability: Use redundant systems to prevent downtime and data loss.
+
 
 Three key building blocks:
 1. Video Storage: To handle all the videos efficiently.

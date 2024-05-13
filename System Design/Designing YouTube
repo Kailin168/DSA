@@ -25,6 +25,7 @@ Functional Requirements:
 
 Non-Functional Requirements:
 1. Reliability: Use redundant systems to prevent downtime and data loss.
+2. Availability: Design a distributed system with load balancing to handle heavy traffic.
 
 
 Three key building blocks:

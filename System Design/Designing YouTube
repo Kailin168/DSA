@@ -34,6 +34,8 @@ Three key building blocks:
 2. Database Management: For swift and accurate searches, likes, dislikes, and comments.
 3. Content Delivery Network (CDN): For good performance and scalability, distributing all that video data effectively.
 
+High-level Design (HLD):
+
 
 
 

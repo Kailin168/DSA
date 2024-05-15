@@ -27,6 +27,7 @@ Non-Functional Requirements:
 1. Reliability: Use redundant systems to prevent downtime and data loss.
 2. Availability: Design a distributed system with load balancing to handle heavy traffic.
 3. Scalability: Ensure the system can grow seamlessly with user and video increases.
+4. Performance: Utilize caching and optimization techniques for faster response times.
 
 Three key building blocks:
 1. Video Storage: To handle all the videos efficiently.

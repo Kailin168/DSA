@@ -35,6 +35,9 @@ Three key building blocks:
 3. Content Delivery Network (CDN): For good performance and scalability, distributing all that video data effectively.
 
 High-level Design (HLD):
+1. User Interface: Create a user-friendly interface across devices.
+2. User Management: Allow secure registration, authentication, and profile management.
+
 
 
 

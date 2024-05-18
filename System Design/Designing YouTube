@@ -37,7 +37,7 @@ Three key building blocks:
 High-level Design (HLD):
 1. User Interface: Create a user-friendly interface across devices.
 2. User Management: Allow secure registration, authentication, and profile management.
-
+3. Video Handling: Process uploads, store videos efficiently, and provide adaptive streaming.
 
 
 

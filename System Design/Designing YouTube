@@ -41,6 +41,7 @@ High-level Design (HLD):
 4. Recommendation Engine: Use algorithms to suggest videos based on user preferences.
 5. Social Interaction: Enable social features like comments, likes, shares, and notifications.
 6. Content Moderation: Implement tools to detect and remove inappropriate content.
+7. Analytics: Provide insights into video performance and user behavior.
 
 
 

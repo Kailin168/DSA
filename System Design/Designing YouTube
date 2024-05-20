@@ -39,7 +39,7 @@ High-level Design (HLD):
 2. User Management: Allow secure registration, authentication, and profile management.
 3. Video Handling: Process uploads, store videos efficiently, and provide adaptive streaming.
 4. Recommendation Engine: Use algorithms to suggest videos based on user preferences.
-
+5. Social Interaction: Enable social features like comments, likes, shares, and notifications.
 
 
 

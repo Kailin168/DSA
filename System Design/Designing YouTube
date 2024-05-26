@@ -46,6 +46,8 @@ High-level Design (HLD):
 Low-level Design (LLD):
 1. Load Balancing: Distribute traffic among servers for optimal performance.
 2. Storage: Store and retrieve videos, metadata, and user data efficiently.
+3. Content Delivery Network (CDN): Cache and deliver videos globally with minimal latency.
+
 
 
 

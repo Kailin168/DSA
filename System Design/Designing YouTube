@@ -50,6 +50,7 @@ Low-level Design (LLD):
 4. Video Encoding: Convert videos into different formats for streaming on various devices.
 5. Database Management: Use sharding, indexing, and caching for database efficiency.
 6. Recommendation System: Develop algorithms for personalized video recommendations.
+7. Monitoring: Monitor system health, performance, and user activity in real-time.
 
 
 

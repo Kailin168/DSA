@@ -48,6 +48,8 @@ Low-level Design (LLD):
 2. Storage: Store and retrieve videos, metadata, and user data efficiently.
 3. Content Delivery Network (CDN): Cache and deliver videos globally with minimal latency.
 4. Video Encoding: Convert videos into different formats for streaming on various devices.
+5. Database Management: Use sharding, indexing, and caching for database efficiency.
+
 
 
 

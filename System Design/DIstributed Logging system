@@ -26,3 +26,5 @@ User Behavior Insights: Log analysis is valuable for understanding user actions,
 Building a Distributed Log from Scratch, Part 1: Storage Mechanics
 A log is an ordered, append-only data structure. It’s basically a sequence of unchangeable events. This simple concept has been used by developers for a long time, whether in application logs, system logs, or access logs. Logs typically consist of a timestamp and an event, appended to the end of a file. When we generalize this pattern, it becomes a powerful tool for managing and distributing data across systems.
 
+Several systems like Apache Kafka, Amazon Kinesis, NATS Streaming, and Apache Pulsar use this idea. Kafka is especially well-known for popularizing it.
+

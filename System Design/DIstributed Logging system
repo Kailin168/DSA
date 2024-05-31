@@ -23,17 +23,6 @@ Data Breach Response: Log data is vital in recognizing and addressing data breac
 
 User Behavior Insights: Log analysis is valuable for understanding user actions, which can inform recommender systems and user experience improvements.
 
-Designing a Distributed Logging System:
-
-The design of a distributed logging system can be broken down into two main sections:
-
-- Introduction: This section covers the fundamentals of distributed logging. It addresses the challenge of managing large log files and the need for structured log data. It sets the stage for understanding the system's logging requirements.
-
-- Design: In this part, we delve into the specifics of designing a distributed logging system. We define the system's requirements, consider API design, and explore the detailed design of the logging system.
-
-The goal of a distributed logging system is to efficiently capture, store, and analyze log data to maintain system health, diagnose issues, and ensure security and compliance.
-
-
-
-
+Building a Distributed Log from Scratch, Part 1: Storage Mechanics
+A log is an ordered, append-only data structure. It’s basically a sequence of unchangeable events. This simple concept has been used by developers for a long time, whether in application logs, system logs, or access logs. Logs typically consist of a timestamp and an event, appended to the end of a file. When we generalize this pattern, it becomes a powerful tool for managing and distributing data across systems.
 

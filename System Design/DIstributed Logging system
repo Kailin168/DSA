@@ -28,3 +28,10 @@ A log is an ordered, append-only data structure. It’s basically a sequence of 
 
 Several systems like Apache Kafka, Amazon Kinesis, NATS Streaming, and Apache Pulsar use this idea. Kafka is especially well-known for popularizing it.
 
+For a distributed log system to be effective, it needs to prioritize:
+
+Performance: Fast enough to keep the data useful.
+High Availability: Always accessible for data in and out.
+Scalability: Able to grow with the enterprise's needs.
+Applying the traditional pub/sub model to a log makes it a versatile solution for many problems.
+

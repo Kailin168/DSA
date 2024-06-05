@@ -30,8 +30,8 @@ Several systems like Apache Kafka, Amazon Kinesis, NATS Streaming, and Apache Pu
 
 For a distributed log system to be effective, it needs to prioritize:
 
-Performance: Fast enough to keep the data useful.
-High Availability: Always accessible for data in and out.
-Scalability: Able to grow with the enterprise's needs.
-Applying the traditional pub/sub model to a log makes it a versatile solution for many problems.
+1. Performance: Fast enough to keep the data useful.
+2. High Availability: Always accessible for data in and out.
+3. Scalability: Able to grow with the enterprise's needs.
 
+Applying the traditional pub/sub model to a log makes it a versatile solution for many problems.

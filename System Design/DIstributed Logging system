@@ -46,3 +46,6 @@ Basic Log Structure
 
   A log looks like a file where new messages are appended to the end. However, this file can become very large. To manage this, the log is split into segments. Each segment is a new file, and once a segment is full, a new one is created.
 
+  Segments are identified by their base offset (the offset of the first message in the segment). This allows quick location of a message by doing a binary search.
+
+

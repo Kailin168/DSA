@@ -41,3 +41,8 @@ Key Principles of Log Storage
   A log is an ordered, immutable sequence of messages. Each message is either fully in the log or not at all. Although we only add messages and never remove them, logs have retention policies to manage size. These policies could be based on time, number of messages, or size.
 
   The log can be read from any point, and it's stored on disk. Sequential disk access is relatively fast, especially with modern OS page caches that keep frequently accessed data in RAM. This makes reads and writes faster.
+
+Basic Log Structure
+
+  A log looks like a file where new messages are appended to the end. However, this file can become very large. To manage this, the log is split into segments. Each segment is a new file, and once a segment is full, a new one is created.
+

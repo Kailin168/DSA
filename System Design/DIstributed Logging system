@@ -48,4 +48,6 @@ Basic Log Structure
 
   Segments are identified by their base offset (the offset of the first message in the segment). This allows quick location of a message by doing a binary search.
 
+  Each segment has an index file mapping message offsets to their positions in the segment. In Kafka, the index stores offsets and log positions efficiently.
+
 

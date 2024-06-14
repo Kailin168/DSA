@@ -58,4 +58,8 @@ Real-world Example
 
   In practice, systems like Kafka use the sendfile system call for zero-copy reads, which improves performance. NATS Streaming’s storage layer can use different backends, including file-based, in-memory, and SQL-backed storage.
 
+Conclusion
+
+  This overview of log storage mechanics sets the stage for understanding distributed log systems. In the next part, we’ll explore making the log fault-tolerant with data replication techniques.
+
 

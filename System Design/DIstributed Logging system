@@ -37,29 +37,21 @@ For a distributed log system to be effective, it needs to prioritize:
 Applying the traditional pub/sub model to a log makes it a versatile solution for many problems.
 
 Key Principles of Log Storage
-
   A log is an ordered, immutable sequence of messages. Each message is either fully in the log or not at all. Although we only add messages and never remove them, logs have retention policies to manage size. These policies could be based on time, number of messages, or size.
-
   The log can be read from any point, and it's stored on disk. Sequential disk access is relatively fast, especially with modern OS page caches that keep frequently accessed data in RAM. This makes reads and writes faster.
 
 Basic Log Structure
-
   A log looks like a file where new messages are appended to the end. However, this file can become very large. To manage this, the log is split into segments. Each segment is a new file, and once a segment is full, a new one is created.
-
   Segments are identified by their base offset (the offset of the first message in the segment). This allows quick location of a message by doing a binary search.
-
   Each segment has an index file mapping message offsets to their positions in the segment. In Kafka, the index stores offsets and log positions efficiently.
 
 Optimizing Data Access
-
   Ideally, data is written to the log in a format that can be sent directly over the network. This allows for zero-copy reads, where data moves from the disk to the network without entering user space, reducing CPU and memory usage.
 
 Real-world Example
-
   In practice, systems like Kafka use the sendfile system call for zero-copy reads, which improves performance. NATS Streaming’s storage layer can use different backends, including file-based, in-memory, and SQL-backed storage.
 
 Conclusion
-
   This overview of log storage mechanics sets the stage for understanding distributed log systems. In the next part, we’ll explore making the log fault-tolerant with data replication techniques.
 
 

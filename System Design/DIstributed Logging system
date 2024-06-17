@@ -12,7 +12,6 @@ Need for Logging:
 
 4. Performance and Error Detection: Logging aids in understanding code, locating unforeseen errors, and optimizing application performance. It provides insight into how processes are running in the system.
 
-
 Log Analysis Benefits:
 Troubleshooting: Logging is crucial for identifying and resolving application, node, or network issues.
 Security and Compliance: It helps in adhering to internal security policies, external regulations, and compliance standards.
@@ -48,4 +47,10 @@ Real-world Example
 Conclusion
   This overview of log storage mechanics sets the stage for understanding distributed log systems. In the next part, we’ll explore making the log fault-tolerant with data replication techniques.
 
+
+Building a Distributed Log from Scratch, Part 2: Data Replication
+
+What a message log is, why it’s useful, and how its storage works.
+
+We’ve got our log, and we know how to write and read data. But what if the machine storing the log dies? We’d be out of luck because our log would be gone. To avoid this single point of failure, we need high availability and fault tolerance. This means ensuring that the system keeps working even if a server fails, minimizing downtime without needing manual intervention.
 

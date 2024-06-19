@@ -54,6 +54,12 @@ What a message log is, why it’s useful, and how its storage works.
 
 We’ve got our log, and we know how to write and read data. But what if the machine storing the log dies? We’d be out of luck because our log would be gone. To avoid this single point of failure, we need high availability and fault tolerance. This means ensuring that the system keeps working even if a server fails, minimizing downtime without needing manual intervention.
 
-Achieving High Availability:
+Achieving High Availability
 High availability means making sure we can always read and write data. If a server goes down, the system should still function. To do this, we eliminate the single point of failure by replicating the data. Replication also helps with scalability, but we’re focusing on high availability here.
+
+There are two main ways to replicate log data: 
+
+1. Gossip/Multicast Protocols: These include epidemic broadcast trees, bimodal multicast, SWIM, HyParView, and NeEM. They are generally eventually consistent and/or random.
+   
+2. Consensus Protocols: These include 2PC/3PC, Paxos, Raft, Zab, and chain replication. They focus more on consistency than availability.
 

@@ -63,3 +63,11 @@ There are two main ways to replicate log data:
    
 2. Consensus Protocols: These include 2PC/3PC, Paxos, Raft, Zab, and chain replication. They focus more on consistency than availability.
 
+Since our log requires ordering and consistency, we’ll go with consensus-based replication.
+
+Consensus-Based Replication
+
+Consensus-based replication has two main parts:
+
+1. Leader Election: Choosing a leader to manage write operations.
+2. Data Replication: Ensuring data is copied to the other servers (followers).

@@ -71,3 +71,15 @@ Consensus-based replication has two main parts:
 
 1. Leader Election: Choosing a leader to manage write operations.
 2. Data Replication: Ensuring data is copied to the other servers (followers).
+
+Leader Election
+
+Leader election can be done through configuration, but for fault tolerance, the leader needs to be dynamic. If the leader crashes, we need a new one to take over. This is a well-studied problem and can be handled with algorithms like Raft.
+
+Data Replication
+
+Once we have a leader, it needs to replicate data to the followers. There are two approaches:
+
+- All Replicas: Wait for all replicas to confirm the write.
+  - Pros: Can handle multiple failures with fewer replicas.
+  - Cons: Slower because it waits for the slowest replica.

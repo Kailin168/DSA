@@ -83,3 +83,7 @@ Once we have a leader, it needs to replicate data to the followers. There are tw
 - All Replicas: Wait for all replicas to confirm the write.
   - Pros: Can handle multiple failures with fewer replicas.
   - Cons: Slower because it waits for the slowest replica.
+
+- Quorum: Wait for a majority of replicas to confirm the write.
+  - Pros: Faster because it doesn’t wait for the slowest replica.
+  - Cons: Needs more replicas to handle the same number of failures.

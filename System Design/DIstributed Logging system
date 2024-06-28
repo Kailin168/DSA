@@ -87,3 +87,9 @@ Once we have a leader, it needs to replicate data to the followers. There are tw
 - Quorum: Wait for a majority of replicas to confirm the write.
   - Pros: Faster because it doesn’t wait for the slowest replica.
   - Cons: Needs more replicas to handle the same number of failures.
+
+Kafka uses the all replicas approach (with some conditions), while NATS Streaming uses a quorum approach. Let’s explore how each handles replication.
+
+Kafka’s Replication
+
+In Kafka, the leader manages an in-sync replica set (ISR) of all fully caught-up replicas. All reads and writes go through the leader. The leader writes messages to a write-ahead log (WAL). These messages are initially uncommitted or “dirty.” They are only committed once all replicas in the ISR have written them to their own WALs. The leader also keeps a high-water mark (HW) of the last committed message.

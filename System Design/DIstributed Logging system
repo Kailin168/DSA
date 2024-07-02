@@ -106,3 +106,7 @@ Handling Failures in Kafka
 2. Follower Fails: The leader tracks how caught up each follower is. If a follower falls behind, it’s removed from the ISR, making the cluster under-replicated until the follower catches up.
 
 3. Follower Temporarily Partitioned: If a follower is temporarily unavailable, it’s treated like a failure. Once it catches up, it’s added back to the ISR.
+
+NATS Streaming’s Replication
+
+NATS Streaming uses the Raft consensus algorithm for leader election and data replication. This makes it different from Kafka, as Raft handles both tasks in a single protocol.

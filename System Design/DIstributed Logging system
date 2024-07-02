@@ -98,3 +98,11 @@ Producers can choose how they receive acknowledgments:
 - Wait until the message is committed.
 - Wait until the message is written to the leader’s WAL.
 - Not wait at all.
+
+Handling Failures in Kafka
+
+1. Leader Fails: Kafka uses ZooKeeper to handle leader election. If the leader dies, ZooKeeper notifies the cluster controller, which then selects a new leader from the ISR.
+   
+2. Follower Fails: The leader tracks how caught up each follower is. If a follower falls behind, it’s removed from the ISR, making the cluster under-replicated until the follower catches up.
+
+3. Follower Temporarily Partitioned: If a follower is temporarily unavailable, it’s treated like a failure. Once it catches up, it’s added back to the ISR.

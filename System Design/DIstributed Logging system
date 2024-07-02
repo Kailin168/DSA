@@ -93,3 +93,8 @@ Kafka uses the all replicas approach (with some conditions), while NATS Streamin
 Kafka’s Replication
 
 In Kafka, the leader manages an in-sync replica set (ISR) of all fully caught-up replicas. All reads and writes go through the leader. The leader writes messages to a write-ahead log (WAL). These messages are initially uncommitted or “dirty.” They are only committed once all replicas in the ISR have written them to their own WALs. The leader also keeps a high-water mark (HW) of the last committed message.
+
+Producers can choose how they receive acknowledgments:
+- Wait until the message is committed.
+- Wait until the message is written to the leader’s WAL.
+- Not wait at all.

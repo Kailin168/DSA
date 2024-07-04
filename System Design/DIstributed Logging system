@@ -114,3 +114,7 @@ NATS Streaming uses the Raft consensus algorithm for leader election and data re
 Raft in NATS Streaming
 
 Raft elects a leader, and this leader sends heartbeats to followers. Writes go through the leader’s WAL, and followers append these writes to their own WALs. Once a quorum of followers acknowledges the write, it’s committed.
+
+NATS Streaming also uses Raft groups for replication:
+- Metadata Raft Group: Manages client state.
+- Topic Raft Groups: Manage messages and subscriptions.

@@ -118,3 +118,9 @@ Raft elects a leader, and this leader sends heartbeats to followers. Writes go t
 NATS Streaming also uses Raft groups for replication:
 - Metadata Raft Group: Manages client state.
 - Topic Raft Groups: Manage messages and subscriptions.
+
+Raft allows NATS Streaming to operate without ZooKeeper or another coordination service.
+
+Challenges with Raft
+
+1. Scaling Raft: As the number of topics grows, so does the number of Raft groups, increasing network traffic. One solution is to hash topics to a fixed number of Raft groups. Another is to use a layer on top of Raft, like CockroachDB’s MultiRaft.

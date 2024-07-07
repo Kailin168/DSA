@@ -124,3 +124,6 @@ Raft allows NATS Streaming to operate without ZooKeeper or another coordination 
 Challenges with Raft
 
 1. Scaling Raft: As the number of topics grows, so does the number of Raft groups, increasing network traffic. One solution is to hash topics to a fixed number of Raft groups. Another is to use a layer on top of Raft, like CockroachDB’s MultiRaft.
+
+2. Dual Writes: Messages are written to both the Raft log and the NATS Streaming log. To avoid redundancy, we can think of the Raft log as our primary log and use the NATS Streaming log as an index.
+

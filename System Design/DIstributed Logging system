@@ -127,3 +127,7 @@ Challenges with Raft
 
 2. Dual Writes: Messages are written to both the Raft log and the NATS Streaming log. To avoid redundancy, we can think of the Raft log as our primary log and use the NATS Streaming log as an index.
 
+Ensuring Performance and Durability
+
+- Performance: Configuring publisher acknowledgments, avoiding explicit fsync on the broker, batching writes, and using zero-copy reads.
+- Durability: Ensuring quorum for data replication. In Kafka, configuring `min.insync.replicas` and producer acks helps achieve this.

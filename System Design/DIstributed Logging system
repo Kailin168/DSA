@@ -131,3 +131,7 @@ Ensuring Performance and Durability
 
 - Performance: Configuring publisher acknowledgments, avoiding explicit fsync on the broker, batching writes, and using zero-copy reads.
 - Durability: Ensuring quorum for data replication. In Kafka, configuring `min.insync.replicas` and producer acks helps achieve this.
+
+Conclusion
+
+Covered how to replicate data to achieve high availability and fault tolerance. Explored how Kafka and NATS Streaming handle replication and the challenges they face. 

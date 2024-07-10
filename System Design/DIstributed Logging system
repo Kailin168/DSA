@@ -45,8 +45,7 @@ Real-world Example
   In practice, systems like Kafka use the sendfile system call for zero-copy reads, which improves performance. NATS Streaming’s storage layer can use different backends, including file-based, in-memory, and SQL-backed storage.
 
 Conclusion
-  This overview of log storage mechanics sets the stage for understanding distributed log systems. In the next part, we’ll explore making the log fault-tolerant with data replication techniques.
-
+  This overview of log storage mechanics sets the stage for understanding distributed log systems.
 
 Building a Distributed Log from Scratch, Part 2: Data Replication
 
@@ -58,28 +57,21 @@ Achieving High Availability
 High availability means making sure we can always read and write data. If a server goes down, the system should still function. To do this, we eliminate the single point of failure by replicating the data. Replication also helps with scalability, but we’re focusing on high availability here.
 
 There are two main ways to replicate log data: 
-
 1. Gossip/Multicast Protocols: These include epidemic broadcast trees, bimodal multicast, SWIM, HyParView, and NeEM. They are generally eventually consistent and/or random.
-   
 2. Consensus Protocols: These include 2PC/3PC, Paxos, Raft, Zab, and chain replication. They focus more on consistency than availability.
 
 Since our log requires ordering and consistency, we’ll go with consensus-based replication.
 
 Consensus-Based Replication
-
 Consensus-based replication has two main parts:
-
 1. Leader Election: Choosing a leader to manage write operations.
 2. Data Replication: Ensuring data is copied to the other servers (followers).
 
 Leader Election
-
 Leader election can be done through configuration, but for fault tolerance, the leader needs to be dynamic. If the leader crashes, we need a new one to take over. This is a well-studied problem and can be handled with algorithms like Raft.
 
 Data Replication
-
 Once we have a leader, it needs to replicate data to the followers. There are two approaches:
-
 - All Replicas: Wait for all replicas to confirm the write.
   - Pros: Can handle multiple failures with fewer replicas.
   - Cons: Slower because it waits for the slowest replica.
@@ -91,7 +83,6 @@ Once we have a leader, it needs to replicate data to the followers. There are tw
 Kafka uses the all replicas approach (with some conditions), while NATS Streaming uses a quorum approach. Let’s explore how each handles replication.
 
 Kafka’s Replication
-
 In Kafka, the leader manages an in-sync replica set (ISR) of all fully caught-up replicas. All reads and writes go through the leader. The leader writes messages to a write-ahead log (WAL). These messages are initially uncommitted or “dirty.” They are only committed once all replicas in the ISR have written them to their own WALs. The leader also keeps a high-water mark (HW) of the last committed message.
 
 Producers can choose how they receive acknowledgments:
@@ -100,38 +91,27 @@ Producers can choose how they receive acknowledgments:
 - Not wait at all.
 
 Handling Failures in Kafka
-
 1. Leader Fails: Kafka uses ZooKeeper to handle leader election. If the leader dies, ZooKeeper notifies the cluster controller, which then selects a new leader from the ISR.
-   
 2. Follower Fails: The leader tracks how caught up each follower is. If a follower falls behind, it’s removed from the ISR, making the cluster under-replicated until the follower catches up.
-
 3. Follower Temporarily Partitioned: If a follower is temporarily unavailable, it’s treated like a failure. Once it catches up, it’s added back to the ISR.
 
 NATS Streaming’s Replication
-
 NATS Streaming uses the Raft consensus algorithm for leader election and data replication. This makes it different from Kafka, as Raft handles both tasks in a single protocol.
 
 Raft in NATS Streaming
-
 Raft elects a leader, and this leader sends heartbeats to followers. Writes go through the leader’s WAL, and followers append these writes to their own WALs. Once a quorum of followers acknowledges the write, it’s committed.
-
 NATS Streaming also uses Raft groups for replication:
 - Metadata Raft Group: Manages client state.
 - Topic Raft Groups: Manage messages and subscriptions.
-
 Raft allows NATS Streaming to operate without ZooKeeper or another coordination service.
 
 Challenges with Raft
-
 1. Scaling Raft: As the number of topics grows, so does the number of Raft groups, increasing network traffic. One solution is to hash topics to a fixed number of Raft groups. Another is to use a layer on top of Raft, like CockroachDB’s MultiRaft.
-
 2. Dual Writes: Messages are written to both the Raft log and the NATS Streaming log. To avoid redundancy, we can think of the Raft log as our primary log and use the NATS Streaming log as an index.
 
 Ensuring Performance and Durability
-
 - Performance: Configuring publisher acknowledgments, avoiding explicit fsync on the broker, batching writes, and using zero-copy reads.
 - Durability: Ensuring quorum for data replication. In Kafka, configuring `min.insync.replicas` and producer acks helps achieve this.
 
 Conclusion
-
 Covered how to replicate data to achieve high availability and fault tolerance. Explored how Kafka and NATS Streaming handle replication and the challenges they face. 

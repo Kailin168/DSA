@@ -1,4 +1,4 @@
-Distributed Logging System Design
+*** Distributed Logging System Design ***
 
 Definition: A log file is a record that documents events within a software application. It captures details such as microservices, transactions, and service actions, providing a means to troubleshoot and monitor the application's flow.
 
@@ -47,7 +47,7 @@ Real-world Example
 Conclusion
   This overview of log storage mechanics sets the stage for understanding distributed log systems.
 
-Building a Distributed Log from Scratch, Part 2: Data Replication
+*** Building a Distributed Log from Scratch, Part 2: Data Replication ***
 
 What a message log is, why it’s useful, and how its storage works.
 
@@ -116,7 +116,7 @@ Ensuring Performance and Durability
 Conclusion
 Covered how to replicate data to achieve high availability and fault tolerance. Explored how Kafka and NATS Streaming handle replication and the challenges they face. 
 
-Building a Distributed Log from Scratch, Part 3: Scaling Message Delivery
+*** Building a Distributed Log from Scratch, Part 3: Scaling Message Delivery ***
 
 Data Scalability
 When you're dealing with a ton of data, you need to partition it to scale things up. Partitioning means you can spread the load across multiple nodes, making the system horizontally scalable. Kafka, for example, was built with this in mind. In Kafka, topics are split into partitions, and ordering is only guaranteed within each partition.

@@ -117,3 +117,6 @@ Conclusion
 Covered how to replicate data to achieve high availability and fault tolerance. Explored how Kafka and NATS Streaming handle replication and the challenges they face. 
 
 Building a Distributed Log from Scratch, Part 3: Scaling Message Delivery
+
+Data Scalability
+When you're dealing with a ton of data, you need to partition it to scale things up. Partitioning means you can spread the load across multiple nodes, making the system horizontally scalable. Kafka, for example, was built with this in mind. In Kafka, topics are split into partitions, and ordering is only guaranteed within each partition.

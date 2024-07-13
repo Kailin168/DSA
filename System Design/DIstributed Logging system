@@ -120,3 +120,5 @@ Covered how to replicate data to achieve high availability and fault tolerance. 
 
 Data Scalability
 When you're dealing with a ton of data, you need to partition it to scale things up. Partitioning means you can spread the load across multiple nodes, making the system horizontally scalable. Kafka, for example, was built with this in mind. In Kafka, topics are split into partitions, and ordering is only guaranteed within each partition.
+Let's say you have an e-commerce app with two topics: purchases and inventory, each with two partitions. This setup allows you to spread the reads and writes across multiple brokers. But here's the trick: how do you decide what data goes into which partition?
+

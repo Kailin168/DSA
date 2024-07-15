@@ -124,3 +124,6 @@ When you're dealing with a ton of data, you need to partition it to scale things
 Let's say you have an e-commerce app with two topics: purchases and inventory, each with two partitions. This setup allows you to spread the reads and writes across multiple brokers. But here's the trick: how do you decide what data goes into which partition?
 
 You could just distribute data randomly, but that messes up the order of events. For instance, if you have operations to add and remove inventory, you might end up processing a removal before an addition if they land in different partitions. To keep things ordered, you might hash a key and send all related writes to the same partition. For example, you could partition purchases by account name and inventory by SKU. That way, all actions for the same account or SKU stay in order.
+
+Challenges with NATS Streaming
+NATS Streaming doesn't handle partitioning as neatly as Kafka. Channels in NATS Streaming are fully ordered, like a single Kafka partition. So, if you want to partition data, you have to manage it at the application level. Some might find this simpler than Kafka's approach, but it wasn't designed with scalability as a primary goal.

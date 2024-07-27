@@ -137,3 +137,6 @@ Push vs. Pull
 Kafka uses a pull-based model for consumers, while NATS Streaming uses push. In a push model, the broker sends data to consumers, which requires explicit flow control to avoid overwhelming them. With pull, consumers request data at their own pace, simplifying flow control.
 Push models can struggle with balancing latency and throughput. You might use a backoff protocol to optimize this, but it's tricky. Pull models, on the other hand, naturally lend themselves to batching. Consumers fetch all available messages, removing the guesswork around tuning.
 From an API perspective, Kafka clients are complex because they do a lot of the heavy lifting, while NATS Streaming clients are simpler since the server handles more. This design decision shifts complexity based on the approach, but a smart client and dumb server might be more scalable in the long run.
+
+Bookkeeping
+Tracking the position in the log can be done by the server or the consumer. NATS Streaming keeps track of positions for consumers, which makes it easy for them to pick up where they left off. But in a clustered setup, this means more data replication, affecting performance.

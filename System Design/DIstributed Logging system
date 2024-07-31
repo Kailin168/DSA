@@ -140,3 +140,6 @@ From an API perspective, Kafka clients are complex because they do a lot of the 
 Bookkeeping
 Tracking the position in the log can be done by the server or the consumer. NATS Streaming keeps track of positions for consumers, which makes it easy for them to pick up where they left off. But in a clustered setup, this means more data replication, affecting performance.
 An alternative is for consumers to track their positions, but they might not have fast storage, especially in IoT devices or containers. A middle ground is storing offsets in the log itself, like Kafka does. Clients periodically checkpoint their offsets, and log compaction keeps only the latest offsets. This way, the log itself becomes the fault-tolerant and durable storage for offsets.
+
+Conclusion
+In this part, we explored how to scale message delivery by partitioning data and managing consumers. We also looked at the differences between push and pull models and how to handle bookkeeping. Stay tuned for part four, where we'll dive into the key trade-offs in implementing a distributed log and share some lessons learned from building NATS Streaming.

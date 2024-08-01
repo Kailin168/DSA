@@ -143,3 +143,6 @@ An alternative is for consumers to track their positions, but they might not hav
 
 Conclusion
 Scale message delivery by partitioning data and managing consumers and the differences between push and pull models and how to handle bookkeeping.
+
+
+Building a Distributed Log from Scratch, Part 4: Trade-Offs and Lessons Learned

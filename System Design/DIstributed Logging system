@@ -146,3 +146,4 @@ Scale message delivery by partitioning data and managing consumers and the diffe
 
 
 Building a Distributed Log from Scratch, Part 4: Trade-Offs and Lessons Learned
+Let’s look at some key trade-offs in building these systems and share lessons learned from creating NATS Streaming.

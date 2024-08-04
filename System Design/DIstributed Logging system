@@ -147,3 +147,6 @@ Scale message delivery by partitioning data and managing consumers and the diffe
 
 Building a Distributed Log from Scratch, Part 4: Trade-Offs and Lessons Learned
 Let’s look at some key trade-offs in building these systems and share lessons learned from creating NATS Streaming.
+
+Competing Goals
+When building a distributed log, you juggle several goals: performance, high availability, and scalability. Achieving all three can be tricky because they often conflict.

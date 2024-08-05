@@ -150,3 +150,4 @@ Let’s look at some key trade-offs in building these systems and share lessons 
 
 Competing Goals
 When building a distributed log, you juggle several goals: performance, high availability, and scalability. Achieving all three can be tricky because they often conflict.
+  - Performance vs. Fault Tolerance: A single-server system can be very fast because it only has to handle network speed and disk I/O. However, if the server fails, you risk losing data unless you have a standby server with replicated data.

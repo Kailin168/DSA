@@ -152,3 +152,4 @@ Competing Goals
 When building a distributed log, you juggle several goals: performance, high availability, and scalability. Achieving all three can be tricky because they often conflict.
   - Performance vs. Fault Tolerance: A single-server system can be very fast because it only has to handle network speed and disk I/O. However, if the server fails, you risk losing data unless you have a standby server with replicated data.
   - High Availability: This means not only keeping the service running but also ensuring that any acknowledged data is not lost. With a standby server, you need data replication to prevent data loss.
+  - Scalability: A single node has limited capacity. Eventually, you'll need to partition the data across multiple nodes to handle more load. This can complicate the system, especially if partitioning is handled at the application level.

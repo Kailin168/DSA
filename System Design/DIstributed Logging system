@@ -154,3 +154,5 @@ When building a distributed log, you juggle several goals: performance, high ava
   - High Availability: This means not only keeping the service running but also ensuring that any acknowledged data is not lost. With a standby server, you need data replication to prevent data loss.
   - Scalability: A single node has limited capacity. Eventually, you'll need to partition the data across multiple nodes to handle more load. This can complicate the system, especially if partitioning is handled at the application level.
 NATS Streaming started as a single-node system, which was a concern for production due to its single point of failure. To address this, a fault-tolerance mode was added where a group of servers would run, with only one acting as the active server. However, this required a shared storage layer and did not replicate data unless the storage layer handled it, impacting performance.
+Simplicity vs. Performance and Scalability
+Simple designs often perform better but may not scale well or be fault-tolerant. Here are some examples from NATS Streaming:

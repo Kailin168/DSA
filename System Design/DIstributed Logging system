@@ -157,3 +157,4 @@ Simplicity vs. Performance and Scalability
 Simple designs often perform better but may not scale well or be fault-tolerant. Here are some examples from NATS Streaming:
   - Single-Node Design: Simple and fast but limited in capacity and not fault-tolerant.
   - Simple File Structure for Logs: Allows efficient use of hardware and OS capabilities, like sequential disk access.
+  - Pull-Based Model: Reduces complexity around flow control and batching.

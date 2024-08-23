@@ -159,4 +159,5 @@ Simple designs often perform better but may not scale well or be fault-tolerant.
   - Simple File Structure for Logs: Allows efficient use of hardware and OS capabilities, like sequential disk access.
   - Pull-Based Model: Reduces complexity around flow control and batching.
 However, optimizing for user experience (UX) can make performance harder. NATS Streaming initially prioritized UX, leading to a simpler, more ergonomic API. But this shifted complexity to the server, making it harder to scale and replicate state across a cluster.
-
+Key Lessons
+Keep it Simple: Distributed systems are complex enough. Start with a simple system that works and then optimize it.

@@ -164,3 +164,4 @@ Key Lessons
   - Leverage Existing Solutions: Use proven protocols and implementations like Raft for leader election and data replication. It’s easier to make a correct solution fast than to make a fast solution correct.
   - Test Thoroughly: Write extensive tests, including edge cases, and use formal methods and property-based testing. Chaos and fault-injection testing can also help.
   - Be Honest with Users: Clearly communicate design decisions, trade-offs, and system guarantees. Transparency builds trust and sets realistic expectations.
+In conclusion, building a distributed log involves balancing performance, high availability, scalability, and simplicity. By learning from existing solutions and maintaining transparency, you can create a robust and reliable system.

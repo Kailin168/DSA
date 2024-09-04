@@ -167,4 +167,4 @@ Key Lessons
 In conclusion, building a distributed log involves balancing performance, high availability, scalability, and simplicity. By learning from existing solutions and maintaining transparency, you can create a robust and reliable system.
 
 Building a Distributed Log from Scratch, Part 5: Sketching a New System
-
+In the fourth part of this series, key trade-offs involved in implementing a distributed log were examined, along with lessons learned while building NATS Streaming. In this fifth and final installment, the series concludes by outlining the design for a new log-based system that builds upon the concepts discussed in the previous entries.

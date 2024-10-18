@@ -188,3 +188,4 @@ Jetstream, on the other hand, is merely a consumer of NATS. In Jetstream, the lo
 This approach provides wildcards for free since streams are bound to NATS subjects, although there are some trade-offs, which are discussed later.
 Performance
 Jetstream does not track subscription positions, leaving it up to consumers to track their position in a stream or optionally store their position within a stream. This approach allows Jetstream to treat a stream as a simple log, enabling fast, sequential disk I/O and minimizing replication, protocol chatter, and code complexity.
+Consumers connect directly to Jetstream using a pull-based socket API, with the log stored in the manner described in part one. This design allows zero-copy reads from a stream and other optimizations that NATS Streaming cannot perform, while also simplifying flow control and batching.

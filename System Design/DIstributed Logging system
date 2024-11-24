@@ -196,4 +196,4 @@ A single metadata leader for the Jetstream cluster handles requests to create or
 Multiple streams can be attached to the same NATS subject, with each stream receiving a copy of the message. However, stream names are unique within a given subject, ensuring that creation is idempotent.
 Jetstream can scale linearly by adding more nodes to the cluster and creating additional streams, which are distributed across the cluster. This separation of message routing from storage and consumption allows for independent scaling.
 Additionally, streams can join a named consumer group, effectively partitioning a NATS subject among the streams in the group. This setup, which uses NATS queue subscriptions, enables competing consumers for load-balancing purposes, albeit with random partitioning.
-
+Compaction and Offset Tracking

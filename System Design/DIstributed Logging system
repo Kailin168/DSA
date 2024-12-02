@@ -200,3 +200,4 @@ Compaction and Offset Tracking
 Streams in Jetstream support multiple log-compaction rules: time-based, message-based, and size-based. A fourth type, key compaction, is also supported, similar to Kafka’s approach, and is used for offset storage. This allows publishers to enhance their messages by providing additional metadata and serializing them into envelopes, with an optional message key included.
 Consumers can optionally store their offsets in Jetstream, with key compaction ensuring only the latest offset for each consumer is retained. This setup, managed by a client library, allows consumers to periodically checkpoint their offsets for improved performance.
 Authorization
+Jetstream, as a separate server and NATS consumer, can implement ACLs or other authorization mechanisms on streams. Although this requires additional configuration, it offers greater flexibility by separating access control between the systems.

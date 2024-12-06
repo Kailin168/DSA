@@ -201,3 +201,4 @@ Streams in Jetstream support multiple log-compaction rules: time-based, message-
 Consumers can optionally store their offsets in Jetstream, with key compaction ensuring only the latest offset for each consumer is retained. This setup, managed by a client library, allows consumers to periodically checkpoint their offsets for improved performance.
 Authorization
 Jetstream, as a separate server and NATS consumer, can implement ACLs or other authorization mechanisms on streams. Although this requires additional configuration, it offers greater flexibility by separating access control between the systems.
+At-Least Once Delivery

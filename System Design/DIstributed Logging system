@@ -202,3 +202,4 @@ Consumers can optionally store their offsets in Jetstream, with key compaction e
 Authorization
 Jetstream, as a separate server and NATS consumer, can implement ACLs or other authorization mechanisms on streams. Although this requires additional configuration, it offers greater flexibility by separating access control between the systems.
 At-Least Once Delivery
+To ensure at-least-once delivery of messages, Jetstream relies on replication and publisher acknowledgments. Upon successful replication, the stream publishes an acknowledgment to NATS on the message’s reply subject. This approach allows publishers to choose whether to ensure their message is stored by setting a reply subject.

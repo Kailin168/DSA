@@ -204,3 +204,4 @@ Jetstream, as a separate server and NATS consumer, can implement ACLs or other a
 At-Least Once Delivery
 To ensure at-least-once delivery of messages, Jetstream relies on replication and publisher acknowledgments. Upon successful replication, the stream publishes an acknowledgment to NATS on the message’s reply subject. This approach allows publishers to choose whether to ensure their message is stored by setting a reply subject.
 Given the dynamic creation and deletion of streams, publishers may not know how many acknowledgments to expect. This trade-off enables subject fan-out and wildcards while maintaining scalability and speed, with the responsibility for determining destination streams left to the publisher.
+Replication Protocol
